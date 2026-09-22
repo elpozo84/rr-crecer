@@ -3,15 +3,17 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Pesa07() {
+export default function Pesa08() {
   const [paso, setPaso] = useState(0);
   const [respuestaInicial, setRespuestaInicial] = useState("");
-  const [respuestaFinal, setRespuestaFinal] = useState("");
+  const [respuestaIntegrada, setRespuestaIntegrada] = useState("");
 
   const irA = (numero) => {
     setPaso(numero);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const totalPasos = 13;
 
   return (
     <main className="trainingPage">
@@ -22,17 +24,17 @@ export default function Pesa07() {
 
         <div className="trainingBrand">
           <span>RR · CRECER</span>
-          <small>PESA 07</small>
+          <small>PESA 08 · INTEGRACIÓN</small>
         </div>
 
-        <div className="kg">{paso <= 5 ? "10 KG" : "20 KG"}</div>
+        <div className="kg">{paso <= 6 ? "20 KG" : "30 KG"}</div>
       </header>
 
       <div className="trainingProgress">
         <div
           className="trainingProgressFill"
           style={{
-            width: `${Math.min(((paso + 1) / 11) * 100, 100)}%`,
+            width: `${Math.min(((paso + 1) / totalPasos) * 100, 100)}%`,
           }}
         />
       </div>
@@ -41,43 +43,46 @@ export default function Pesa07() {
         <section className="trainingScreen">
           <div className="trainingVisual">
             <img
-              src="/pesa07.png"
-              alt="Pesa 07 · Pantallas y contenido inesperado"
+              src="/pesa08.png"
+              alt="Pesa 08 · Integración de criterios"
             />
             <div className="trainingVisualCaption">
-              <span>SPOT RR · PANTALLAS Y CONTENIDO INESPERADO</span>
+              <span>SPOT RR · INTEGRACIÓN</span>
               <p>
-                Cuando aparece algo que no esperábamos, la primera reacción puede
-                decidir si la próxima vez viene a contárnoslo o intenta ocultarlo.
+                Ya no entrenamos una sola respuesta. Ahora tendrás que descubrir
+                qué está ocurriendo, qué criterios necesitas y cuándo proteger
+                importa más que seguir entrenando.
               </p>
             </div>
           </div>
 
-          <span className="trainingTag">SPOT · 10 KG</span>
+          <span className="trainingTag">SPOT · 20 KG</span>
 
-          <h1>«Me ha salido esto en el móvil.»</h1>
+          <h1>«Me dijo que no se lo contara a nadie.»</h1>
 
           <div className="scene">
             <p>
-              Tu hijo estaba utilizando un móvil para ver vídeos. Se acerca,
-              te lo entrega y dice:
+              Tu hijo llega del colegio algo serio. Después de un rato te dice:
             </p>
 
             <blockquote>
-              —Papá, estaba viendo vídeos y
-              <strong> me ha salido gente desnuda haciendo cosas.</strong>
-              <br />
-              <br />
-              Lo he quitado.
+              —Un niño mayor nos enseñó un vídeo en su móvil. Salía gente desnuda.
+              Luego dijo que era una broma y que
+              <strong> no se lo contáramos a nadie.</strong>
             </blockquote>
+
+            <p>
+              No sabes todavía cuánto vio, quién estaba allí ni por qué le han
+              pedido que lo mantenga en secreto.
+            </p>
           </div>
 
-          <h2>¿Qué harías primero?</h2>
+          <h2>¿Qué harías o dirías primero?</h2>
 
           <textarea
             value={respuestaInicial}
             onChange={(e) => setRespuestaInicial(e.target.value)}
-            placeholder="Escribe lo primero que probablemente harías o dirías..."
+            placeholder="Escribe tu respuesta real, aunque no estés seguro..."
           />
 
           <button
@@ -85,7 +90,7 @@ export default function Pesa07() {
             onClick={() => irA(1)}
             disabled={!respuestaInicial.trim()}
           >
-            CONTINUAR →
+            ENTRAR EN EL SPOT →
           </button>
         </section>
       )}
@@ -94,417 +99,504 @@ export default function Pesa07() {
         <section className="trainingScreen">
           <span className="trainingTag">VENTANA RR</span>
 
-          <h1>Hay dos problemas posibles.</h1>
-
-          <div className="factStory">
-            <div>
-              <span>LO QUE HA APARECIDO</span>
-              <p>
-                Contenido que puede no ser adecuado para su edad y que
-                necesitamos gestionar.
-              </p>
-            </div>
-
-            <div>
-              <span>LO QUE PUEDE OCURRIR AHORA</span>
-              <p>
-                Nuestra reacción puede enseñarle si la próxima vez debe venir
-                a contárnoslo o esconderlo.
-              </p>
-            </div>
-          </div>
+          <h1>No corras a completar la historia.</h1>
 
           <div className="yourFirstAnswer">
-            <span>TU PRIMERA REACCIÓN</span>
+            <span>TU RESPUESTA INICIAL</span>
             <p>{respuestaInicial}</p>
           </div>
 
-          <div className="bigQuestion">
-            <small>PRIMER OBJETIVO</small>
-            <h2>No perder al mensajero mientras atendemos el problema.</h2>
+          <div className="factStory">
+            <div>
+              <span>HECHOS</span>
+              <p>
+                Ha visto un vídeo con desnudos. Lo mostró un niño mayor. Le
+                pidieron que no lo contara. Tu hijo ha venido a decírtelo.
+              </p>
+            </div>
+
+            <div>
+              <span>TODAVÍA NO SABEMOS</span>
+              <p>
+                Qué contenía exactamente, si hubo presión, si alguien pidió hacer
+                algo, si el contenido fue enviado o si existe alguna otra persona
+                implicada.
+              </p>
+            </div>
+          </div>
+
+          <div className="criterionReminder">
+            <span>HECHO ≠ HISTORIA</span>
+            <p>
+              La situación merece atención. Precisamente por eso necesitamos
+              comprender antes de completar los huecos con miedo o suposiciones.
+            </p>
           </div>
 
           <button className="trainingButton" onClick={() => irA(2)}>
-            CONTINUAR →
+            DESCUBRIR SIN INTERROGAR →
           </button>
         </section>
       )}
 
       {paso === 2 && (
         <section className="trainingScreen">
-          <span className="trainingTag">HECHO ≠ HISTORIA</span>
+          <span className="trainingTag">INTEGRACIÓN</span>
 
-          <h1>Todavía no sabemos cómo llegó hasta allí.</h1>
+          <h1>Ya conoces varias herramientas. Ahora elige el orden.</h1>
 
           <div className="factStory">
             <div>
-              <span>HECHO</span>
-              <p>Ha visto algo, lo ha cerrado y ha venido a contártelo.</p>
+              <span>PESA 01 · DESCUBRIR</span>
+              <p>No asumir qué significa una frase antes de preguntar.</p>
             </div>
 
             <div>
-              <span>HISTORIAS POSIBLES</span>
+              <span>PESA 03 · SECRETOS</span>
               <p>
-                «Lo estaba buscando.» «Alguien se lo ha enviado.» «Ya lleva
-                tiempo viendo estas cosas.»
+                Una petición de silencio nunca debe impedir acudir a un adulto de
+                confianza.
               </p>
             </div>
           </div>
 
-          <div className="criterionReminder">
-            <span>NO ADIVINES TODAVÍA</span>
-            <p>
-              Antes de enfadarte, castigar o dar una explicación, descubre qué
-              ocurrió.
-            </p>
+          <div className="factStory">
+            <div>
+              <span>PESA 07 · PANTALLAS</span>
+              <p>
+                No reenviar el contenido y proteger que pueda volver a contártelo.
+              </p>
+            </div>
+
+            <div>
+              <span>VENTANA RR</span>
+              <p>
+                Regular tu primera reacción para poder obtener información útil.
+              </p>
+            </div>
+          </div>
+
+          <div className="bigQuestion">
+            <small>EL RETO YA NO ES RECORDAR FRASES</small>
+            <h2>Es saber qué criterio necesita este momento.</h2>
           </div>
 
           <button className="trainingButton" onClick={() => irA(3)}>
-            DESCUBRIR QUÉ PASÓ →
+            CONTINUAR →
           </button>
         </section>
       )}
 
       {paso === 3 && (
         <section className="trainingScreen">
-          <span className="trainingTag">CRITERIO RR</span>
+          <span className="trainingTag">PRIMER MOVIMIENTO</span>
 
-          <h1>Primero protege la conversación.</h1>
+          <h1>Protege la puerta por la que acaba de entrar.</h1>
 
           <div className="conversation">
             <div>
               <span>TÚ</span>
               <p>
-                Gracias por venir a enseñármelo. Has hecho bien en contármelo.
-                ¿Qué estabas viendo cuando apareció?
+                Gracias por contármelo. Aunque alguien diga que no lo cuentes,
+                puedes venir a decírmelo cuando algo te preocupa, te incomoda o
+                no entiendes qué está pasando.
               </p>
             </div>
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-              <p>
-                Un vídeo de un juego. Después salió otro vídeo y lo abrí porque
-                no sabía qué era.
-              </p>
+              <p>Pero se va a enfadar si sabe que te lo he dicho.</p>
             </div>
 
             <div>
               <span>TÚ</span>
-              <p>Vale. ¿Lo viste mucho rato o lo cerraste enseguida?</p>
-            </div>
-
-            <div className="childAnswer">
-              <span>TU HIJO</span>
               <p>
-                Un poco. No entendía qué estaban haciendo y después lo quité.
+                Entiendo que eso te preocupe. Ahora lo importante es que yo pueda
+                entender bien qué ocurrió para ayudarte.
               </p>
             </div>
           </div>
 
           <div className="criterionReminder">
-            <span>OBSERVA</span>
+            <span>OBSERVA EL ORDEN</span>
             <p>
-              Estamos obteniendo información sin convertir la conversación en
-              un interrogatorio ni castigar el hecho de haberlo contado.
+              Recibes lo que te cuenta, reduces el miedo a hablar y después
+              empiezas a descubrir.
             </p>
           </div>
 
           <button className="trainingButton" onClick={() => irA(4)}>
-            CONTINUAR →
+            DESCUBRIR →
           </button>
         </section>
       )}
 
       {paso === 4 && (
         <section className="trainingScreen">
-          <span className="trainingTag">PREPARAR PARA LA PRÓXIMA VEZ</span>
+          <span className="trainingTag">DESCUBRIR</span>
 
-          <h1>No podemos garantizar que nunca vuelva a aparecer.</h1>
-
-          <p className="trainingLead">
-            Los filtros y las normas importan, pero también necesitamos que el
-            niño sepa qué hacer cuando algo inesperado atraviesa esas barreras.
-          </p>
+          <h1>Pregunta para comprender, no para conseguir una confesión.</h1>
 
           <div className="conversation">
             <div>
-              <span>SI VUELVE A OCURRIR</span>
-              <p>Puedes cerrar la imagen o el vídeo y venir a decírmelo.</p>
+              <span>PREGUNTA ÚTIL</span>
+              <p>Cuéntame desde el principio qué pasó.</p>
             </div>
 
             <div>
-              <span>SI TE LO ENVÍA ALGUIEN</span>
-              <p>
-                No tienes que seguir mirándolo ni reenviarlo. Puedes enseñármelo
-                o acudir a otro adulto de confianza.
-              </p>
+              <span>PREGUNTA ÚTIL</span>
+              <p>¿Quién estaba allí?</p>
             </div>
 
             <div>
-              <span>SI TE DA VERGÜENZA</span>
-              <p>
-                La vergüenza no significa que tengas que resolverlo solo.
-              </p>
+              <span>PREGUNTA ÚTIL</span>
+              <p>¿Alguien os pidió hacer algo además de mirar?</p>
+            </div>
+
+            <div>
+              <span>PREGUNTA ÚTIL</span>
+              <p>¿Ese vídeo os lo enviaron o solo estaba en ese móvil?</p>
             </div>
           </div>
 
           <div className="lesson">
-            <span>OBJETIVO</span>
+            <span>CRITERIO</span>
             <blockquote>
-              No preparar un Internet perfecto.
-              <strong> Preparar al niño para cuando Internet no lo sea.</strong>
+              Necesitamos información suficiente para proteger.
+              <strong> No necesitamos convertir al niño en investigador.</strong>
             </blockquote>
           </div>
 
           <button className="trainingButton" onClick={() => irA(5)}>
-            CONSTRUIR MI RESPUESTA →
+            CONTINUAR →
           </button>
         </section>
       )}
 
       {paso === 5 && (
         <section className="trainingScreen">
-          <span className="trainingTag">REPLAY · 10 KG</span>
+          <span className="trainingTag">NUEVA INFORMACIÓN</span>
 
-          <h1>Vuelve al primer momento.</h1>
+          <h1>La situación cambia con una sola frase.</h1>
 
-          <div className="scene">
-            <blockquote>
-              —Papá, estaba viendo vídeos y me ha salido gente desnuda haciendo
-              cosas. Lo he quitado.
-            </blockquote>
+          <div className="conversation">
+            <div className="childAnswer">
+              <span>TU HIJO</span>
+              <p>
+                Solo nos lo enseñó. Cuando yo dije que me iba, me dijo que no
+                fuera un bebé y que todos los demás se habían quedado.
+              </p>
+            </div>
           </div>
 
-          <textarea
-            value={respuestaFinal}
-            onChange={(e) => setRespuestaFinal(e.target.value)}
-            placeholder="¿Qué harías y qué le dirías ahora?"
-          />
+          <h2>¿Qué aparece ahora?</h2>
 
-          <button
-            className="trainingButton"
-            onClick={() => irA(6)}
-            disabled={!respuestaFinal.trim()}
-          >
-            TERMINAR 10 KG →
-          </button>
+          <div className="choiceList">
+            <button onClick={() => irA(6)}>
+              Solo curiosidad. No hay nada más que valorar.
+            </button>
+
+            <button onClick={() => irA(7)}>
+              Aparece presión del grupo y necesitamos integrar límites, pantallas,
+              criterio propio y pedir ayuda.
+            </button>
+
+            <button onClick={() => irA(6)}>
+              El problema principal es que utilizó la palabra «bebé».
+            </button>
+
+            <button onClick={() => irA(6)}>
+              Lo mejor es decirle que no vuelva a juntarse nunca con esos niños y
+              cerrar la conversación.
+            </button>
+          </div>
         </section>
       )}
 
       {paso === 6 && (
-        <section className="trainingScreen finishScreen">
-          <span className="trainingTag">10 KG SUPERADOS</span>
+        <section className="trainingScreen">
+          <span className="trainingTag">REPLAY INMEDIATO</span>
 
-          <div className="finishMark">10</div>
+          <h1>Cuando aparece información nueva, el criterio también puede cambiar.</h1>
 
-          <h1>Has protegido algo más importante que una pantalla.</h1>
+          <p className="trainingLead">
+            El objetivo no es acertar una etiqueta a la primera. Es actualizar
+            nuestra respuesta a medida que entendemos mejor lo ocurrido.
+          </p>
 
-          <h2>Has protegido la posibilidad de que vuelva a contártelo.</h2>
-
-          <div className="comparison">
-            <div>
-              <span>ANTES</span>
-              <p>{respuestaInicial}</p>
-            </div>
-
-            <div>
-              <span>DESPUÉS DE ENTRENAR</span>
-              <p>{respuestaFinal}</p>
-            </div>
-          </div>
-
-          <div className="nextSpot">
-            <span>AHORA SUBIMOS EL PESO</span>
-            <strong>20 KG</strong>
+          <div className="criterionReminder">
+            <span>AHORA SABEMOS ALGO MÁS</span>
             <p>
-              Esta vez el contenido no ha aparecido por accidente. Alguien se
-              lo ha enviado.
+              Hubo presión para quedarse mirando. Eso añade una cuestión de
+              límites y decisión propia a la situación de pantalla.
             </p>
           </div>
 
-          <button className="trainingButton" onClick={() => irA(7)}>
-            SUBIR A 20 KG →
+          <button className="trainingButton" onClick={() => irA(5)}>
+            VOLVER AL SPOT →
           </button>
-
-          <Link
-            href="/prepararme/7-9"
-            className="secondaryTrainingButton"
-          >
-            VOLVER AL GIMNASIO
-          </Link>
         </section>
       )}
 
       {paso === 7 && (
         <section className="trainingScreen">
-          <span className="trainingTag">SPOT · 20 KG</span>
+          <span className="trainingTag">20 KG · INTEGRAR</span>
 
-          <h1>Ahora hay otra persona al otro lado.</h1>
+          <h1>No basta con decir «no mires eso».</h1>
 
-          <div className="scene">
-            <p>Tu hijo se acerca con el móvil y te dice:</p>
+          <div className="conversation">
+            <div>
+              <span>TÚ</span>
+              <p>
+                Si algo te incomoda, puedes apartarte aunque los demás se queden o
+                se rían. No tienes que demostrar nada quedándote.
+              </p>
+            </div>
 
-            <blockquote>
-              —Un niño me ha enviado una imagen de gente desnuda.
-              <br />
-              <br />
-              Me dijo que era graciosa y que
-              <strong> se la mandara a otros.</strong>
-            </blockquote>
+            <div className="childAnswer">
+              <span>TU HIJO</span>
+              <p>¿Y si luego se ríen de mí?</p>
+            </div>
+
+            <div>
+              <span>TÚ</span>
+              <p>
+                Puede pasar, y puede ser incómodo. Pero que un grupo se ría no
+                convierte una decisión que te protege en una mala decisión.
+              </p>
+            </div>
           </div>
 
-          <h2>¿Cuál es el mejor primer movimiento?</h2>
+          <div className="factStory">
+            <div>
+              <span>LÍMITE</span>
+              <p>Puedes salir de una situación que no quieres.</p>
+            </div>
 
-          <div className="choiceList">
-            <button onClick={() => irA(8)}>
-              Quitarle inmediatamente el móvil y prohibírselo durante varias
-              semanas.
-            </button>
-
-            <button onClick={() => irA(9)}>
-              Reconocer que ha hecho bien en contarlo, averiguar qué ocurrió y
-              enseñarle que no debe reenviar ese contenido.
-            </button>
-
-            <button onClick={() => irA(8)}>
-              Exigirle que diga inmediatamente quién fue para hablar con sus
-              padres.
-            </button>
-
-            <button onClick={() => irA(8)}>
-              Borrar la imagen y no darle más importancia para evitar que se
-              obsesione con el tema.
-            </button>
+            <div>
+              <span>GRUPO</span>
+              <p>Que otros lo hagan no obliga a imitarlo.</p>
+            </div>
           </div>
+
+          <button className="trainingButton" onClick={() => irA(8)}>
+            SUBIR A 30 KG →
+          </button>
         </section>
       )}
 
       {paso === 8 && (
         <section className="trainingScreen">
-          <span className="trainingTag">REPLAY INMEDIATO</span>
+          <span className="trainingTag">SPOT · 30 KG</span>
 
-          <h1>Hay decisiones que vendrán después.</h1>
+          <h1>Ahora RR retira casi toda la ayuda.</h1>
 
-          <p className="trainingLead">
-            Puede ser necesario revisar el dispositivo, ajustar controles,
-            conocer el origen del contenido o intervenir con otros adultos.
-            Pero el primer movimiento sigue teniendo una función concreta:
-            comprender lo ocurrido y mantener abierta la comunicación.
-          </p>
+          <div className="scene">
+            <p>Tu hijo te cuenta:</p>
 
-          <div className="criterionReminder">
-            <span>ORDEN RR</span>
-            <p>
-              Primero comprende. Después protege. Luego decide qué medidas
-              adicionales necesita la situación.
-            </p>
+            <blockquote>
+              —Otro día ese niño dijo que si queríamos ver más vídeos teníamos
+              que ir a un sitio donde no hubiera adultos.
+            </blockquote>
           </div>
 
-          <button className="trainingButton" onClick={() => irA(7)}>
-            VOLVER AL SPOT →
+          <h2>Construye tu respuesta completa.</h2>
+
+          <p className="trainingLead">
+            Piensa en el orden: recibir, comprender, valorar seguridad, proteger y
+            decidir qué debe ocurrir después.
+          </p>
+
+          <textarea
+            value={respuestaIntegrada}
+            onChange={(e) => setRespuestaIntegrada(e.target.value)}
+            placeholder="¿Qué dirías y qué harías ahora?"
+          />
+
+          <button
+            className="trainingButton"
+            onClick={() => irA(9)}
+            disabled={!respuestaIntegrada.trim()}
+          >
+            COMPROBAR MI CRITERIO →
           </button>
         </section>
       )}
 
       {paso === 9 && (
         <section className="trainingScreen">
-          <span className="trainingTag">TRANSFERENCIA · 20 KG</span>
+          <span className="trainingTag">CAMBIO DE MODO</span>
 
-          <h1>Ahora aparecen varios criterios a la vez.</h1>
+          <h1>Esto ya no es solo una conversación educativa.</h1>
 
-          <div className="conversation">
-            <div>
-              <span>TÚ</span>
-              <p>
-                Has hecho bien en enseñármelo. No lo reenvíes. Vamos a ver
-                juntos qué ha ocurrido.
-              </p>
-            </div>
+          <p className="trainingLead">
+            La propuesta de aislar a menores de los adultos para mostrarles más
+            contenido sexual cambia el nivel de preocupación. Ya no buscamos una
+            frase perfecta ni seguimos aumentando los kilos.
+          </p>
 
-            <div className="childAnswer">
-              <span>TU HIJO</span>
-              <p>
-                Pero si digo quién me lo mandó se va a enfadar conmigo.
-              </p>
-            </div>
+          <div className="yourFirstAnswer">
+            <span>TU RESPUESTA</span>
+            <p>{respuestaIntegrada}</p>
           </div>
 
-          <div className="factStory">
-            <div>
-              <span>PESA 01</span>
-              <p>Primero descubre qué ha ocurrido realmente.</p>
-            </div>
-
-            <div>
-              <span>PESA 03</span>
-              <p>
-                El miedo a que alguien se enfade no debe impedir pedir ayuda.
-              </p>
-            </div>
+          <div className="lesson">
+            <span>PUENTE RR · SEGURIDAD</span>
+            <blockquote>
+              Cuando aparecen señales que pueden requerir protección,
+              <strong> el entrenamiento se detiene y la prioridad cambia.</strong>
+            </blockquote>
           </div>
 
-          <div className="factStory">
-            <div>
-              <span>PESA 04</span>
-              <p>
-                Privacidad no convierte el cuerpo en algo malo o vergonzoso.
-              </p>
-            </div>
-
-            <div>
-              <span>PESA 07</span>
-              <p>
-                No reenviar, cerrar el contenido y acudir a un adulto de
-                confianza.
-              </p>
-            </div>
+          <div className="criterionReminder">
+            <span>PRIMERAS PRIORIDADES</span>
+            <p>
+              Escuchar sin culpar, evitar promesas que no puedas cumplir,
+              preservar la información relevante y buscar orientación adecuada
+              para valorar los siguientes pasos.
+            </p>
           </div>
 
           <button className="trainingButton" onClick={() => irA(10)}>
-            TERMINAR →
+            VER QUÉ HE ENTRENADO →
           </button>
         </section>
       )}
 
       {paso === 10 && (
-        <section className="trainingScreen finishScreen">
-          <span className="trainingTag">20 KG SUPERADOS</span>
+        <section className="trainingScreen">
+          <span className="trainingTag">REPLAY RR</span>
 
-          <div className="finishMark">20</div>
+          <h1>Compara el principio con el final.</h1>
 
-          <h1>Los criterios empiezan a trabajar juntos.</h1>
+          <div className="comparison">
+            <div>
+              <span>AL ENTRAR</span>
+              <p>{respuestaInicial}</p>
+            </div>
 
-          <div className="lesson">
-            <span>CRITERIO RR · CRECER</span>
-            <blockquote>
-              La primera reacción no debería enseñarle a ocultarlo.
-              <strong> Debería enseñarle qué hacer con ello.</strong>
-            </blockquote>
+            <div>
+              <span>30 KG</span>
+              <p>{respuestaIntegrada}</p>
+            </div>
+          </div>
+
+          <div className="bigQuestion">
+            <small>NO MIDAS SI SUENA BONITO</small>
+            <h2>Mide qué capacidades aparecen ahora en tu respuesta.</h2>
           </div>
 
           <div className="factStory">
             <div>
-              <span>SI APARECE</span>
-              <p>Cerrar, apartarse y contarlo.</p>
+              <span>DESCUBRIR</span>
+              <p>No completas la historia antes de escuchar.</p>
             </div>
 
             <div>
-              <span>SI LO ENVÍAN</span>
-              <p>No reenviarlo y pedir ayuda.</p>
+              <span>PROTEGER LA CONVERSACIÓN</span>
+              <p>No castigas el hecho de que haya venido a contártelo.</p>
             </div>
           </div>
 
+          <div className="factStory">
+            <div>
+              <span>INTEGRAR</span>
+              <p>Combinas pantallas, secretos, presión y límites.</p>
+            </div>
+
+            <div>
+              <span>CAMBIAR DE MODO</span>
+              <p>Reconoces cuándo la situación necesita protección real.</p>
+            </div>
+          </div>
+
+          <button className="trainingButton" onClick={() => irA(11)}>
+            VER EL MAPA →
+          </button>
+        </section>
+      )}
+
+      {paso === 11 && (
+        <section className="trainingScreen">
+          <span className="trainingTag">MAPA RR · INTEGRACIÓN</span>
+
+          <h1>Ya no necesitas recordar cada conversación.</h1>
+
+          <div className="conversation">
+            <div>
+              <span>1 · RECIBO</span>
+              <p>Cuido que pueda seguir hablando conmigo.</p>
+            </div>
+
+            <div>
+              <span>2 · SEPARO</span>
+              <p>Distingo hechos de lo que mi cabeza está completando.</p>
+            </div>
+
+            <div>
+              <span>3 · DESCUBRO</span>
+              <p>Pregunto lo necesario para comprender.</p>
+            </div>
+
+            <div>
+              <span>4 · INTEGRO</span>
+              <p>Activo los criterios que necesita la situación.</p>
+            </div>
+
+            <div>
+              <span>5 · DECIDO</span>
+              <p>Elijo qué enseñar, qué límite poner y qué acción tomar.</p>
+            </div>
+
+            <div>
+              <span>6 · PROTEJO</span>
+              <p>
+                Si aparecen señales preocupantes, dejo de entrenar y busco la
+                ayuda adecuada.
+              </p>
+            </div>
+          </div>
+
+          <button className="trainingButton" onClick={() => irA(12)}>
+            TERMINAR PESA 08 →
+          </button>
+        </section>
+      )}
+
+      {paso === 12 && (
+        <section className="trainingScreen finishScreen">
+          <span className="trainingTag">PESA 08 · SUPERADA</span>
+
+          <div className="finishMark">30</div>
+
+          <h1>Los criterios ya no viven separados.</h1>
+
+          <h2>Empiezan a convertirse en una forma de responder.</h2>
+
+          <div className="lesson">
+            <span>CRITERIO RR · CRECER</span>
+            <blockquote>
+              No necesitas saber de antemano todas las respuestas.
+              <strong> Necesitas saber construir el siguiente paso.</strong>
+            </blockquote>
+          </div>
+
           <div className="nextSpot">
-            <span>QUEDA UNA PESA</span>
-            <strong>PESA 08 · INTEGRACIÓN</strong>
+            <span>SIGUIENTE ENTRENAMIENTO</span>
+            <strong>PESA 09 · TRANSFERENCIA</strong>
             <p>
-              Ya no vamos a enseñarte un criterio nuevo. Te pondremos delante
-              de una situación ambigua y RR retirará gran parte de la ayuda.
-              Tendrás que decidir qué está ocurriendo, qué criterios necesitas
-              y cuándo una situación deja de ser un entrenamiento y necesita
-              ayuda real.
+              En la siguiente Pesa aparecerá una conversación cotidiana con
+              humor, grupo y sexualidad. RR retirará todavía más ayuda para que
+              seas tú quien construya la respuesta.
             </p>
           </div>
+
+          <Link
+            href="/orientacion"
+            className="secondaryTrainingButton"
+          >
+            HA PASADO ALGO · NECESITO ORIENTACIÓN
+          </Link>
 
           <Link
             href="/prepararme/7-9"
