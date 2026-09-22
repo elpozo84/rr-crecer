@@ -39,6 +39,27 @@ export default function Pesa05() {
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa05.png"
+              alt="Pesa 05 · De dónde vienen los bebés"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 5 KG</span>
 
           <h1>«¿De dónde vienen los bebés?»</h1>
@@ -125,15 +146,11 @@ export default function Pesa05() {
           <div className="factStory">
             <div>
               <span>HECHO</span>
-
-              <p>
-                Tu hijo ha preguntado de dónde vienen los bebés.
-              </p>
+              <p>Tu hijo ha preguntado de dónde vienen los bebés.</p>
             </div>
 
             <div>
               <span>TODAVÍA NO SABEMOS</span>
-
               <p>
                 Qué sabe, qué imagina, qué ha escuchado ni qué parte del
                 proceso quiere comprender.
@@ -182,7 +199,6 @@ export default function Pesa05() {
           <div className="conversation">
             <div>
               <span>TÚ</span>
-
               <p>
                 Buena pregunta. ¿Qué sabes tú sobre cómo se forma un bebé?
               </p>
@@ -190,7 +206,6 @@ export default function Pesa05() {
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-
               <p>
                 Sé que crece en la barriga, pero no sé cómo empieza.
               </p>
@@ -199,13 +214,11 @@ export default function Pesa05() {
 
           <div className="bigQuestion">
             <small>AHORA LA PREGUNTA ES MÁS PRECISA</small>
-
             <h2>¿Cómo empieza un bebé?</h2>
           </div>
 
           <div className="criterionReminder">
             <span>CRITERIO</span>
-
             <p>
               No adivines el nivel de detalle que necesita. Averigua primero
               qué sabe y responde a la pregunta que realmente está haciendo.
@@ -233,7 +246,6 @@ export default function Pesa05() {
           <div className="conversation">
             <div>
               <span>UNA RESPUESTA POSIBLE</span>
-
               <p>
                 Para que empiece un bebé hacen falta una célula llamada óvulo
                 y otra llamada espermatozoide. Cuando se unen, puede comenzar
@@ -243,14 +255,12 @@ export default function Pesa05() {
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-
               <p>¿Y cómo se juntan?</p>
             </div>
           </div>
 
           <div className="criterionReminder">
             <span>FÍJATE EN LO QUE HA OCURRIDO</span>
-
             <p>
               Hemos respondido una pregunta. El niño decide si necesita abrir
               la siguiente.
@@ -270,9 +280,7 @@ export default function Pesa05() {
           <h1>Ahora vuelve al principio.</h1>
 
           <div className="scene">
-            <blockquote>
-              —Papá, ¿de dónde vienen los bebés?
-            </blockquote>
+            <blockquote>—Papá, ¿de dónde vienen los bebés?</blockquote>
           </div>
 
           <p className="trainingLead">
@@ -303,7 +311,6 @@ export default function Pesa05() {
           <div className="finishMark">RR</div>
 
           <h1>No has aprendido «la explicación».</h1>
-
           <h2>Has aprendido a calibrarla.</h2>
 
           <div className="comparison">
@@ -329,7 +336,6 @@ export default function Pesa05() {
 
           <div className="nextSpot">
             <span>SIGUIENTE NIVEL</span>
-
             <strong>10 KG</strong>
 
             <p>
@@ -433,15 +439,11 @@ export default function Pesa05() {
           <div className="conversation">
             <div className="childAnswer">
               <span>TU HIJO</span>
-
-              <p>
-                ¿Cómo se juntan el óvulo y el espermatozoide?
-              </p>
+              <p>¿Cómo se juntan el óvulo y el espermatozoide?</p>
             </div>
 
             <div>
               <span>UNA RESPUESTA POSIBLE</span>
-
               <p>
                 Una forma en que puede ocurrir es durante una relación sexual:
                 el pene puede entrar en la vagina y el semen, que contiene
@@ -452,14 +454,12 @@ export default function Pesa05() {
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-
               <p>Ah. Vale.</p>
             </div>
           </div>
 
           <div className="bigQuestion">
             <small>Y AHORA...</small>
-
             <h2>No hace falta añadir cinco capítulos más.</h2>
           </div>
 
@@ -494,13 +494,11 @@ export default function Pesa05() {
           <div className="factStory">
             <div>
               <span>PRIMERO</span>
-
               <p>Descubre qué sabe y qué quiere comprender.</p>
             </div>
 
             <div>
               <span>DESPUÉS</span>
-
               <p>
                 Responde con verdad, claridad y la profundidad necesaria para
                 esa pregunta.
@@ -510,7 +508,6 @@ export default function Pesa05() {
 
           <div className="nextSpot">
             <span>RECORRIDO 7–9</span>
-
             <strong>YA TENEMOS 5 PESAS</strong>
 
             <p>
