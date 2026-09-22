@@ -1,27 +1,33 @@
+import Link from "next/link";
+
 const paths = [
   {
     number: "01",
     title: "QUIERO PREPARARME",
     text: "Entrena conversaciones antes de necesitarlas.",
     action: "ENTRAR AL GIMNASIO",
+    href: "/prepararme",
   },
   {
     number: "02",
     title: "ME ACABA DE PREGUNTAR ALGO",
     text: "Te ha hecho una pregunta y no sabes qué decir, cuánto explicar o cómo hacerlo.",
     action: "AYÚDAME A RESPONDER",
+    href: "/responder",
   },
   {
     number: "03",
     title: "QUIERO HABLAR DE UN TEMA",
     text: "Cuerpo, reproducción, pubertad, sexualidad, consentimiento, Internet y relaciones.",
     action: "ELEGIR TEMA",
+    href: "/temas",
   },
   {
     number: "04",
     title: "HA PASADO ALGO",
     text: "Has visto, escuchado o te han contado algo que te preocupa.",
     action: "NECESITO ORIENTACIÓN",
+    href: "/orientacion",
     serious: true,
   },
 ];
@@ -38,19 +44,22 @@ export default function Home() {
   return (
     <main>
       <header className="header">
-        <a className="brand" href="#">
+        <Link className="brand" href="/">
           <span className="mark">RR</span>
+
           <span>
             <strong>CRECER</strong>
             <small>MÉTODO RUIZ RIVAS</small>
           </span>
-        </a>
+        </Link>
 
         <nav>
           <a href="#como">Cómo funciona</a>
           <a href="#familias">Para familias</a>
-          <a href="#">Entrar</a>
-          <a className="navButton" href="#empezar">Empezar</a>
+          <Link href="/acceso">Entrar</Link>
+          <Link className="navButton" href="/prepararme">
+            Empezar
+          </Link>
         </nav>
       </header>
 
@@ -72,9 +81,9 @@ export default function Home() {
           <strong>Necesitas que puedan seguir preguntándote.</strong>
         </p>
 
-        <a href="#empezar" className="primary">
+        <Link href="/prepararme" className="primary">
           EMPEZAR GRATIS <span>→</span>
-        </a>
+        </Link>
 
         <p className="micro">
           Para madres, padres y cuidadores · Contenido progresivo según su etapa
@@ -97,7 +106,9 @@ export default function Home() {
 
       <section className="intro" id="familias">
         <div className="sectionTag">NO ES «LA CHARLA»</div>
+
         <h2>Cientos de pequeñas conversaciones.</h2>
+
         <p>
           Una palabra que escucha en el colegio. Una pregunta mientras vais en
           coche. El primer cambio corporal. Una imagen que aparece en Internet.
@@ -112,6 +123,7 @@ export default function Home() {
 
       <section className="choose" id="empezar">
         <div className="sectionTag">EMPECEMOS POR HOY</div>
+
         <h2>¿Qué necesitas?</h2>
 
         <div className="cards">
@@ -121,9 +133,14 @@ export default function Home() {
               key={item.number}
             >
               <span className="cardNumber">{item.number}</span>
+
               <h3>{item.title}</h3>
+
               <p>{item.text}</p>
-              <button>{item.action} →</button>
+
+              <Link href={item.href}>
+                {item.action} →
+              </Link>
             </article>
           ))}
         </div>
@@ -132,7 +149,9 @@ export default function Home() {
       <section className="method" id="como">
         <div>
           <div className="sectionTag">MÉTODO RR</div>
+
           <h2>No vienes solamente a leer.</h2>
+
           <h2 className="accent">Vienes a entrenar.</h2>
 
           <p>
@@ -143,7 +162,9 @@ export default function Home() {
 
         <div className="spot">
           <span>SPOT · 5 KG</span>
+
           <p>Tu hijo te hace una pregunta que no esperabas.</p>
+
           <strong>¿Qué responderías tú?</strong>
 
           <div className="steps">
@@ -162,7 +183,9 @@ export default function Home() {
 
       <section className="stages">
         <div className="sectionTag">CRECE CON ELLOS</div>
+
         <h2>La conversación cambia con la edad.</h2>
+
         <p className="stageIntro">
           No tienes que explicarlo todo hoy. La información gana profundidad a
           medida que crecen.
@@ -172,6 +195,7 @@ export default function Home() {
           {stages.map(([age, title, text]) => (
             <div className="stage" key={age}>
               <strong>{age}</strong>
+
               <div>
                 <b>{title}</b>
                 <p>{text}</p>
@@ -197,12 +221,15 @@ export default function Home() {
 
       <section className="safety">
         <span>CUANDO ENTRENAR NO ES SUFICIENTE</span>
+
         <h2>Hay situaciones que necesitan ayuda.</h2>
+
         <p>
           Si una situación puede implicar riesgo, abuso, coerción o un problema
           de salud, RR · Crecer deja de ser un gimnasio y orienta hacia recursos
           profesionales adecuados.
         </p>
+
         <p className="safetySmall">
           RR · Crecer es una herramienta educativa y no sustituye atención
           médica, psicológica ni servicios de protección infantil.
@@ -211,11 +238,16 @@ export default function Home() {
 
       <section className="closing">
         <span>RR · CRECER</span>
+
         <h2>No necesitas tener todas las respuestas.</h2>
-        <h2 className="accent">Necesitas que puedan seguir preguntándote.</h2>
-        <a href="#empezar" className="primary">
+
+        <h2 className="accent">
+          Necesitas que puedan seguir preguntándote.
+        </h2>
+
+        <Link href="/prepararme" className="primary">
           EMPEZAR RR · CRECER →
-        </a>
+        </Link>
       </section>
 
       <footer>
@@ -223,6 +255,7 @@ export default function Home() {
           <strong>RR · CRECER</strong>
           <span>Un proyecto del Método Ruiz Rivas</span>
         </div>
+
         <span>Educación · Entrenamiento · Conversación</span>
       </footer>
     </main>
