@@ -6165,3 +6165,247 @@ textarea:focus {
     font-size: 27px;
   }
 }
+
+
+
+/* ========================================
+   RR · CRECER · HOME V3
+   PALETA BLOQUEADA: BLANCO + AZUL NOCHE + DORADO
+   Esta capa afecta SOLO a .premiumHome.
+======================================== */
+
+.premiumHome {
+  --home-white: #ffffff;
+  --home-navy: #0b1928;
+  --home-navy-2: #17324a;
+  --home-gold: #b88e48;
+  --home-gold-light: #e0c58e;
+  --home-text: #102231;
+  --home-muted: #687782;
+  --home-line: rgba(11,25,40,.13);
+  background: var(--home-white) !important;
+}
+
+/* BLANCO PURO */
+.premiumHome .premiumIntro,
+.premiumHome .premiumChoose,
+.premiumHome .premiumStages,
+.premiumHome .premiumSafety {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* AZUL NOCHE */
+.premiumHome .premiumImpact,
+.premiumHome .premiumKgStory,
+.premiumHome .premiumMethod,
+.premiumHome .premiumPrinciple,
+.premiumHome .premiumClosing {
+  background: linear-gradient(135deg, #07131f 0%, #0b1928 55%, #17324a 100%) !important;
+}
+
+/* INTRO BLANCA */
+.premiumHome .premiumIntro h2,
+.premiumHome .premiumIntroText blockquote {
+  color: var(--home-navy) !important;
+}
+
+.premiumHome .premiumIntroText p {
+  color: var(--home-muted) !important;
+}
+
+/* PUERTAS BLANCAS */
+.premiumHome .premiumChoose .premiumSectionHead h2 {
+  color: var(--home-navy) !important;
+}
+
+.premiumHome .premiumChoose .premiumSectionHead > p {
+  color: var(--home-muted) !important;
+}
+
+.premiumHome .premiumCard {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-color: var(--home-line) !important;
+}
+
+.premiumHome .premiumCard h3,
+.premiumHome .premiumCard > strong {
+  color: var(--home-navy) !important;
+}
+
+.premiumHome .premiumCard p {
+  color: var(--home-muted) !important;
+}
+
+.premiumHome .premiumCardSerious {
+  background: linear-gradient(135deg, #0b1928, #17324a) !important;
+}
+
+.premiumHome .premiumCardSerious h3,
+.premiumHome .premiumCardSerious > strong {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumCardSerious p {
+  color: rgba(255,255,255,.68) !important;
+}
+
+/* MÉTODO RR: TODO OSCURO, SIN GRIS/BEIGE */
+.premiumHome .premiumMethod {
+  color: #ffffff;
+}
+
+.premiumHome .premiumMethod .sectionTag {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumMethod h2,
+.premiumHome .premiumMethod h2 span,
+.premiumHome .premiumMethodCopy > p,
+.premiumHome .premiumMethodNote strong {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumMethod h2 span {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumMethodCopy > p {
+  color: rgba(255,255,255,.66) !important;
+}
+
+.premiumHome .premiumMethodNote {
+  border-color: rgba(255,255,255,.15) !important;
+}
+
+.premiumHome .premiumMethodNote span {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumTraining {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(255,255,255,.17) !important;
+  box-shadow: 0 24px 65px rgba(0,0,0,.18) !important;
+  backdrop-filter: blur(10px);
+}
+
+.premiumHome .premiumTrainingTop {
+  color: rgba(255,255,255,.58) !important;
+}
+
+.premiumHome .premiumTrainingTop b,
+.premiumHome .premiumTrainingQuestion small,
+.premiumHome .premiumTrainingSteps span {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumTrainingQuestion p,
+.premiumHome .premiumTrainingSteps b {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumTrainingSteps {
+  border-color: rgba(255,255,255,.14) !important;
+}
+
+.premiumHome .premiumTrainingSteps > div {
+  border-color: rgba(255,255,255,.14) !important;
+}
+
+.premiumHome .premiumTrainingSteps small {
+  color: rgba(255,255,255,.58) !important;
+}
+
+.premiumHome .premiumTrainingButton {
+  background: var(--home-gold) !important;
+  color: #ffffff !important;
+}
+
+/* EDADES: BLANCO PURO */
+.premiumHome .premiumStages .premiumSectionHead h2 {
+  color: var(--home-navy) !important;
+}
+
+.premiumHome .premiumStages .premiumSectionHead > p,
+.premiumHome .premiumStage p,
+.premiumHome .premiumStageIndex {
+  color: var(--home-muted) !important;
+}
+
+.premiumHome .premiumStageList,
+.premiumHome .premiumStage {
+  border-color: var(--home-line) !important;
+}
+
+.premiumHome .premiumStage {
+  background: #ffffff !important;
+}
+
+.premiumHome .premiumStage b,
+.premiumHome .premiumStageArrow {
+  color: var(--home-navy) !important;
+}
+
+.premiumHome .premiumStage > strong {
+  color: var(--home-gold) !important;
+}
+
+/* SEGURIDAD: BLANCO PURO */
+.premiumHome .premiumSafety {
+  border-color: var(--home-line) !important;
+}
+
+.premiumHome .premiumSafety h2,
+.premiumHome .premiumSafetyText a {
+  color: var(--home-navy) !important;
+}
+
+.premiumHome .premiumSafetyText p {
+  color: var(--home-muted) !important;
+}
+
+/* CIERRE: AZUL NOCHE */
+.premiumHome .premiumClosing > span {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumClosing h2 {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumClosing p {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumClosing .premiumPrimary {
+  background: var(--home-gold) !important;
+  border-color: var(--home-gold) !important;
+}
+
+/* FOOTER BLANCO */
+.premiumHome .premiumFooter {
+  background: #ffffff !important;
+  border-color: var(--home-line) !important;
+  color: var(--home-muted) !important;
+}
+
+.premiumHome .premiumFooter strong {
+  color: var(--home-navy) !important;
+}
+
+@media (hover:hover) {
+  .premiumHome .premiumCard:not(.premiumCardSerious):hover {
+    background: #ffffff !important;
+  }
+
+  .premiumHome .premiumStage:hover {
+    background: #ffffff !important;
+    box-shadow: inset 0 0 0 1px rgba(184,142,72,.18);
+  }
+
+  .premiumHome .premiumTrainingButton:hover {
+    background: var(--home-gold-light) !important;
+    color: var(--home-navy) !important;
+  }
+}
