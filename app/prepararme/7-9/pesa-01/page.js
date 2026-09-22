@@ -120,6 +120,17 @@ export default function Pesa09() {
           <span className="trainingTag">SPOT · RESPUESTA REAL</span>
           <h1>«Papá, ¿qué significa follar?»</h1>
 
+          <div className="trainingVisual">
+            <img
+              src="/pesa01.png"
+              alt="Situación cotidiana para iniciar el entrenamiento de la Pesa 01"
+            />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · SITUACIÓN COTIDIANA</span>
+              <p>Primero ocurre la vida. Después entrenamos cómo responder.</p>
+            </div>
+          </div>
+
           <div className="scene">
             <p>
               No buscamos una respuesta perfecta. Queremos saber desde dónde
