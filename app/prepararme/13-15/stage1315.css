@@ -1,0 +1,82 @@
+/* RR · CRECER · 13–15 · DECIDIR
+   Hoja aislada. No depende del sistema premium antiguo. */
+
+.rrStage1315Page {
+  --n:#081522; --n2:#0b1928; --n3:#132b40;
+  --g:#b88e48; --gl:#e0c58e; --w:#fff;
+  --mut:rgba(255,255,255,.64); --line:rgba(255,255,255,.13);
+  min-height:100vh; overflow-x:hidden;
+  background:linear-gradient(180deg,#081522 0%,#0b1928 48%,#07131f 100%) !important;
+  color:#fff;
+}
+.rrStage1315Page *{box-sizing:border-box}
+.rrStage1315Page a{color:inherit;text-decoration:none}
+
+.rrStage1315Header{width:min(1240px,calc(100% - 64px));height:88px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.rrStage1315Brand{display:flex;align-items:center;gap:12px}.rrStage1315Mark{width:42px;height:42px;border:1px solid rgba(224,197,142,.45);border-radius:50%;display:grid;place-items:center;color:var(--gl);font-family:Georgia,serif}
+.rrStage1315BrandText{display:flex;flex-direction:column}.rrStage1315BrandText b{font-size:12px;letter-spacing:.18em}.rrStage1315BrandText small{font-size:8px;letter-spacing:.13em;color:rgba(255,255,255,.45)}
+.rrStage1315Nav{display:flex;gap:30px}.rrStage1315Nav a{font-size:11px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.65)}
+
+.rrStage1315Hero{position:relative;width:min(1240px,calc(100% - 64px));margin:auto;padding:94px 0 88px;display:grid;grid-template-columns:1.3fr .7fr;gap:90px;align-items:end;background:transparent !important}
+.rrStage1315Hero:after{content:"13—15";position:absolute;right:-25px;top:10px;font:190px/1 Georgia,serif;color:rgba(255,255,255,.018);pointer-events:none}
+.rrStage1315HeroCopy,.rrStage1315HeroPanel{position:relative;z-index:1}
+.rrStage1315Eyebrow,.rrStage1315HeroPanel>span,.rrStage1315Principle>span,.rrStage1315Intro span,.rrStage1315SectionHeading span,.rrStage1315Method>div:first-child>span,.rrStage1315Safety>div:first-child>span,.rrStage1315Closing>span{color:var(--gl);font-size:10px;font-weight:800;letter-spacing:.16em}
+.rrStage1315Hero h1{margin:22px 0 26px;max-width:780px;font:400 clamp(58px,6.1vw,92px)/.93 Georgia,serif;letter-spacing:-.045em;color:#fff !important}
+.rrStage1315Hero h1 em{display:block;color:var(--gl)!important;font-weight:400}
+.rrStage1315Lead{max-width:690px;margin:0;color:var(--mut)!important;font-size:16px;line-height:1.8}
+.rrStage1315HeroActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.rrStage1315Primary,.rrStage1315Secondary,.rrStage1315SafetyButton{min-height:52px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;gap:20px;font-size:10px;font-weight:900;letter-spacing:.11em}
+.rrStage1315Primary{background:var(--g)!important;border:1px solid var(--g);color:#fff!important}.rrStage1315Secondary{border:1px solid rgba(255,255,255,.22);color:#fff!important}
+.rrStage1315HeroPanel{padding:32px 0 8px 32px;border-left:1px solid rgba(224,197,142,.38)}
+.rrStage1315HeroPanel strong{display:block;margin:11px 0 17px;font:400 27px/1.1 Georgia,serif;color:#fff!important}.rrStage1315HeroPanel p{margin:0;color:rgba(255,255,255,.58)!important;font-size:13px;line-height:1.7}
+.rrStage1315Scale{margin-top:26px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}.rrStage1315Scale span{color:var(--gl);font-size:9px;font-weight:800}.rrStage1315Scale div{height:1px;background:linear-gradient(90deg,var(--g),rgba(224,197,142,.18))}
+
+.rrStage1315Principle{width:min(1240px,calc(100% - 64px));margin:auto;padding:68px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rrStage1315Principle blockquote{max-width:1050px;margin:20px 0 0;font:400 clamp(30px,3.2vw,50px)/1.13 Georgia,serif;color:#fff!important}.rrStage1315Principle blockquote strong{color:var(--gl)!important;font-weight:400}
+
+.rrStage1315Intro{width:min(1240px,calc(100% - 64px));margin:auto;padding:76px 0;display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;border-bottom:1px solid var(--line)}
+.rrStage1315Intro h2,.rrStage1315SectionHeading h2,.rrStage1315Method h2{margin:12px 0 0;font:400 clamp(36px,4vw,58px)/1.04 Georgia,serif;color:#fff!important}
+.rrStage1315Intro>p,.rrStage1315SectionHeading>p{margin:0;color:var(--mut)!important;font-size:14px;line-height:1.8}
+
+.rrStage1315Weights{width:min(1240px,calc(100% - 64px));margin:auto;padding:94px 0}
+.rrStage1315SectionHeading{display:grid;grid-template-columns:1fr .75fr;gap:70px;align-items:end;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.rrStage1315WeightsList{display:grid}
+.rrStage1315WeightCard{display:grid;grid-template-columns:170px 54px 110px minmax(0,1fr) 46px;gap:26px;align-items:center;min-height:170px;padding:22px 0;border-bottom:1px solid var(--line);background:transparent!important;color:#fff!important}
+.rrStage1315WeightCard.featured{background:rgba(184,142,72,.055)!important}
+.rrStage1315WeightVisual{position:relative;width:170px;height:118px;overflow:hidden;border-radius:3px;background:var(--n3)}
+.rrStage1315WeightVisual img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.72)}.rrStage1315WeightShade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(8,21,34,.78))}
+.rrStage1315WeightVisual>span{position:absolute;left:12px;bottom:10px;font-size:8px;font-weight:800;letter-spacing:.12em;color:#fff}
+.rrStage1315WeightNumber{font:34px Georgia,serif;color:rgba(255,255,255,.22)}.rrStage1315WeightMeta{display:flex;flex-direction:column;gap:7px}.rrStage1315WeightMeta span{color:var(--gl);font-size:10px;font-weight:800}.rrStage1315WeightMeta small{color:rgba(255,255,255,.45);font-size:8px;font-weight:800;letter-spacing:.12em}
+.rrStage1315WeightContent>span{color:var(--gl);font-size:8px;font-weight:800;letter-spacing:.12em}.rrStage1315WeightContent h3{margin:7px 0;font:400 clamp(21px,2vw,29px)/1.06 Georgia,serif;color:#fff!important}.rrStage1315WeightContent p{max-width:670px;margin:0;color:rgba(255,255,255,.55)!important;font-size:12px;line-height:1.6}
+.rrStage1315WeightArrow{width:42px;height:42px;border:1px solid rgba(224,197,142,.26);border-radius:50%;display:grid;place-items:center;color:var(--gl)}
+
+.rrStage1315Journey{padding:92px max(32px,calc((100vw - 1240px)/2));background:rgba(255,255,255,.025)!important;border-block:1px solid var(--line)}
+.rrStage1315JourneyGrid{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.rrStage1315JourneyGrid article,.rrStage1315MethodSteps article{padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent!important}
+.rrStage1315JourneyGrid article{min-height:210px}.rrStage1315JourneyGrid article>span,.rrStage1315MethodSteps article>span{font:22px Georgia,serif;color:var(--gl)}
+.rrStage1315JourneyGrid strong,.rrStage1315MethodSteps strong{display:block;margin-top:32px;color:#fff!important;font-size:10px;letter-spacing:.12em}.rrStage1315JourneyGrid p,.rrStage1315MethodSteps p{margin:10px 0 0;color:rgba(255,255,255,.56)!important;font-size:12px;line-height:1.65}
+
+.rrStage1315Method{width:min(1240px,calc(100% - 64px));margin:auto;padding:94px 0}.rrStage1315Method>div:first-child{padding-bottom:38px;border-bottom:1px solid var(--line)}
+.rrStage1315MethodSteps{display:grid;grid-template-columns:repeat(5,1fr);border-left:1px solid var(--line)}.rrStage1315MethodSteps article{min-height:230px;padding:28px 22px}
+
+.rrStage1315Safety{width:min(1240px,calc(100% - 64px));margin:0 auto 94px;padding:46px;display:grid;grid-template-columns:1fr 1.15fr auto;gap:46px;align-items:center;border:1px solid rgba(224,197,142,.26);background:rgba(184,142,72,.055)!important}
+.rrStage1315Safety h2{margin:10px 0 0;font:400 30px/1.05 Georgia,serif;color:#fff!important}.rrStage1315Safety>p{margin:0;color:var(--mut)!important;font-size:13px;line-height:1.7}.rrStage1315SafetyButton{border:1px solid var(--g);color:var(--gl)!important}
+
+.rrStage1315Closing{padding:105px max(32px,calc((100vw - 1050px)/2));text-align:center;background:radial-gradient(circle at 50% 0%,rgba(184,142,72,.12),transparent 34%),#07131f!important;border-top:1px solid var(--line)}
+.rrStage1315Closing h2{max-width:980px;margin:18px auto 36px;font:400 clamp(42px,5vw,72px)/1 Georgia,serif;color:#fff!important}.rrStage1315Closing h2 em{display:block;color:var(--gl)!important;font-weight:400}
+.rrStage1315Footer{width:min(1240px,calc(100% - 64px));min-height:100px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line)}.rrStage1315Footer>div{display:flex;gap:18px;align-items:center}.rrStage1315Footer strong{font-size:11px;letter-spacing:.12em}.rrStage1315Footer span,.rrStage1315Footer a{color:rgba(255,255,255,.46);font-size:10px}
+
+@media(hover:hover){
+.rrStage1315WeightCard:hover{background:rgba(255,255,255,.035)!important}
+.rrStage1315WeightCard:hover .rrStage1315WeightArrow{background:var(--g);color:#fff}
+.rrStage1315Primary:hover{background:var(--gl)!important;color:var(--n)!important}
+}
+@media(max-width:980px){
+.rrStage1315Hero{grid-template-columns:1fr}.rrStage1315Intro,.rrStage1315SectionHeading{grid-template-columns:1fr;gap:28px}.rrStage1315JourneyGrid{grid-template-columns:repeat(2,1fr)}.rrStage1315MethodSteps{grid-template-columns:repeat(2,1fr)}.rrStage1315Safety{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+.rrStage1315Header,.rrStage1315Hero,.rrStage1315Principle,.rrStage1315Intro,.rrStage1315Weights,.rrStage1315Method,.rrStage1315Safety,.rrStage1315Footer{width:calc(100% - 36px)}
+.rrStage1315Header{height:74px}.rrStage1315Nav{gap:14px}.rrStage1315Nav a:first-child{display:none}.rrStage1315Hero{padding:68px 0 60px}.rrStage1315Hero h1{font-size:clamp(48px,14vw,68px)}.rrStage1315HeroPanel{padding:26px 0 0;border-left:0;border-top:1px solid rgba(224,197,142,.35)}
+.rrStage1315WeightCard{grid-template-columns:96px 1fr 42px;gap:14px;padding:20px 0}.rrStage1315WeightVisual{grid-row:1/span 2;width:96px;height:108px}.rrStage1315WeightNumber{display:none}.rrStage1315WeightMeta,.rrStage1315WeightContent{grid-column:2}.rrStage1315WeightContent p{display:none}.rrStage1315WeightArrow{grid-column:3;grid-row:1/span 2}
+.rrStage1315Journey{padding:68px 18px}.rrStage1315JourneyGrid,.rrStage1315MethodSteps{grid-template-columns:1fr}.rrStage1315Safety{padding:28px 22px;grid-template-columns:1fr;gap:24px}.rrStage1315Closing{padding:78px 20px}.rrStage1315Footer{padding:26px 0;flex-direction:column;align-items:flex-start;gap:18px}
+}
