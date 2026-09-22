@@ -3,6 +3,7 @@ import Link from "next/link";
 const pesas = [
   {
     id: "01",
+    imagen: "/pesa01.png",
     kg: "5 → 10 KG",
     nivel: "DESCUBRIR",
     titulo: "PAPÁ, ¿QUÉ SIGNIFICA...?",
@@ -14,6 +15,7 @@ const pesas = [
   },
   {
     id: "02",
+    imagen: "/pesa02.png",
     kg: "5 → 10 KG",
     nivel: "DESCUBRIR",
     titulo: "DALE UN BESO",
@@ -25,6 +27,7 @@ const pesas = [
   },
   {
     id: "03",
+    imagen: "/pesa03.png",
     kg: "5 → 10 KG",
     nivel: "DESCUBRIR",
     titulo: "ES NUESTRO SECRETO",
@@ -36,6 +39,7 @@ const pesas = [
   },
   {
     id: "04",
+    imagen: "/pesa04.png",
     kg: "5 → 10 KG",
     nivel: "RECONOCER",
     titulo: "¿POR QUÉ NO PUEDO ENTRAR?",
@@ -47,6 +51,7 @@ const pesas = [
   },
   {
     id: "05",
+    imagen: "/pesa05.png",
     kg: "5 → 10 KG",
     nivel: "RECONOCER",
     titulo: "¿DE DÓNDE VIENEN LOS BEBÉS?",
@@ -58,6 +63,7 @@ const pesas = [
   },
   {
     id: "06",
+    imagen: "/pesa06.png",
     kg: "5 → 10 KG",
     nivel: "RECONOCER",
     titulo: "¿POR QUÉ SE LLAMA PENE / VULVA?",
@@ -69,6 +75,7 @@ const pesas = [
   },
   {
     id: "07",
+    imagen: "/pesa07.png",
     kg: "10 → 20 KG",
     nivel: "COMBINAR",
     titulo: "ME HA SALIDO ESTO EN EL MÓVIL",
@@ -80,6 +87,7 @@ const pesas = [
   },
   {
     id: "08",
+    imagen: "/pesa08.png",
     kg: "20 → 40 KG",
     nivel: "DECIDIR",
     titulo: "INTEGRACIÓN",
@@ -91,6 +99,7 @@ const pesas = [
   },
   {
     id: "09",
+    imagen: "/pesa09.png",
     kg: "10 → 20 → 30 KG",
     nivel: "TRANSFERIR",
     titulo: "¿POR QUÉ HACE ESOS RUIDOS?",
@@ -204,6 +213,14 @@ export default function Comprender79() {
               href={pesa.href}
               key={pesa.id}
             >
+              <div className="premiumWeightVisual">
+                <img
+                  src={pesa.imagen}
+                  alt={`Imagen del entrenamiento ${pesa.id}: ${pesa.titulo}`}
+                />
+                <span>PESA {pesa.id}</span>
+              </div>
+
               <div className="premiumWeightId">
                 <small>PESA</small>
                 <strong>{pesa.id}</strong>
