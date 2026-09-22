@@ -1,13 +1,13 @@
 :root {
-  --cream: #f5f0e6;
-  --cream2: #ebe3d5;
-  --ink: #182b2a;
-  --green: #244b46;
-  --green2: #315f58;
-  --gold: #b38b47;
-  --muted: #6d746f;
-  --line: rgba(24, 43, 42, 0.14);
-  --white: #fffdf8;
+  --cream: #ffffff;
+  --cream2: #f5f7f9;
+  --ink: #102231;
+  --green: #0b1928;
+  --green2: #17324a;
+  --gold: #b88e48;
+  --muted: #687782;
+  --line: rgba(11, 25, 40, 0.13);
+  --white: #ffffff;
 }
 
 * {
@@ -46,7 +46,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  background: rgba(245, 240, 230, 0.96);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .brand {
@@ -222,7 +222,7 @@ nav {
 .intro > p {
   max-width: 760px;
   margin: auto;
-  color: #c8ccc6;
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.9;
   font-size: 16px;
 }
@@ -265,7 +265,7 @@ blockquote strong {
 .card {
   min-height: 320px;
   padding: 38px;
-  background: rgba(255, 255, 255, 0.32);
+  background: #ffffff;
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
@@ -274,7 +274,7 @@ blockquote strong {
 
 .card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.55);
+  background: #ffffff;
 }
 
 .cardNumber {
@@ -501,7 +501,7 @@ blockquote strong {
 .safety {
   padding: 110px 15%;
   text-align: center;
-  background: #e9e0d1;
+  background: #f5f7f9;
 }
 
 .safety > span {
@@ -734,7 +734,7 @@ footer strong {
   margin: 55px auto 0;
   padding: 24px 28px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.28);
+  background: #ffffff;
   text-align: left;
 }
 
@@ -1044,7 +1044,7 @@ textarea:focus {
 .emotionGrid button {
   padding: 20px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.3);
+  background: #f5f7f9;
   color: var(--ink);
   text-align: left;
   cursor: pointer;
@@ -1066,7 +1066,7 @@ textarea:focus {
 .factStory > div {
   padding: 28px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.35);
+  background: #ffffff;
 }
 
 .factStory span,
@@ -1132,7 +1132,7 @@ textarea:focus {
   margin: 35px 0;
   padding: 28px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.35);
+  background: #ffffff;
 }
 
 .yourFirstAnswer p {
@@ -1167,7 +1167,7 @@ textarea:focus {
   width: 100%;
   padding: 22px 24px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.4);
+  background: #f5f7f9;
   color: var(--ink);
   text-align: left;
   font-size: 14px;
@@ -1481,7 +1481,7 @@ textarea:focus {
   margin: 48px 0;
   padding: 34px;
   border: 1px solid rgba(179, 139, 71, 0.38);
-  background: #fffdf8;
+  background: #ffffff;
   box-shadow: 0 18px 50px rgba(24, 43, 42, 0.06);
 }
 
@@ -1694,6 +1694,788 @@ textarea:focus {
     min-height: 52px;
     padding: 15px;
     font-size: 9px;
+  }
+}
+
+/* ========================================
+   RR · CRECER · PREMIUM 2026
+   Blanco + azul noche + dorado champán
+   Capa final de acabado y movimiento
+======================================== */
+
+:root {
+  --rr-navy: #0b1928;
+  --rr-navy-2: #17324a;
+  --rr-navy-3: #1c3b56;
+  --rr-white: #ffffff;
+  --rr-soft: #f5f7f9;
+  --rr-gold: #b88e48;
+  --rr-gold-light: #e0c58e;
+  --rr-text: #102231;
+  --rr-muted: #687782;
+  --rr-line: rgba(11, 25, 40, 0.13);
+  --rr-shadow: 0 18px 45px rgba(11, 25, 40, 0.10);
+  --rr-shadow-hover: 0 22px 52px rgba(11, 25, 40, 0.16);
+}
+
+body {
+  background: var(--rr-white);
+  color: var(--rr-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.header,
+.trainingHeader {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: var(--rr-line);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.mark {
+  border-color: var(--rr-gold);
+  color: var(--rr-gold);
+  box-shadow: 0 6px 20px rgba(184, 142, 72, 0.08);
+}
+
+.navButton {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--rr-navy);
+  color: var(--rr-navy);
+  transition: color .25s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.navButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--rr-navy);
+  transform: translateY(102%);
+  transition: transform .3s cubic-bezier(.2,.8,.2,1);
+  z-index: -1;
+}
+
+.sectionTag,
+.eyebrow,
+.trainingTag,
+.gymHeading > span,
+.gymPrinciple > span {
+  color: var(--rr-gold);
+}
+
+/* HOME */
+
+.hero,
+.choose,
+.stages,
+.closing,
+.agePage,
+.gymPage,
+.trainingPage {
+  background: var(--rr-white);
+}
+
+.hero h1,
+.ageHero h1,
+.gymHero h1,
+.trainingScreen > h1,
+.trainingScreen > h2,
+.bigQuestion h2 {
+  color: var(--rr-navy);
+}
+
+.hero h1 span,
+.accent,
+.gymHero h1 em {
+  color: var(--rr-navy-2);
+}
+
+.primary,
+.trainingButton {
+  position: relative;
+  overflow: hidden;
+  background: var(--rr-navy);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(11, 25, 40, 0.14);
+  transition: transform .2s ease, box-shadow .2s ease, color .25s ease;
+}
+
+.primary::before,
+.trainingButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--rr-gold), #d7bb82);
+  transform: translateX(-102%);
+  transition: transform .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.primary > *,
+.trainingButton > * {
+  position: relative;
+  z-index: 1;
+}
+
+.intro,
+.twoSides,
+.gymPrinciple {
+  background: linear-gradient(125deg, var(--rr-navy), var(--rr-navy-2));
+}
+
+.intro {
+  color: #fff;
+}
+
+.method {
+  background: var(--rr-soft);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-color: var(--rr-line);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(11,25,40,.045);
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--rr-gold);
+  transition: width .32s cubic-bezier(.2,.8,.2,1);
+}
+
+.card.serious {
+  background: linear-gradient(135deg, var(--rr-navy), var(--rr-navy-2));
+}
+
+.safety {
+  background: var(--rr-soft);
+}
+
+/* EDADES */
+
+.ageCard {
+  position: relative;
+  overflow: hidden;
+  transition: transform .22s ease, background .22s ease,
+    box-shadow .22s ease, padding .22s ease;
+}
+
+.ageCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 3px;
+  background: var(--rr-gold);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform .25s ease;
+}
+
+.ageNumber {
+  color: var(--rr-gold);
+}
+
+.ageArrow {
+  color: var(--rr-navy);
+  transition: transform .22s ease;
+}
+
+.ageNote {
+  background: linear-gradient(125deg, var(--rr-navy), var(--rr-navy-2));
+}
+
+/* GIMNASIO */
+
+.progressBox {
+  background: #fff;
+  border-color: var(--rr-line);
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(11,25,40,.055);
+}
+
+.progressFill,
+.trainingProgressFill {
+  background: linear-gradient(90deg, var(--rr-gold), var(--rr-gold-light));
+}
+
+.gymContent {
+  background: var(--rr-white);
+}
+
+.weightCard {
+  position: relative;
+  overflow: hidden;
+  transition: transform .22s ease, background .22s ease,
+    box-shadow .22s ease, padding .22s ease;
+}
+
+.weightCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 3px;
+  background: var(--rr-gold);
+  transform: scaleY(0);
+  transition: transform .24s ease;
+}
+
+.weightNumber {
+  color: var(--rr-gold);
+}
+
+.weightBody > span,
+.weightAvailable {
+  color: var(--rr-navy-2);
+}
+
+/* ENTRENAMIENTOS */
+
+.trainingHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.trainingProgress {
+  background: #e9eef1;
+}
+
+.trainingScreen {
+  width: min(820px, calc(100% - 44px));
+}
+
+.trainingTag {
+  color: var(--rr-gold);
+}
+
+.scene {
+  position: relative;
+  overflow: hidden;
+  margin: 45px 0;
+  padding: 34px;
+  background: linear-gradient(125deg, var(--rr-navy), var(--rr-navy-2));
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(11, 25, 40, 0.15);
+  color: #fff;
+}
+
+.scene::after {
+  content: "RR";
+  position: absolute;
+  right: 18px;
+  bottom: -35px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 110px;
+  line-height: 1;
+  color: rgba(255,255,255,.035);
+  pointer-events: none;
+}
+
+.scene > p {
+  position: relative;
+  z-index: 1;
+  color: rgba(255,255,255,.72);
+}
+
+.scene blockquote,
+.scene blockquote strong,
+.scene blockquote b,
+.scene blockquote em,
+.scene p strong {
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+
+.scene blockquote {
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+textarea {
+  border-radius: 12px;
+  background: #fff;
+  border-color: var(--rr-line);
+  box-shadow: inset 0 1px 0 rgba(11,25,40,.02);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+textarea:focus {
+  border-color: var(--rr-gold);
+  box-shadow: 0 0 0 4px rgba(184,142,72,.10);
+}
+
+.emotionGrid {
+  gap: 12px;
+}
+
+.emotionGrid button,
+.choiceList button {
+  position: relative;
+  overflow: hidden;
+  min-height: 68px;
+  border: 1px solid var(--rr-line);
+  border-radius: 13px;
+  background: var(--rr-soft);
+  color: var(--rr-navy);
+  transition: transform .2s ease, box-shadow .2s ease,
+    border-color .2s ease, color .25s ease, background .25s ease;
+}
+
+.emotionGrid button::before,
+.choiceList button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, var(--rr-navy), var(--rr-navy-3));
+  transform: translateX(-102%);
+  transition: transform .32s cubic-bezier(.2,.8,.2,1);
+  z-index: 0;
+}
+
+.emotionGrid button > *,
+.choiceList button > * {
+  position: relative;
+  z-index: 1;
+}
+
+.emotionGrid button.selected,
+.choiceList button.selectedChoice {
+  background: var(--rr-navy);
+  border-color: var(--rr-navy);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(11,25,40,.14);
+}
+
+.emotionGrid button.selected::before,
+.choiceList button.selectedChoice::before {
+  transform: translateX(0);
+}
+
+.factStory {
+  gap: 14px;
+}
+
+.factStory > div,
+.yourFirstAnswer,
+.reflectionBox,
+.criterionReminder,
+.comparison > div {
+  background: #fff;
+  border-color: var(--rr-line);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(11,25,40,.045);
+}
+
+.conversation > div {
+  background: #fff;
+  border-color: var(--rr-line);
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(11,25,40,.04);
+}
+
+.conversation .childAnswer {
+  background: var(--rr-navy);
+  border-color: var(--rr-navy);
+  color: #fff;
+}
+
+.conversation .childAnswer p,
+.conversation .childAnswer strong {
+  color: #fff !important;
+}
+
+.nextSpot {
+  background: linear-gradient(125deg, var(--rr-navy), var(--rr-navy-2));
+  border-radius: 16px;
+  box-shadow: var(--rr-shadow);
+}
+
+.finishMark {
+  border-color: var(--rr-gold);
+  color: var(--rr-gold);
+  box-shadow: 0 8px 28px rgba(184,142,72,.08);
+}
+
+.finishScreen > h2 {
+  color: var(--rr-navy-2);
+}
+
+/* PUENTES RR */
+
+.puenteRR {
+  border-color: rgba(184,142,72,.32);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 16px 42px rgba(11,25,40,.07);
+}
+
+.puenteRRIcon {
+  border-color: var(--rr-gold);
+  color: var(--rr-gold);
+}
+
+.puenteRR h2,
+.puenteRRRoute strong {
+  color: var(--rr-navy);
+}
+
+.puenteRRPrimary,
+.puenteRRSecondary {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform .2s ease, box-shadow .2s ease,
+    background .2s ease, color .2s ease;
+}
+
+.puenteRRPrimary {
+  background: var(--rr-navy);
+  border-color: var(--rr-navy);
+  color: #fff;
+  box-shadow: 0 9px 24px rgba(11,25,40,.12);
+}
+
+.puenteRRSecondary {
+  background: #fff;
+  border-color: var(--rr-line);
+  color: var(--rr-navy);
+}
+
+.puenteRRSafety {
+  border-color: var(--rr-navy);
+  background: linear-gradient(125deg, var(--rr-navy), var(--rr-navy-2));
+  color: #fff;
+}
+
+.puenteRRSafety h2,
+.puenteRRSafety .puenteRRText {
+  color: #fff;
+}
+
+/* MOVIMIENTO SOLO DONDE HAY RATÓN */
+
+@media (hover: hover) and (pointer: fine) {
+  .navButton:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(11,25,40,.12);
+  }
+
+  .navButton:hover::before {
+    transform: translateY(0);
+  }
+
+  .primary:hover,
+  .trainingButton:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--rr-shadow-hover);
+    color: var(--rr-navy);
+  }
+
+  .primary:hover::before,
+  .trainingButton:hover::before {
+    transform: translateX(0);
+  }
+
+  .card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(184,142,72,.5);
+    box-shadow: var(--rr-shadow-hover);
+  }
+
+  .card:hover::after {
+    width: 100%;
+  }
+
+  .ageCard:hover {
+    padding-left: 22px;
+    padding-right: 22px;
+    background: var(--rr-soft);
+    box-shadow: 0 10px 28px rgba(11,25,40,.05);
+  }
+
+  .ageCard:hover::before {
+    transform: scaleY(1);
+  }
+
+  .ageCard:hover .ageArrow {
+    transform: translateX(7px);
+  }
+
+  .weightCard:not(.locked):hover {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: var(--rr-soft);
+    box-shadow: 0 10px 28px rgba(11,25,40,.045);
+  }
+
+  .weightCard:not(.locked):hover::before {
+    transform: scaleY(1);
+  }
+
+  .emotionGrid button:hover,
+  .choiceList button:hover {
+    transform: translateY(-3px);
+    border-color: var(--rr-gold);
+    box-shadow: 0 10px 25px rgba(11,25,40,.08);
+    background: #fff;
+  }
+
+  .emotionGrid button.selected:hover,
+  .choiceList button.selectedChoice:hover {
+    color: #fff;
+  }
+
+  .puenteRRPrimary:hover {
+    background: var(--rr-navy-2);
+    border-color: var(--rr-navy-2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(11,25,40,.16);
+  }
+
+  .puenteRRSecondary:hover {
+    background: var(--rr-soft);
+    transform: translateY(-2px);
+  }
+}
+
+/* TACTO */
+
+.primary:active,
+.trainingButton:active,
+.navButton:active,
+.emotionGrid button:active,
+.choiceList button:active,
+.puenteRRPrimary:active,
+.puenteRRSecondary:active {
+  transform: scale(.985);
+}
+
+/* ========================================
+   PREMIUM · MÓVIL
+======================================== */
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    min-height: 66px;
+    padding: 0 16px;
+  }
+
+  .mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 68px 18px 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 13vw, 58px);
+    line-height: .98;
+  }
+
+  .heroText {
+    font-size: 15px;
+  }
+
+  .primary {
+    width: 100%;
+    justify-content: space-between;
+    min-height: 60px;
+    padding: 17px 19px;
+  }
+
+  .cards {
+    gap: 14px;
+  }
+
+  .card {
+    min-height: 245px;
+    padding: 25px 22px;
+    border-radius: 14px;
+  }
+
+  .ageHero h1,
+  .gymHero h1 {
+    font-size: clamp(42px, 12vw, 52px);
+  }
+
+  .ageCard {
+    grid-template-columns: 64px 1fr 24px;
+    gap: 12px;
+  }
+
+  .ageNumber {
+    font-size: 28px;
+  }
+
+  .progressBox {
+    padding: 21px 19px;
+    border-radius: 13px;
+  }
+
+  .weightCard {
+    grid-template-columns: 45px 1fr;
+    gap: 12px;
+    padding: 25px 0;
+  }
+
+  .trainingHeader {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+  .trainingScreen {
+    width: calc(100% - 30px);
+    padding: 44px 0 78px;
+  }
+
+  .trainingScreen > h1 {
+    font-size: clamp(39px, 11vw, 48px);
+    line-height: 1.02;
+  }
+
+  .trainingScreen > h2 {
+    font-size: 27px;
+    line-height: 1.15;
+  }
+
+  .trainingLead {
+    font-size: 15px;
+    line-height: 1.72;
+  }
+
+  .scene {
+    margin: 32px 0;
+    padding: 24px 20px;
+    border-radius: 13px;
+  }
+
+  .scene blockquote {
+    font-size: 21px;
+    line-height: 1.48;
+  }
+
+  textarea {
+    min-height: 145px;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+
+  .trainingButton {
+    min-height: 60px;
+    padding: 17px 18px;
+    border-radius: 12px;
+  }
+
+  .emotionGrid,
+  .factStory,
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .emotionGrid {
+    gap: 10px;
+  }
+
+  .emotionGrid button,
+  .choiceList button {
+    min-height: 64px;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .conversation > div {
+    max-width: 96%;
+    padding: 18px 19px;
+    border-radius: 13px;
+  }
+
+  .conversation p {
+    font-size: 18px;
+  }
+
+  .yourFirstAnswer,
+  .reflectionBox,
+  .criterionReminder,
+  .factStory > div,
+  .comparison > div {
+    padding: 22px 19px;
+    border-radius: 13px;
+  }
+
+  .bigQuestion {
+    margin-top: 44px;
+  }
+
+  .bigQuestion h2 {
+    font-size: 30px;
+  }
+
+  .puenteRR {
+    margin: 34px 0;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .puenteRRRoute {
+    grid-template-columns: 1fr;
+  }
+
+  .puenteRRPrimary,
+  .puenteRRSecondary {
+    min-height: 56px;
+    border-radius: 11px;
+  }
+
+  .nextSpot {
+    padding: 27px 20px;
+    border-radius: 14px;
+  }
+
+  .nextSpot strong {
+    font-size: 29px;
+  }
+}
+
+/* Respeta a usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 
