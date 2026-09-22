@@ -39,6 +39,27 @@ export default function Pesa03() {
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa03.png"
+              alt="Pesa 03 · Es nuestro secreto"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 5 KG</span>
 
           <h1>«Es nuestro secreto.»</h1>
@@ -288,7 +309,10 @@ export default function Pesa03() {
 
             <blockquote>
               Puedes tener privacidad.
-              <strong> Nunca tienes que quedarte solo con algo que necesitas contar.</strong>
+              <strong>
+                {" "}
+                Nunca tienes que quedarte solo con algo que necesitas contar.
+              </strong>
             </blockquote>
           </div>
 
@@ -450,7 +474,10 @@ export default function Pesa03() {
 
             <blockquote>
               Privacidad no significa aislamiento.
-              <strong> Pedir ayuda siempre debe seguir siendo posible.</strong>
+              <strong>
+                {" "}
+                Pedir ayuda siempre debe seguir siendo posible.
+              </strong>
             </blockquote>
           </div>
 
