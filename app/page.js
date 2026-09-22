@@ -3,8 +3,8 @@ import Link from "next/link";
 const paths = [
   {
     number: "01",
-    title: "QUIERO PREPARARME",
-    text: "Entrena conversaciones antes de necesitarlas.",
+    title: "ENTRENA PARA LO QUE VENDRÁ",
+    text: "Practica situaciones reales según la edad de tu hijo. Aprende a preguntar, responder, poner límites y acompañar sin necesitar tener preparada cada respuesta.",
     action: "ENTRAR AL GIMNASIO",
     href: "/prepararme",
   },
@@ -218,7 +218,7 @@ export default function Home() {
           </p>
 
           <div className="premiumMethodNote">
-            <span>DE 5 A 40 KG</span>
+            <span>DE 5 A 30 KG</span>
             <strong>Menos ayuda. Más criterio propio.</strong>
           </div>
         </div>
@@ -299,7 +299,7 @@ export default function Home() {
         <div className="premiumStageList">
           {stages.map(([age, title, text], index) => (
             <Link
-              href={`/prepararme/${age.replace("–", "-").replace("+", "plus")}`}
+              href={`/prepararme/${age.replace("–", "-")}`}
               className="premiumStage"
               key={age}
             >
