@@ -35,16 +35,34 @@ export default function Pesa02() {
         <div
           className="trainingProgressFill"
           style={{
-            width: `${Math.min(
-              ((paso + 1) / totalPasos) * 100,
-              100
-            )}%`,
+            width: `${Math.min(((paso + 1) / totalPasos) * 100, 100)}%`,
           }}
         />
       </div>
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa02.png"
+              alt="Pesa 02 · Cuerpo y límites"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 5 KG</span>
 
           <h1>«Dale un beso a la abuela.»</h1>
@@ -107,7 +125,6 @@ export default function Pesa02() {
 
           <div className="bigQuestion">
             <small>LA PREGUNTA RR ES</small>
-
             <h2>
               ¿Qué puede aprender sobre su cuerpo con nuestra reacción?
             </h2>
@@ -128,7 +145,6 @@ export default function Pesa02() {
           <div className="factStory">
             <div>
               <span>INTENCIÓN DEL ADULTO</span>
-
               <p>
                 «Quiero que aprenda educación, cariño y respeto hacia su
                 familia.»
@@ -137,7 +153,6 @@ export default function Pesa02() {
 
             <div>
               <span>POSIBLE APRENDIZAJE</span>
-
               <p>
                 «A veces tengo que aceptar contacto físico aunque no quiera
                 para que otro adulto no se sienta mal.»
@@ -165,7 +180,6 @@ export default function Pesa02() {
           <div className="factStory">
             <div>
               <span>EDUCACIÓN</span>
-
               <p>
                 Podemos enseñar a saludar, despedirse, dar las gracias y tratar
                 con respeto a otras personas.
@@ -174,7 +188,6 @@ export default function Pesa02() {
 
             <div>
               <span>CUERPO</span>
-
               <p>
                 No necesitamos convertir un beso o un abrazo en la condición
                 para demostrar educación o cariño.
@@ -184,7 +197,6 @@ export default function Pesa02() {
 
           <div className="bigQuestion">
             <small>CRITERIO RR</small>
-
             <h2>
               Puedo pedirte que saludes sin decidir por ti cómo usar tu cuerpo.
             </h2>
@@ -212,7 +224,6 @@ export default function Pesa02() {
           <div className="conversation">
             <div>
               <span>A · NATURAL Y BREVE</span>
-
               <p>
                 “Si no quieres dar un beso, no tienes que darlo. Saluda a la
                 abuela de otra manera.”
@@ -221,7 +232,6 @@ export default function Pesa02() {
 
             <div>
               <span>B · DANDO ALTERNATIVAS</span>
-
               <p>
                 “No tienes que dar un beso si no quieres. Puedes decir hola,
                 darle la mano, chocar los cinco, mandar un beso o elegir otra
@@ -231,7 +241,6 @@ export default function Pesa02() {
 
             <div>
               <span>C · PROTEGIENDO EL LÍMITE DELANTE DEL ADULTO</span>
-
               <p>
                 “Está bien. No tiene que dar un beso si no quiere. Puede elegir
                 cómo saludar.”
@@ -241,7 +250,6 @@ export default function Pesa02() {
 
           <div className="criterionReminder">
             <span>FÍJATE</span>
-
             <p>
               No estamos enseñando «haz lo que quieras». Seguimos enseñando una
               norma social —saludar— pero dejamos de hacer obligatorio el
@@ -262,30 +270,22 @@ export default function Pesa02() {
           <h1>¿Cuál se parece más a ti?</h1>
 
           <div className="choiceList">
-            <button
-              onClick={() => setEstiloElegido("breve")}
-            >
+            <button onClick={() => setEstiloElegido("breve")}>
               {estiloElegido === "breve" ? "✓ " : ""}
               Sería breve: no hace falta besar, pero sí saludar.
             </button>
 
-            <button
-              onClick={() => setEstiloElegido("alternativas")}
-            >
+            <button onClick={() => setEstiloElegido("alternativas")}>
               {estiloElegido === "alternativas" ? "✓ " : ""}
               Le ofrecería varias formas de saludar.
             </button>
 
-            <button
-              onClick={() => setEstiloElegido("proteger")}
-            >
+            <button onClick={() => setEstiloElegido("proteger")}>
               {estiloElegido === "proteger" ? "✓ " : ""}
               Expresaría yo mismo el límite delante del familiar.
             </button>
 
-            <button
-              onClick={() => setEstiloElegido("mezcla")}
-            >
+            <button onClick={() => setEstiloElegido("mezcla")}>
               {estiloElegido === "mezcla" ? "✓ " : ""}
               Mezclaría varias y lo diría con mis propias palabras.
             </button>
@@ -308,9 +308,7 @@ export default function Pesa02() {
           <h1>«Pues la abuela se va a poner triste.»</h1>
 
           <div className="scene">
-            <p>
-              Alguien de la familia sonríe y dice:
-            </p>
+            <p>Alguien de la familia sonríe y dice:</p>
 
             <blockquote>
               —¿No le vas a dar un beso a la abuela?
@@ -343,15 +341,11 @@ export default function Pesa02() {
           <div className="conversation">
             <div>
               <span>A · MUY SENCILLA</span>
-
-              <p>
-                “Puedes querer mucho a la abuela y no querer dar un beso.”
-              </p>
+              <p>“Puedes querer mucho a la abuela y no querer dar un beso.”</p>
             </div>
 
             <div>
               <span>B · SEPARANDO EMOCIÓN Y CUERPO</span>
-
               <p>
                 “Entiendo que no queramos que la abuela se ponga triste, pero
                 no tienes que dar un beso que no quieres dar.”
@@ -360,7 +354,6 @@ export default function Pesa02() {
 
             <div>
               <span>C · BUSCANDO OTRA FORMA DE CARIÑO</span>
-
               <p>
                 “No tienes que darle un beso para demostrar que la quieres.
                 Puedes buscar otra forma de demostrarle cariño que te resulte
@@ -371,7 +364,6 @@ export default function Pesa02() {
 
           <div className="lesson">
             <span>UNA DISTINCIÓN IMPORTANTE</span>
-
             <blockquote>
               Puedo preocuparme por cómo se siente otra persona
               <strong> sin tener que ignorar mis límites corporales.</strong>
@@ -407,7 +399,6 @@ export default function Pesa02() {
 
           <div className="criterionReminder">
             <span>COMPRUEBA</span>
-
             <p>
               ¿Mantienes la educación? ¿Respetas el límite? ¿Evitas hacerle
               responsable de demostrar cariño mediante contacto físico?
@@ -437,22 +428,17 @@ export default function Pesa02() {
           <div className="comparison">
             <div>
               <span>ANTES</span>
-
-              <p>
-                {respuestaInicial || "No sabía qué responder."}
-              </p>
+              <p>{respuestaInicial || "No sabía qué responder."}</p>
             </div>
 
             <div>
               <span>DESPUÉS DE ENTRENAR</span>
-
               <p>{respuestaFinal}</p>
             </div>
           </div>
 
           <div className="lesson">
             <span>LO QUE TE LLEVAS</span>
-
             <blockquote>
               Puedo enseñarte a respetar a los demás
               <strong> sin enseñarte a ignorar tus propios límites.</strong>
@@ -461,9 +447,7 @@ export default function Pesa02() {
 
           <div className="nextSpot">
             <span>SIGUIENTE NIVEL</span>
-
             <strong>10 KG</strong>
-
             <p>
               Hasta ahora hemos protegido el límite de tu hijo. Ahora será él
               quien tenga que respetar el límite de otra persona.
@@ -537,7 +521,6 @@ export default function Pesa02() {
 
           <div className="criterionReminder">
             <span>CRITERIO</span>
-
             <p>
               Cuando alguien pide parar un contacto físico, enseñamos a parar.
               Después podemos hablar de lo ocurrido.
@@ -564,15 +547,11 @@ export default function Pesa02() {
           <div className="conversation">
             <div>
               <span>A · INMEDIATA</span>
-
-              <p>
-                “Ha dicho que pares. Paramos.”
-              </p>
+              <p>“Ha dicho que pares. Paramos.”</p>
             </div>
 
             <div>
               <span>B · EXPLICANDO EL CAMBIO</span>
-
               <p>
                 “Puede haberse estado divirtiendo antes y querer parar ahora.
                 Cuando alguien dice que paremos, paramos.”
@@ -581,7 +560,6 @@ export default function Pesa02() {
 
             <div>
               <span>C · ENSEÑANDO QUÉ HACER DESPUÉS</span>
-
               <p>
                 “Ha dicho que ya no quiere cosquillas. Paramos. Puedes
                 preguntarle si quiere seguir jugando de otra manera.”
@@ -591,7 +569,6 @@ export default function Pesa02() {
 
           <div className="bigQuestion">
             <small>LA REGLA COMPLETA</small>
-
             <h2>Mi NO importa. Tu NO también.</h2>
           </div>
 
@@ -613,19 +590,16 @@ export default function Pesa02() {
           <div className="conversation">
             <div>
               <span>TÚ</span>
-
               <p>Ha dicho «para». Paramos.</p>
             </div>
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-
               <p>¡Pero si se estaba riendo!</p>
             </div>
 
             <div>
               <span>TÚ</span>
-
               <p>
                 Puede haberse estado divirtiendo antes y querer parar ahora.
                 Cuando alguien dice que paremos, paramos.
@@ -635,7 +609,6 @@ export default function Pesa02() {
 
           <div className="lesson">
             <span>OTRA IDEA QUE EMPIEZA A APARECER</span>
-
             <blockquote>
               Querer algo hace un momento
               <strong> no obliga a seguir queriéndolo ahora.</strong>
@@ -661,7 +634,6 @@ export default function Pesa02() {
 
           <div className="lesson">
             <span>CRITERIO RR · CRECER</span>
-
             <blockquote>
               Mi cuerpo merece respeto.
               <strong> El cuerpo del otro también.</strong>
@@ -671,22 +643,18 @@ export default function Pesa02() {
           <div className="factStory">
             <div>
               <span>PUEDO</span>
-
               <p>Decir que no quiero contacto físico.</p>
             </div>
 
             <div>
               <span>DEBO</span>
-
               <p>Parar cuando otra persona no quiere ese contacto.</p>
             </div>
           </div>
 
           <div className="nextSpot">
             <span>LO QUE YA PUEDES LLEVARTE A CASA</span>
-
             <strong>FRASES UTILIZABLES</strong>
-
             <p>
               “No tienes que dar un beso si no quieres.”
               <br />
@@ -700,9 +668,7 @@ export default function Pesa02() {
 
           <div className="nextSpot">
             <span>PRÓXIMA PESA</span>
-
             <strong>«ES NUESTRO SECRETO»</strong>
-
             <p>
               El siguiente entrenamiento distinguirá intimidad, sorpresas,
               secretos y situaciones que siempre deben poder contarse.
