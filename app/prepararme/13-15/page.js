@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import "./stage1315.css";
 
 const pesas = [
   {
@@ -108,54 +107,54 @@ const pesas = [
 
 export default function GimnasioDecidir1315() {
   return (
-    <main className="rrStage1315Page">
-      <header className="rrStage1315Header">
-        <Link href="/" className="rrStage1315Brand" aria-label="RR Crecer, inicio">
-          <span className="rrStage1315Mark">RR</span>
-          <span className="rrStage1315BrandText">
+    <main className="premiumGymPage">
+      <header className="premiumGymHeader">
+        <Link href="/" className="premiumGymBrand" aria-label="RR Crecer, inicio">
+          <span className="premiumGymMark">RR</span>
+          <span className="premiumGymBrandText">
             <b>CRECER</b>
             <small>MÉTODO RUIZ RIVAS</small>
           </span>
         </Link>
 
-        <nav className="rrStage1315Nav" aria-label="Navegación">
+        <nav className="premiumGymNav" aria-label="Navegación">
           <Link href="/">Inicio</Link>
           <Link href="/prepararme">Etapas</Link>
           <Link href="/orientacion">Ha pasado algo</Link>
         </nav>
       </header>
 
-      <section className="rrStage1315Hero">
-        <div className="rrStage1315HeroCopy">
-          <span className="rrStage1315Eyebrow">13–15 AÑOS · DECIDIR</span>
+      <section className="premiumGymHero">
+        <div className="premiumGymHeroCopy">
+          <span className="premiumEyebrow">13–15 AÑOS · DECIDIR</span>
 
           <h1>
             Ya no basta con saber
             <em> qué está bien.</em>
           </h1>
 
-          <p className="rrStage1315Lead">
+          <p className="premiumGymLead">
             Empiezan decisiones que ocurren fuera de tu mirada: relaciones,
             deseo, grupo, intimidad, pantallas y límites. Tu papel cambia. No
             puedes decidir cada vez más cosas por él, pero todavía puedes
             ayudarle a construir el criterio con el que decidirá.
           </p>
 
-          <div className="rrStage1315HeroActions">
+          <div className="premiumGymHeroActions">
             <Link
               href="/prepararme/13-15/pesa-01"
-              className="rrStage1315Primary"
+              className="premiumPrimaryButton"
             >
               EMPEZAR PESA 01 <span>→</span>
             </Link>
 
-            <a href="#pesas" className="rrStage1315Secondary">
+            <a href="#pesas" className="premiumSecondaryButton">
               VER LAS 9 PESAS
             </a>
           </div>
         </div>
 
-        <aside className="rrStage1315HeroPanel">
+        <aside className="premiumGymHeroPanel">
           <span>CAMBIO DE ETAPA</span>
           <strong>DE PREPARARSE A DECIDIR</strong>
           <p>
@@ -164,7 +163,7 @@ export default function GimnasioDecidir1315() {
             mundo.
           </p>
 
-          <div className="rrStage1315Scale">
+          <div className="premiumGymScale">
             <span>20 KG</span>
             <div />
             <span>30 KG</span>
@@ -172,7 +171,7 @@ export default function GimnasioDecidir1315() {
         </aside>
       </section>
 
-      <section className="rrStage1315Principle">
+      <section className="premiumGymPrinciple">
         <span>PRINCIPIO DE ESTA ETAPA</span>
         <blockquote>
           Tu objetivo no es conseguir que tome siempre la decisión que tú
@@ -185,7 +184,7 @@ export default function GimnasioDecidir1315() {
         </blockquote>
       </section>
 
-      <section className="rrStage1315Intro">
+      <section className="premiumGymIntro">
         <div>
           <span>EL NUEVO RETO</span>
           <h2>Menos control. Más criterio.</h2>
@@ -199,8 +198,8 @@ export default function GimnasioDecidir1315() {
         </p>
       </section>
 
-      <section className="rrStage1315Weights" id="pesas">
-        <div className="rrStage1315SectionHeading">
+      <section className="premiumWeightsSection" id="pesas">
+        <div className="premiumSectionHeading">
           <div>
             <span>GIMNASIO RR · 13–15</span>
             <h2>9 Pesas para entrenar DECIDIR.</h2>
@@ -213,49 +212,49 @@ export default function GimnasioDecidir1315() {
           </p>
         </div>
 
-        <div className="rrStage1315WeightsList">
+        <div className="premiumWeightsList">
           {pesas.map((pesa) => (
             <Link
               href={pesa.href}
               key={pesa.id}
-              className={`rrStage1315WeightCard ${
+              className={`premiumWeightCard ${
                 pesa.featured ? "featured" : ""
               }`}
             >
-              <div className="rrStage1315WeightVisual">
+              <div className="premiumWeightVisual">
                 <img src={pesa.imagen} alt="" />
-                <div className="rrStage1315WeightShade" />
+                <div className="premiumWeightVisualShade" />
                 <span>PESA {pesa.id}</span>
               </div>
 
-              <div className="rrStage1315WeightNumber">{pesa.id}</div>
+              <div className="premiumWeightNumber">{pesa.id}</div>
 
-              <div className="rrStage1315WeightMeta">
+              <div className="premiumWeightMeta">
                 <span>{pesa.kg}</span>
                 <small>{pesa.nivel}</small>
               </div>
 
-              <div className="rrStage1315WeightContent">
+              <div className="premiumWeightContent">
                 <span>{pesa.capacidad}</span>
                 <h3>{pesa.titulo}</h3>
                 <p>{pesa.descripcion}</p>
               </div>
 
-              <div className="rrStage1315WeightArrow">→</div>
+              <div className="premiumWeightArrow">→</div>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="rrStage1315Journey">
-        <div className="rrStage1315SectionHeading">
+      <section className="premiumGymJourney">
+        <div className="premiumSectionHeading">
           <div>
             <span>PROGRESIÓN</span>
             <h2>Lo que va cambiando dentro del gimnasio.</h2>
           </div>
         </div>
 
-        <div className="rrStage1315JourneyGrid">
+        <div className="premiumJourneyGrid">
           <article>
             <span>01</span>
             <strong>DESEO</strong>
@@ -338,13 +337,13 @@ export default function GimnasioDecidir1315() {
         </div>
       </section>
 
-      <section className="rrStage1315Method">
+      <section className="premiumGymMethod">
         <div>
           <span>¿QUÉ ENTRENA EL ADULTO?</span>
           <h2>No dirigir cada decisión.</h2>
         </div>
 
-        <div className="rrStage1315MethodSteps">
+        <div className="premiumMethodSteps">
           <article>
             <span>01</span>
             <strong>RECIBIR</strong>
@@ -392,7 +391,7 @@ export default function GimnasioDecidir1315() {
         </div>
       </section>
 
-      <section className="rrStage1315Safety">
+      <section className="premiumSafetyBlock">
         <div>
           <span>PUENTE DE SEGURIDAD</span>
           <h2>Hay situaciones que dejan de ser entrenamiento.</h2>
@@ -405,12 +404,12 @@ export default function GimnasioDecidir1315() {
           proteger y buscar orientación adecuada.
         </p>
 
-        <Link href="/orientacion" className="rrStage1315SafetyButton">
+        <Link href="/orientacion" className="premiumSafetyButton">
           HA PASADO ALGO <span>→</span>
         </Link>
       </section>
 
-      <section className="rrStage1315Closing">
+      <section className="premiumGymClosing">
         <span>13–15 · DECIDIR</span>
         <h2>
           No podrás tomar todas sus decisiones.
@@ -419,13 +418,13 @@ export default function GimnasioDecidir1315() {
 
         <Link
           href="/prepararme/13-15/pesa-01"
-          className="rrStage1315Primary"
+          className="premiumPrimaryButton"
         >
           EMPEZAR EL GIMNASIO <span>→</span>
         </Link>
       </section>
 
-      <footer className="rrStage1315Footer">
+      <footer className="premiumGymFooter">
         <div>
           <strong>RR · CRECER</strong>
           <span>Un proyecto del Método Ruiz Rivas</span>

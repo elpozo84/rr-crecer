@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "../../utils/supabase/client";
-import "./acceso.css";
 
 export default function AccesoPage() {
   const router = useRouter();
@@ -19,6 +18,7 @@ export default function AccesoPage() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+
     setLoading(true);
     setMessage("");
     setError("");
@@ -28,9 +28,14 @@ export default function AccesoPage() {
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
-          options: { emailRedirectTo: `${window.location.origin}/acceso` },
+          options: {
+            emailRedirectTo: `${window.location.origin}/acceso`,
+          },
         });
-        if (signUpError) throw signUpError;
+
+        if (signUpError) {
+          throw signUpError;
+        }
 
         if (data.session) {
           router.push("/prepararme");
@@ -43,9 +48,14 @@ export default function AccesoPage() {
         );
       } else {
         const { error: signInError } =
-          await supabase.auth.signInWithPassword({ email, password });
+          await supabase.auth.signInWithPassword({
+            email,
+            password,
+          });
 
-        if (signInError) throw signInError;
+        if (signInError) {
+          throw signInError;
+        }
 
         router.push("/prepararme");
         router.refresh();
@@ -67,36 +77,40 @@ export default function AccesoPage() {
   }
 
   return (
-    <main className="rrAccessPage">
-      <header className="rrAccessHeader">
-        <Link href="/" className="rrAccessBrand" aria-label="RR Crecer, inicio">
-          <span className="rrAccessMark">RR</span>
-          <span className="rrAccessBrandText">
+    <main className="accessPage">
+      <header className="accessHeader">
+        <Link href="/" className="brand" aria-label="RR Crecer, inicio">
+          <span className="mark">RR</span>
+
+          <span>
             <strong>CRECER</strong>
             <small>MÉTODO RUIZ RIVAS</small>
           </span>
         </Link>
 
-        <Link href="/" className="rrAccessBack">← VOLVER</Link>
+        <Link href="/" className="accessBack">
+          ← VOLVER
+        </Link>
       </header>
 
-      <section className="rrAccessShell">
-        <div className="rrAccessIntro">
-          <span className="rrAccessTag">TU GIMNASIO RR</span>
+      <section className="accessShell">
+        <div className="accessIntro">
+          <div className="sectionTag">TU GIMNASIO RR</div>
 
           <h1>
             Entrena hoy.
-            <em>Continúa mañana.</em>
+            <span> Continúa mañana.</span>
           </h1>
 
-          <p className="rrAccessLead">
+          <p>
             Puedes utilizar RR · CRECER sin tener todas las respuestas.
             Tu cuenta sirve para recordar por dónde vas y continuar tu
             entrenamiento cuando vuelvas.
           </p>
 
-          <div className="rrAccessPromise">
+          <div className="accessPromise">
             <span>RR</span>
+
             <div>
               <strong>Guardamos tu progreso, no tus conversaciones.</strong>
               <p>
@@ -106,7 +120,7 @@ export default function AccesoPage() {
             </div>
           </div>
 
-          <div className="rrAccessPoints">
+          <div className="accessPoints">
             <div>
               <span>01</span>
               <p>
@@ -119,7 +133,9 @@ export default function AccesoPage() {
               <span>02</span>
               <p>
                 <strong>Observa lo que has entrenado.</strong>
-                <small>Etapas, Pesas y criterios que ya has trabajado.</small>
+                <small>
+                  Etapas, Pesas y criterios que ya has trabajado.
+                </small>
               </p>
             </div>
 
@@ -128,20 +144,21 @@ export default function AccesoPage() {
               <p>
                 <strong>Sin notas ni puntuaciones.</strong>
                 <small>
-                  Progreso significa entrenamiento realizado, no juzgar cómo educas.
+                  Progreso significa entrenamiento realizado, no juzgar cómo
+                  educas.
                 </small>
               </p>
             </div>
           </div>
         </div>
 
-        <div className="rrAccessCard">
-          <div className="rrAccessCardTop">
+        <div className="accessCard">
+          <div className="accessCardTop">
             <span>RR · CRECER</span>
             <b>{mode === "login" ? "ENTRAR" : "CREAR CUENTA"}</b>
           </div>
 
-          <div className="rrAccessTabs">
+          <div className="accessTabs">
             <button
               type="button"
               className={mode === "login" ? "active" : ""}
@@ -149,6 +166,7 @@ export default function AccesoPage() {
             >
               ENTRAR
             </button>
+
             <button
               type="button"
               className={mode === "register" ? "active" : ""}
@@ -158,10 +176,13 @@ export default function AccesoPage() {
             </button>
           </div>
 
-          <div className="rrAccessCardCopy">
+          <div className="accessCardCopy">
             <h2>
-              {mode === "login" ? "Vuelve a tu gimnasio." : "Crea tu gimnasio."}
+              {mode === "login"
+                ? "Vuelve a tu gimnasio."
+                : "Crea tu gimnasio."}
             </h2>
+
             <p>
               {mode === "login"
                 ? "Accede para recuperar tu progreso y continuar entrenando."
@@ -169,9 +190,10 @@ export default function AccesoPage() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="rrAccessForm">
+          <form onSubmit={handleSubmit} className="accessForm">
             <label>
               <span>CORREO ELECTRÓNICO</span>
+
               <input
                 type="email"
                 autoComplete="email"
@@ -184,9 +206,12 @@ export default function AccesoPage() {
 
             <label>
               <span>CONTRASEÑA</span>
+
               <input
                 type="password"
-                autoComplete={mode === "login" ? "current-password" : "new-password"}
+                autoComplete={
+                  mode === "login" ? "current-password" : "new-password"
+                }
                 placeholder="Mínimo 6 caracteres"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
@@ -196,20 +221,24 @@ export default function AccesoPage() {
             </label>
 
             {error && (
-              <div className="rrAccessMessage rrAccessError">
+              <div className="accessMessage accessError">
                 <strong>NO SE HA PODIDO COMPLETAR</strong>
                 <p>{error}</p>
               </div>
             )}
 
             {message && (
-              <div className="rrAccessMessage rrAccessSuccess">
+              <div className="accessMessage accessSuccess">
                 <strong>CUENTA CREADA</strong>
                 <p>{message}</p>
               </div>
             )}
 
-            <button type="submit" className="rrAccessSubmit" disabled={loading}>
+            <button
+              type="submit"
+              className="accessSubmit"
+              disabled={loading}
+            >
               <span>
                 {loading
                   ? "UN MOMENTO..."
@@ -217,28 +246,29 @@ export default function AccesoPage() {
                     ? "ENTRAR EN MI GIMNASIO"
                     : "CREAR MI CUENTA"}
               </span>
+
               <b>→</b>
             </button>
           </form>
 
-          <div className="rrAccessDivider">
+          <div className="accessDivider">
             <span />
             <small>RR</small>
             <span />
           </div>
 
-          <p className="rrAccessPrivacy">
+          <p className="accessPrivacy">
             RR · CRECER utilizará tu cuenta para identificar y recuperar tu
             progreso de entrenamiento.
           </p>
 
-          <Link href="/prepararme" className="rrAccessWithout">
+          <Link href="/prepararme" className="accessWithoutAccount">
             CONTINUAR SIN CUENTA →
           </Link>
         </div>
       </section>
 
-      <footer className="rrAccessFooter">
+      <footer className="accessFooter">
         <strong>RR · CRECER</strong>
         <span>Un proyecto del Método Ruiz Rivas</span>
       </footer>
