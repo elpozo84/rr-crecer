@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PuenteRR from "../../../components/PuenteRR";
 
 const emocionesDisponibles = [
   "Sorpresa",
   "Vergüenza",
-  "Miedo",
   "Incomodidad",
   "Preocupación",
   "Bloqueo",
@@ -15,52 +15,22 @@ const emocionesDisponibles = [
   "No sé identificarlo",
 ];
 
-const origenes = [
-  "Lo ha escuchado en el colegio",
-  "Otro niño se lo ha dicho",
-  "Lo ha visto escrito o en una pantalla",
-  "Está intentando entender algo sobre sexo o reproducción",
-  "Ha ocurrido algo que quiere contarme",
-  "Todavía no lo sé",
+const pensamientosDisponibles = [
+  "¿Dónde habrá aprendido eso ese niño?",
+  "Esto es demasiado sexual para su edad",
+  "No quiero darle más información de la que necesita",
+  "Me preocupa que mi hijo también lo esté haciendo",
+  "No sé cómo explicarlo sin ponerme incómodo",
+  "Quiero saber qué ha pasado antes de sacar conclusiones",
 ];
 
-const frasesHerramienta = [
-  {
-    uso: "GANAR TIEMPO",
-    frase: "Buena pregunta. Déjame pensar cómo explicártelo bien.",
-  },
-  {
-    uso: "DESCUBRIR QUÉ SABE",
-    frase: "¿Tú qué crees que significa?",
-  },
-  {
-    uso: "DESCUBRIR EL ORIGEN",
-    frase: "¿Dónde has escuchado esa palabra?",
-  },
-  {
-    uso: "ACLARAR QUÉ NECESITA",
-    frase: "¿Qué es exactamente lo que quieres saber?",
-  },
-  {
-    uso: "RESPONDER BREVE",
-    frase:
-      "Es una palabra que algunas personas usan para hablar de tener relaciones sexuales.",
-  },
-  {
-    uso: "NORMALIZAR",
-    frase:
-      "Puedes preguntarme estas cosas aunque te parezcan raras o te dé vergüenza.",
-  },
-  {
-    uso: "SI SE RÍE",
-    frase:
-      "Veo que te hace gracia la palabra. Aun así, podemos hablar de lo que significa.",
-  },
-  {
-    uso: "SI NO LO SÉ",
-    frase:
-      "Eso no lo sé explicar bien todavía. Podemos buscar una buena manera de entenderlo.",
-  },
+const frasesUtiles = [
+  ["PARA DESCUBRIR", "No sé por qué ese niño los hace. ¿Tú sabes qué creen los demás que significan?"],
+  ["PARA NO INVENTAR", "Puede haberlos escuchado en muchos sitios. Como no lo sabemos, no necesitamos inventarnos su historia."],
+  ["PARA EXPLICAR", "Algunas personas pueden hacer sonidos cuando sienten sensaciones agradables durante una relación sexual."],
+  ["PARA TRABAJAR EL GRUPO", "Que todos se rían no significa que tú tengas que hacerlo."],
+  ["PARA HACERLE PENSAR", "Si nadie más se riera, ¿tú seguirías haciéndolo?"],
+  ["PARA DEJAR PUERTA ABIERTA", "Si hay algo de esto que no entiendes, puedes preguntármelo."],
 ];
 
 export default function Pesa09() {
@@ -68,13 +38,12 @@ export default function Pesa09() {
   const [respuestaInicial, setRespuestaInicial] = useState("");
   const [emociones, setEmociones] = useState([]);
   const [pensamiento, setPensamiento] = useState("");
-  const [preguntaVentana, setPreguntaVentana] = useState("");
-  const [origen, setOrigen] = useState("");
-  const [necesidad, setNecesidad] = useState("");
-  const [respuestaConstruida, setRespuestaConstruida] = useState("");
-  const [respuestaTransferencia, setRespuestaTransferencia] = useState("");
+  const [preguntaDescubrir, setPreguntaDescubrir] = useState("");
+  const [respuestaGrupo, setRespuestaGrupo] = useState("");
+  const [respuestaFinal, setRespuestaFinal] = useState("");
+  const [transferencia, setTransferencia] = useState("");
 
-  const totalPasos = 12;
+  const totalPasos = 14;
 
   const irA = (numero) => {
     setPaso(numero);
@@ -98,11 +67,11 @@ export default function Pesa09() {
 
         <div className="trainingBrand">
           <span>RR · CRECER</span>
-          <small>LABORATORIO · CONSTRUIR RESPUESTAS</small>
+          <small>PESA 09 · IMITACIÓN, GRUPO Y SEXUALIDAD</small>
         </div>
 
         <div className="kg">
-          {paso <= 3 ? "5 KG" : paso <= 8 ? "10 KG" : "20 KG"}
+          {paso <= 4 ? "10 KG" : paso <= 10 ? "20 KG" : "30 KG"}
         </div>
       </header>
 
@@ -118,19 +87,37 @@ export default function Pesa09() {
       {paso === 0 && (
         <section className="trainingScreen">
           <span className="trainingTag">SPOT · RESPUESTA REAL</span>
-          <h1>«Papá, ¿qué significa follar?»</h1>
+          <h1>«¿Por qué hace esos ruidos?»</h1>
+
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa09.png"
+              alt="Pesa 09 · ¿Por qué hace esos ruidos?"
+              style={{ display: "block", width: "100%", height: "auto" }}
+            />
+          </div>
 
           <div className="scene">
-            <p>
-              No buscamos una respuesta perfecta. Queremos saber desde dónde
-              empiezas hoy.
-            </p>
+            <p>Tu hijo llega del colegio y te cuenta algo que ha ocurrido con otros niños.</p>
             <blockquote>
-              Tu hijo te hace la pregunta de repente. No estabas preparado.
+              —Papá, hay un niño que se pone a hacer «ahhh, ahhh» y todos empiezan
+              a reírse.
+              <br /><br />
+              <strong>¿Por qué hace esos ruidos?</strong>
             </blockquote>
           </div>
 
-          <h2>¿Qué le responderías de verdad?</h2>
+          <h2>¿Qué le responderías ahora mismo?</h2>
+
           <textarea
             value={respuestaInicial}
             onChange={(e) => setRespuestaInicial(e.target.value)}
@@ -138,10 +125,10 @@ export default function Pesa09() {
           />
 
           <div className="criterionReminder">
-            <span>IMPORTANTE</span>
+            <span>PUNTO DE PARTIDA</span>
             <p>
-              «No sé qué decirle» también es una respuesta válida aquí. Este
-              entrenamiento empieza precisamente donde te bloqueas.
+              No buscamos una respuesta perfecta. Queremos conservar lo que
+              responderías antes de entrenar para poder compararlo al final.
             </p>
           </div>
 
@@ -150,22 +137,22 @@ export default function Pesa09() {
             onClick={() => irA(1)}
             disabled={!respuestaInicial.trim()}
           >
-            EMPEZAR A CONSTRUIR →
+            EMPEZAR A ENTRENAR →
           </button>
         </section>
       )}
 
       {paso === 1 && (
         <section className="trainingScreen">
-          <span className="trainingTag">PRIMERO · TÚ</span>
-          <h1>Antes de responder, mira qué te ha ocurrido por dentro.</h1>
+          <span className="trainingTag">PRIMERO · ¿QUÉ TE PASA A TI?</span>
+          <h1>Antes de responder al niño, observa tu propia reacción.</h1>
 
           <p className="trainingLead">
-            Una pregunta puede activar emociones antes de que hayas decidido qué
-            quieres enseñar.
+            Las preguntas sobre sexualidad pueden activar algo en el adulto antes
+            de que haya tenido tiempo de pensar qué quiere enseñar.
           </p>
 
-          <h2>¿Qué sentiste al imaginar esa pregunta?</h2>
+          <h2>¿Qué te hizo sentir esta situación?</h2>
 
           <div className="choiceList">
             {emocionesDisponibles.map((emocion) => (
@@ -181,19 +168,28 @@ export default function Pesa09() {
             ))}
           </div>
 
-          <h2>¿Qué pensamiento apareció?</h2>
-          <textarea
-            value={pensamiento}
-            onChange={(e) => setPensamiento(e.target.value)}
-            placeholder='Ej.: "Es demasiado pequeño", "¿dónde habrá oído eso?", "no quiero explicarlo mal"...'
-          />
+          <h2>¿Qué pensamiento apareció primero?</h2>
+
+          <div className="choiceList">
+            {pensamientosDisponibles.map((item) => (
+              <button
+                type="button"
+                key={item}
+                className={pensamiento === item ? "selectedChoice" : ""}
+                onClick={() => setPensamiento(item)}
+              >
+                {pensamiento === item ? "✓ " : ""}
+                {item}
+              </button>
+            ))}
+          </div>
 
           <button
             className="trainingButton"
             onClick={() => irA(2)}
-            disabled={emociones.length === 0 || !pensamiento.trim()}
+            disabled={emociones.length === 0 || !pensamiento}
           >
-            VER QUÉ ESTÁ PASANDO →
+            SEPARAR HECHO E HISTORIA →
           </button>
         </section>
       )}
@@ -201,31 +197,39 @@ export default function Pesa09() {
       {paso === 2 && (
         <section className="trainingScreen">
           <span className="trainingTag">HECHO ≠ HISTORIA</span>
-          <h1>Tu emoción importa. Pero no tiene que conducir la respuesta.</h1>
+          <h1>Tu cabeza ya ha empezado a completar lo que no sabe.</h1>
 
           <div className="factStory">
             <div>
               <span>HECHO</span>
-              <p>Tu hijo ha preguntado: «¿Qué significa follar?»</p>
+              <p>Un niño hace unos sonidos y otros niños se ríen.</p>
             </div>
+
             <div>
-              <span>LO QUE APARECIÓ EN TI</span>
+              <span>LO QUE TODAVÍA NO SABEMOS</span>
               <p>
-                {emociones.join(", ")}. {pensamiento}
+                Dónde los escuchó, si sabe qué significan, si los vio en Internet,
+                si los oyó en casa, si los aprendió de otro niño o si simplemente
+                está imitando.
               </p>
             </div>
           </div>
 
+          <div className="yourFirstAnswer">
+            <span>LO QUE APARECIÓ EN TI</span>
+            <p>{emociones.join(", ")} · {pensamiento}</p>
+          </div>
+
           <div className="lesson">
-            <span>PRIMER APRENDIZAJE</span>
+            <span>CRITERIO RR</span>
             <blockquote>
-              Puedo notar lo que me provoca la pregunta
-              <strong> sin responder desde el susto, la vergüenza o el bloqueo.</strong>
+              Puedo notar lo que esta situación me hace pensar
+              <strong> sin convertirlo automáticamente en un hecho.</strong>
             </blockquote>
           </div>
 
           <button className="trainingButton" onClick={() => irA(3)}>
-            APRENDER LA PRIMERA HERRAMIENTA →
+            APRENDER QUÉ HACER CUANDO NO SÉ →
           </button>
         </section>
       )}
@@ -233,269 +237,309 @@ export default function Pesa09() {
       {paso === 3 && (
         <section className="trainingScreen">
           <span className="trainingTag">HERRAMIENTA 1 · VENTANA RR</span>
-          <h1>No saber qué decir no te obliga a responder inmediatamente.</h1>
+          <h1>No saber por qué lo hace ese niño no es un problema.</h1>
 
           <p className="trainingLead">
-            Antes de explicar, puedes conseguir información. Preguntar no es
-            esquivar la conversación: es prepararte para responder a la pregunta
-            correcta.
+            El error sería rellenar el hueco con una historia. Cuando no sabes,
+            puedes convertir la incertidumbre en una pregunta.
           </p>
 
           <div className="conversation">
             <div>
-              <span>PUEDES GANAR TIEMPO</span>
-              <p>«Buena pregunta. Déjame pensar cómo explicártelo bien.»</p>
+              <span>PUEDES DECIR</span>
+              <p>«No sé por qué ese niño los hace.»</p>
             </div>
             <div>
-              <span>PUEDES DESCUBRIR QUÉ SABE</span>
-              <p>«¿Tú qué crees que significa?»</p>
+              <span>Y DESCUBRIR</span>
+              <p>«¿Tú sabes qué creen los demás que significan?»</p>
             </div>
             <div>
-              <span>PUEDES DESCUBRIR DE DÓNDE VIENE</span>
-              <p>«¿Dónde has escuchado esa palabra?»</p>
-            </div>
-            <div>
-              <span>PUEDES ACLARAR LA PREGUNTA</span>
-              <p>«¿Qué es exactamente lo que quieres saber?»</p>
+              <span>O PREGUNTAR</span>
+              <p>«¿Tú qué piensas que significan esos sonidos?»</p>
             </div>
           </div>
 
-          <h2>Construye ahora tu propia Ventana RR.</h2>
+          <h2>Construye tu propia pregunta para descubrir antes de explicar.</h2>
+
           <textarea
-            value={preguntaVentana}
-            onChange={(e) => setPreguntaVentana(e.target.value)}
-            placeholder="Escribe la primera frase o pregunta que usarías antes de explicar..."
+            value={preguntaDescubrir}
+            onChange={(e) => setPreguntaDescubrir(e.target.value)}
+            placeholder="¿Qué le preguntarías?"
           />
 
           <button
             className="trainingButton"
             onClick={() => irA(4)}
-            disabled={!preguntaVentana.trim()}
+            disabled={!preguntaDescubrir.trim()}
           >
-            PROBAR MI PREGUNTA →
+            ESCUCHAR SU RESPUESTA →
           </button>
         </section>
       )}
 
       {paso === 4 && (
         <section className="trainingScreen">
-          <span className="trainingTag">DESCUBRIR ANTES DE EXPLICAR</span>
-          <h1>La misma pregunta puede necesitar respuestas distintas.</h1>
+          <span className="trainingTag">LA CONVERSACIÓN SE MUEVE</span>
+          <h1>Ahora aparece información nueva.</h1>
 
           <div className="yourFirstAnswer">
-            <span>TU VENTANA RR</span>
-            <p>{preguntaVentana}</p>
+            <span>TU PREGUNTA</span>
+            <p>{preguntaDescubrir}</p>
+          </div>
+
+          <div className="conversation">
+            <div className="childAnswer">
+              <span>TU HIJO</span>
+              <p>
+                Dicen que esos ruidos los hace la gente cuando está follando.
+              </p>
+            </div>
           </div>
 
           <p className="trainingLead">
-            Imagina que después de preguntarle descubres algo más. ¿De dónde
-            parece venir su pregunta?
+            Aquí hay dos conversaciones posibles. Puede estar preguntando por los
+            sonidos, pero también puede que no sepa qué significa la palabra que
+            acaba de utilizar.
           </p>
 
-          <div className="choiceList">
-            {origenes.map((item) => (
-              <button
-                type="button"
-                key={item}
-                className={origen === item ? "selectedChoice" : ""}
-                onClick={() => setOrigen(item)}
-              >
-                {origen === item ? "✓ " : ""}
-                {item}
-              </button>
-            ))}
-          </div>
-
-          <button
-            className="trainingButton"
-            onClick={() => irA(5)}
-            disabled={!origen}
-          >
-            DECIDIR QUÉ NECESITA →
-          </button>
+          <PuenteRR
+            origen="PESA 09"
+            destino="PESA 01"
+            titulo="¿Sabe qué significa la palabra que acaba de utilizar?"
+            texto="Una conversación puede cambiar de dirección con una sola palabra. Antes de seguir explicando los sonidos, puedes comprobar si «follar» es una palabra que entiende o simplemente una palabra que repite."
+            href="/prepararme/7-9/pesa-01?volver=/prepararme/7-9/pesa-09&paso=4"
+            onContinuar={() => irA(5)}
+          />
         </section>
       )}
 
       {paso === 5 && (
         <section className="trainingScreen">
-          <span className="trainingTag">HERRAMIENTA 2 · AJUSTAR</span>
-          <h1>No respondas a la palabra. Responde a la necesidad.</h1>
+          <span className="trainingTag">HERRAMIENTA 2 · VERDAD PROGRESIVA</span>
+          <h1>Si quiere saber por qué algunos adultos hacen esos sonidos.</h1>
 
-          <div className="yourFirstAnswer">
-            <span>LO QUE HAS DESCUBIERTO</span>
-            <p>{origen}</p>
-          </div>
+          <p className="trainingLead">
+            Ya no necesitas explicarlo todo. Necesitas una respuesta verdadera,
+            comprensible para su edad y suficientemente corta para permitir otra
+            pregunta.
+          </p>
 
-          <h2>¿Qué parece necesitar ahora?</h2>
+          <div className="conversation">
+            <div>
+              <span>A · MUY BREVE</span>
+              <p>
+                Algunas personas hacen sonidos cuando sienten sensaciones
+                agradables durante una relación sexual.
+              </p>
+            </div>
 
-          <div className="choiceList">
-            {[
-              "Una explicación sencilla",
-              "Corregir algo que ha entendido mal",
-              "Poder contarme algo sin sentirse juzgado",
-              "Que compruebe primero si ha ocurrido algo preocupante",
-              "Todavía necesito preguntar más",
-            ].map((item) => (
-              <button
-                type="button"
-                key={item}
-                className={necesidad === item ? "selectedChoice" : ""}
-                onClick={() => setNecesidad(item)}
-              >
-                {necesidad === item ? "✓ " : ""}
-                {item}
-              </button>
-            ))}
+            <div>
+              <span>B · EXPLICATIVA</span>
+              <p>
+                Durante una relación sexual algunas partes del cuerpo pueden
+                producir sensaciones agradables y algunas personas expresan esas
+                sensaciones haciendo sonidos. Otras no.
+              </p>
+            </div>
+
+            <div>
+              <span>C · CONVERSACIONAL</span>
+              <p>
+                Pueden hacerlos porque están sintiendo algo agradable. ¿Era eso
+                lo que querías saber o te preguntabas otra cosa?
+              </p>
+            </div>
           </div>
 
           <div className="criterionReminder">
-            <span>CRITERIO RR</span>
+            <span>LAS FRASES SON MULETAS</span>
             <p>
-              La edad orienta cuánto explicar. Lo que acabas de descubrir orienta
-              qué explicar.
+              No memorices la frase. Observa la estructura: verdad sencilla,
+              profundidad ajustada y espacio para que el niño decida si necesita
+              saber más.
             </p>
           </div>
 
-          <button
-            className="trainingButton"
-            onClick={() => irA(6)}
-            disabled={!necesidad}
-          >
-            ABRIR MI CAJA DE HERRAMIENTAS →
+          <button className="trainingButton" onClick={() => irA(6)}>
+            AHORA APARECE EL GRUPO →
           </button>
         </section>
       )}
 
       {paso === 6 && (
         <section className="trainingScreen">
-          <span className="trainingTag">CAJA DE HERRAMIENTAS</span>
-          <h1>No necesitas una frase mágica. Necesitas recursos.</h1>
+          <span className="trainingTag">NUEVO PROBLEMA · EL GRUPO</span>
+          <h1>Saber qué significa no termina la conversación.</h1>
 
           <div className="conversation">
-            {frasesHerramienta.map((item) => (
-              <div key={item.uso}>
-                <span>{item.uso}</span>
-                <p>«{item.frase}»</p>
-              </div>
-            ))}
+            <div className="childAnswer">
+              <span>TU HIJO</span>
+              <p>Todos nos reímos cuando lo hace.</p>
+            </div>
           </div>
 
-          <div className="criterionReminder">
-            <span>LAS FRASES SON MULETAS</span>
-            <p>
-              No tienes que memorizarlas. Observa para qué sirve cada una y
-              utiliza tus propias palabras.
-            </p>
-          </div>
+          <p className="trainingLead">
+            Ahora la pregunta ya no es solo sexual. También estás educando sobre
+            imitación, empatía y presión del grupo.
+          </p>
 
-          <button className="trainingButton" onClick={() => irA(7)}>
-            VER QUÉ FRASES ABREN Y CUÁLES CIERRAN →
+          <h2>¿Qué querrías enseñarle en este momento?</h2>
+
+          <textarea
+            value={respuestaGrupo}
+            onChange={(e) => setRespuestaGrupo(e.target.value)}
+            placeholder="No busques todavía una frase perfecta. Escribe la idea que te gustaría que aprendiera."
+          />
+
+          <button
+            className="trainingButton"
+            onClick={() => irA(7)}
+            disabled={!respuestaGrupo.trim()}
+          >
+            CONVERTIR MI IDEA EN UNA RESPUESTA →
           </button>
         </section>
       )}
 
       {paso === 7 && (
         <section className="trainingScreen">
-          <span className="trainingTag">HERRAMIENTA 3 · PUERTA ABIERTA</span>
-          <h1>Dos frases pueden informar y producir efectos muy distintos.</h1>
+          <span className="trainingTag">HERRAMIENTA 3 · GRUPO ≠ CRITERIO</span>
+          <h1>Ahora transforma una intención educativa en lenguaje.</h1>
 
-          <div className="factStory">
-            <div>
-              <span>TIENDE A CERRAR</span>
-              <p>«Eso no son cosas de niños.»</p>
-            </div>
-            <div>
-              <span>TIENDE A ABRIR</span>
-              <p>«Puedes preguntarme estas cosas.»</p>
-            </div>
+          <div className="yourFirstAnswer">
+            <span>LO QUE QUIERES ENSEÑAR</span>
+            <p>{respuestaGrupo}</p>
           </div>
 
-          <div className="factStory">
+          <div className="conversation">
             <div>
-              <span>TIENDE A CERRAR</span>
-              <p>«¿Quién te ha enseñado esa guarrada?»</p>
+              <span>RECONOCER SIN APROBAR TODO</span>
+              <p>
+                «Entiendo que os pueda hacer gracia porque es algo raro para
+                vosotros.»
+              </p>
             </div>
-            <div>
-              <span>TIENDE A ABRIR</span>
-              <p>«¿Dónde has escuchado esa palabra?»</p>
-            </div>
-          </div>
 
-          <div className="factStory">
             <div>
-              <span>TIENDE A CERRAR</span>
-              <p>«Ya te lo explicaré cuando seas mayor.»</p>
+              <span>AÑADIR CRITERIO</span>
+              <p>
+                «Pero que todos se rían no significa que tú tengas que hacerlo.»
+              </p>
             </div>
+
             <div>
-              <span>TIENDE A ABRIR</span>
-              <p>«Puedo explicarte la parte que necesitas saber ahora.»</p>
+              <span>AÑADIR EMPATÍA</span>
+              <p>
+                «Piensa cómo se sentiría él si cada vez que hace algo todos se
+                ríen de él.»
+              </p>
+            </div>
+
+            <div>
+              <span>DEVOLVERLE LA DECISIÓN</span>
+              <p>«Si nadie más se riera, ¿tú seguirías haciéndolo?»</p>
             </div>
           </div>
 
           <div className="lesson">
-            <span>OBJETIVO</span>
+            <span>CRITERIO</span>
             <blockquote>
-              No buscamos que nunca te equivoques.
-              <strong> Buscamos que tu hijo pueda volver a preguntarte.</strong>
+              Que todos hagan algo
+              <strong> no decide automáticamente lo que hago yo.</strong>
             </blockquote>
           </div>
 
           <button className="trainingButton" onClick={() => irA(8)}>
-            CONSTRUIR MI RESPUESTA →
+            ABRIR MI CAJA DE HERRAMIENTAS →
           </button>
         </section>
       )}
 
       {paso === 8 && (
         <section className="trainingScreen">
-          <span className="trainingTag">CONSTRUCCIÓN GUIADA · 10 KG</span>
-          <h1>Ahora junta las piezas.</h1>
+          <span className="trainingTag">CAJA DE HERRAMIENTAS · PESA 09</span>
+          <h1>Ahora ya tienes más de una forma de responder.</h1>
 
           <div className="conversation">
-            <div>
-              <span>1 · RECIBE</span>
-              <p>Haz que la pregunta pueda existir sin vergüenza.</p>
-            </div>
-            <div>
-              <span>2 · DESCUBRE</span>
-              <p>Averigua qué sabe, qué ha ocurrido o qué quiere entender.</p>
-            </div>
-            <div>
-              <span>3 · RESPONDE</span>
-              <p>Da una explicación verdadera, sencilla y ajustada.</p>
-            </div>
-            <div>
-              <span>4 · DEJA PUERTA ABIERTA</span>
-              <p>Comprueba si era eso lo que quería saber y permite otra pregunta.</p>
-            </div>
+            {frasesUtiles.map(([uso, frase]) => (
+              <div key={uso}>
+                <span>{uso}</span>
+                <p>«{frase}»</p>
+              </div>
+            ))}
           </div>
 
-          <div className="yourFirstAnswer">
-            <span>LO QUE PARECE NECESITAR</span>
-            <p>{necesidad}</p>
+          <div className="criterionReminder">
+            <span>NO SON GUIONES</span>
+            <p>
+              Cada frase tiene una función. Cuantas más funciones reconoces,
+              menos dependes de recordar una frase exacta.
+            </p>
           </div>
 
-          <h2>Construye tu respuesta completa.</h2>
-          <textarea
-            value={respuestaConstruida}
-            onChange={(e) => setRespuestaConstruida(e.target.value)}
-            placeholder="Escríbela con tus palabras. No copies una frase perfecta: construye la tuya."
-          />
-
-          <button
-            className="trainingButton"
-            onClick={() => irA(9)}
-            disabled={!respuestaConstruida.trim()}
-          >
-            VER LO QUE ACABO DE HACER →
+          <button className="trainingButton" onClick={() => irA(9)}>
+            CONSTRUIR MI RESPUESTA →
           </button>
         </section>
       )}
 
       {paso === 9 && (
+        <section className="trainingScreen">
+          <span className="trainingTag">CONSTRUCCIÓN GUIADA · 20 KG</span>
+          <h1>Junta ahora las piezas.</h1>
+
+          <div className="conversation">
+            <div>
+              <span>1 · REGULA</span>
+              <p>Reconoce lo que te provoca sin convertirlo en la respuesta.</p>
+            </div>
+            <div>
+              <span>2 · DESCUBRE</span>
+              <p>No inventes por qué el otro niño hace los sonidos.</p>
+            </div>
+            <div>
+              <span>3 · EXPLICA</span>
+              <p>Responde con verdad sencilla si tu hijo realmente quiere saberlo.</p>
+            </div>
+            <div>
+              <span>4 · EDUCA</span>
+              <p>Introduce criterio sobre grupo, imitación y empatía.</p>
+            </div>
+            <div>
+              <span>5 · ABRE</span>
+              <p>Haz posible que pueda seguir preguntándote.</p>
+            </div>
+          </div>
+
+          <h2>Vuelve al SPOT original. ¿Qué responderías ahora?</h2>
+
+          <div className="scene">
+            <blockquote>
+              —Papá, hay un niño que hace esos ruidos y todos se ríen. ¿Por qué
+              los hace?
+            </blockquote>
+          </div>
+
+          <textarea
+            value={respuestaFinal}
+            onChange={(e) => setRespuestaFinal(e.target.value)}
+            placeholder="Construye ahora tu respuesta con tus propias palabras..."
+          />
+
+          <button
+            className="trainingButton"
+            onClick={() => irA(10)}
+            disabled={!respuestaFinal.trim()}
+          >
+            COMPARAR MI PROGRESO →
+          </button>
+        </section>
+      )}
+
+      {paso === 10 && (
         <section className="trainingScreen finishScreen">
-          <span className="trainingTag">PROGRESO VISIBLE</span>
-          <h1>Compara el antes con el después.</h1>
+          <span className="trainingTag">ANTES / DESPUÉS</span>
+          <h1>Esto es lo que has entrenado.</h1>
 
           <div className="comparison">
             <div>
@@ -504,116 +548,167 @@ export default function Pesa09() {
             </div>
             <div>
               <span>DESPUÉS DE ENTRENAR</span>
-              <p>{respuestaConstruida}</p>
+              <p>{respuestaFinal}</p>
             </div>
-          </div>
-
-          <div className="lesson">
-            <span>LO QUE HAS ENTRENADO</span>
-            <blockquote>
-              Has pasado de buscar «la respuesta correcta» a tener un proceso:
-              <strong> recibir → descubrir → ajustar → responder → abrir.</strong>
-            </blockquote>
           </div>
 
           <div className="conversation">
             <div>
-              <span>HAS MIRADO TU REACCIÓN</span>
-              <p>Has identificado qué te provocaba la pregunta antes de actuar.</p>
+              <span>HAS OBSERVADO TU REACCIÓN</span>
+              <p>Ya sabes que lo primero que sientes no tiene que dirigir la conversación.</p>
             </div>
             <div>
-              <span>HAS DESCUBIERTO ANTES DE SUPONER</span>
-              <p>Has aprendido a preguntar antes de llenar los huecos.</p>
+              <span>HAS SEPARADO HECHO E HISTORIA</span>
+              <p>No necesitas inventar dónde aprendió algo otro niño.</p>
             </div>
             <div>
-              <span>HAS AJUSTADO</span>
-              <p>Has pensado qué necesita el niño, no todo lo que tú sabes.</p>
+              <span>HAS APRENDIDO A DESCUBRIR</span>
+              <p>Puedes preguntar antes de explicar.</p>
             </div>
             <div>
-              <span>HAS CUIDADO LA PUERTA</span>
-              <p>Has trabajado para que pueda volver a hablar contigo.</p>
+              <span>HAS APRENDIDO A AJUSTAR</span>
+              <p>Puedes decir la verdad sin convertir la conversación en una clase.</p>
+            </div>
+            <div>
+              <span>HAS INTRODUCIDO CRITERIO</span>
+              <p>El grupo no tiene que decidir automáticamente lo que hace tu hijo.</p>
             </div>
           </div>
 
-          <button className="trainingButton" onClick={() => irA(10)}>
-            QUITAR LAS MULETAS · 20 KG →
-          </button>
-        </section>
-      )}
-
-      {paso === 10 && (
-        <section className="trainingScreen">
-          <span className="trainingTag">TRANSFERENCIA · 20 KG</span>
-          <h1>La pregunta cambia. La herramienta permanece.</h1>
-
-          <div className="scene">
-            <blockquote>—Papá, ¿qué significa masturbarse?</blockquote>
-          </div>
-
-          <p className="trainingLead">
-            Esta vez RR no te dará frases. Utiliza lo que acabas de aprender:
-            recibe, descubre, ajusta, responde y deja abierta la conversación.
-          </p>
-
-          <textarea
-            value={respuestaTransferencia}
-            onChange={(e) => setRespuestaTransferencia(e.target.value)}
-            placeholder="Construye ahora la respuesta tú solo..."
-          />
-
-          <button
-            className="trainingButton"
-            onClick={() => irA(11)}
-            disabled={!respuestaTransferencia.trim()}
-          >
-            TERMINAR ENTRENAMIENTO →
+          <button className="trainingButton" onClick={() => irA(11)}>
+            QUITAR AYUDA · 30 KG →
           </button>
         </section>
       )}
 
       {paso === 11 && (
-        <section className="trainingScreen finishScreen">
-          <span className="trainingTag">ENTRENAMIENTO SUPERADO</span>
-          <div className="finishMark">RR</div>
+        <section className="trainingScreen">
+          <span className="trainingTag">TRANSFERENCIA · 30 KG</span>
+          <h1>Ahora cambia la situación.</h1>
 
-          <h1>No has memorizado una respuesta.</h1>
-          <h2>Has empezado a aprender a construirlas.</h2>
+          <div className="scene">
+            <blockquote>
+              —Papá, hoy nosotros también hemos empezado a hacer esos ruidos.
+              Todos los hacíamos y nos partíamos de risa. ¿Qué pasa? Si solo
+              estamos jugando.
+            </blockquote>
+          </div>
 
-          <div className="comparison">
-            <div>
-              <span>PRIMER SPOT</span>
-              <p>{respuestaInicial}</p>
+          <p className="trainingLead">
+            Esta vez RR no te da frases. Construye una respuesta usando lo que
+            acabas de entrenar.
+          </p>
+
+          <textarea
+            value={transferencia}
+            onChange={(e) => setTransferencia(e.target.value)}
+            placeholder="¿Qué responderías?"
+          />
+
+          <button
+            className="trainingButton"
+            onClick={() => irA(12)}
+            disabled={!transferencia.trim()}
+          >
+            VER EL ÚLTIMO GIRO →
+          </button>
+        </section>
+      )}
+
+      {paso === 12 && (
+        <section className="trainingScreen">
+          <span className="trainingTag">CUANDO EL SPOT CAMBIA</span>
+          <h1>Hay momentos en los que ya no toca seguir entrenando.</h1>
+
+          <div className="conversation">
+            <div className="childAnswer">
+              <span>TU HIJO</span>
+              <p>
+                Es que no solo hacía los ruidos. El otro día nos enseñó un vídeo
+                y nos dijo que hiciéramos lo mismo.
+              </p>
             </div>
+
             <div>
-              <span>NUEVO SPOT · SIN MULETAS</span>
-              <p>{respuestaTransferencia}</p>
+              <span>PRIMERA RESPUESTA ÚTIL</span>
+              <p>
+                «Gracias por contármelo. Quiero entender bien qué pasó. No estás
+                en problemas por decírmelo.»
+              </p>
             </div>
           </div>
 
           <div className="lesson">
-            <span>TU MAPA RR</span>
+            <span>CAMBIO DE MODO</span>
             <blockquote>
-              NOTO QUÉ ME PASA → DESCUBRO QUÉ NECESITA → AJUSTO → RESPONDO →
+              Si aparecen exposición sexual preocupante, presión, amenazas,
+              secretos, contacto sexual o participación de un adulto,
+              <strong>
+                {" "}
+                la prioridad deja de ser terminar la Pesa y pasa a ser comprender
+                qué ha ocurrido y proteger al menor.
+              </strong>
+            </blockquote>
+          </div>
+
+          <PuenteRR
+            tipo="seguridad"
+            origen="PESA 09"
+            destino="HA PASADO ALGO"
+            titulo="Esto ya no es solo una conversación educativa"
+            texto="Ha aparecido información que puede requerir una respuesta de protección. Mantén la calma, escucha sin completar tú los huecos y pasa al espacio de orientación."
+            href="/orientacion"
+          />
+
+          <button className="trainingButton" onClick={() => irA(13)}>
+            VER MI MAPA FINAL →
+          </button>
+        </section>
+      )}
+
+      {paso === 13 && (
+        <section className="trainingScreen finishScreen">
+          <span className="trainingTag">PESA 09 · COMPLETADA</span>
+          <div className="finishMark">30</div>
+
+          <h1>Ya no necesitas saber de antemano todas las respuestas.</h1>
+          <h2>Necesitas saber qué hacer cuando aparece una conversación que no esperabas.</h2>
+
+          <div className="lesson">
+            <span>TU MAPA RR · PESA 09</span>
+            <blockquote>
+              NOTO → SEPARO HECHO/HISTORIA → DESCUBRO → EXPLICO → AÑADO CRITERIO →
               <strong> DEJO LA PUERTA ABIERTA.</strong>
             </blockquote>
           </div>
 
+          <div className="comparison">
+            <div>
+              <span>TU PRIMERA RESPUESTA</span>
+              <p>{respuestaInicial}</p>
+            </div>
+            <div>
+              <span>TU RESPUESTA DESPUÉS DE ENTRENAR</span>
+              <p>{respuestaFinal}</p>
+            </div>
+          </div>
+
           <div className="criterionReminder">
-            <span>¿QUÉ SIGNIFICA EDUCAR BIEN AQUÍ?</span>
+            <span>LO QUE ESTÁS EDUCANDO</span>
             <p>
-              No significa acertar siempre ni encontrar una frase perfecta.
-              Significa aumentar las posibilidades de escuchar, comprender,
-              responder con información ajustada y mantener un vínculo en el que
-              tu hijo pueda volver a preguntar.
+              No solo has hablado de unos sonidos. Has entrenado curiosidad sin
+              vergüenza, pensamiento antes de suponer, criterio frente al grupo,
+              empatía y una relación en la que tu hijo pueda volver a contarte
+              algo cuando no lo entiende.
             </p>
           </div>
 
           <div className="nextSpot">
             <span>RR · CRECER</span>
-            <strong>ANTES NO SABÍAS QUÉ DECIR.</strong>
+            <strong>NO MEMORIZAR RESPUESTAS. APRENDER A CONSTRUIRLAS.</strong>
             <p>
-              Ahora tienes un proceso que puedes volver a utilizar cuando llegue
-              una pregunta que todavía no habías preparado.
+              El tema cambiará. La próxima pregunta será distinta. Las
+              herramientas que acabas de entrenar pueden viajar contigo.
             </p>
           </div>
 
