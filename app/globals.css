@@ -4436,3 +4436,142 @@ textarea:focus {
   }
 }
 
+
+/* ========================================
+   RR · CRECER · PESA MAESTRA · VISUAL SPOT
+======================================== */
+
+.trainingVisual {
+  position: relative;
+  width: 100%;
+  margin: 28px 0 34px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #0b1928;
+  border: 1px solid rgba(11, 25, 40, .12);
+  box-shadow: 0 22px 55px rgba(11, 25, 40, .12);
+}
+
+.trainingVisual img {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 42vw, 520px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.trainingVisual::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 25, 40, 0) 0%,
+    rgba(11, 25, 40, .86) 100%
+  );
+  pointer-events: none;
+}
+
+.trainingVisualCaption {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 30px 25px;
+  color: #fff;
+}
+
+.trainingVisualCaption span {
+  display: block;
+  margin-bottom: 7px;
+  color: #e0c58e;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .17em;
+}
+
+.trainingVisualCaption p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, .92) !important;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.trainingScreen {
+  position: relative;
+}
+
+.trainingScreen > h1 {
+  text-wrap: balance;
+}
+
+.trainingScreen textarea {
+  transition:
+    border-color .22s ease,
+    box-shadow .22s ease,
+    transform .22s ease;
+}
+
+.trainingScreen textarea:focus {
+  border-color: rgba(184, 142, 72, .72);
+  box-shadow: 0 0 0 4px rgba(184, 142, 72, .10);
+  outline: none;
+}
+
+.trainingButton {
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    background-color .22s ease;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .trainingVisual img {
+    transition: transform .7s ease;
+  }
+
+  .trainingVisual:hover img {
+    transform: scale(1.018);
+  }
+
+  .trainingButton:not(:disabled):hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 800px) {
+  .trainingVisual {
+    margin: 22px 0 28px;
+    border-radius: 16px;
+  }
+
+  .trainingVisual img {
+    height: clamp(230px, 70vw, 360px);
+  }
+
+  .trainingVisualCaption {
+    padding: 24px 20px 19px;
+  }
+
+  .trainingVisualCaption span {
+    font-size: 8px;
+  }
+
+  .trainingVisualCaption p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trainingVisual img,
+  .trainingButton,
+  .trainingScreen textarea {
+    transition: none !important;
+  }
+}
+
