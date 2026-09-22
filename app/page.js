@@ -199,6 +199,11 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <div className="premiumKgClosing">
+            <strong>RR te ayuda cada vez menos.</strong>
+            <span>TÚ NECESITAS CADA VEZ MENOS AYUDA.</span>
+          </div>
         </div>
       </section>
 
