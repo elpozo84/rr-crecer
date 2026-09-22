@@ -89,21 +89,19 @@ export default function Pesa09() {
           <span className="trainingTag">SPOT · RESPUESTA REAL</span>
           <h1>«¿Por qué hace esos ruidos?»</h1>
 
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa09.png"
-              alt="Pesa 09 · ¿Por qué hace esos ruidos?"
-              style={{ display: "block", width: "100%", height: "auto" }}
+              alt="Pesa 09 · Imitación, grupo y sexualidad"
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · IMITACIÓN, GRUPO Y SEXUALIDAD</span>
+              <p>
+                Una pregunta que parece sencilla puede abrir varias conversaciones.
+                El reto es descubrir antes de suponer, explicar sin sobrecargar y
+                ayudar a construir criterio propio frente al grupo.
+              </p>
+            </div>
           </div>
 
           <div className="scene">
