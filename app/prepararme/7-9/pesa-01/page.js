@@ -40,76 +40,34 @@ export default function Pesa01() {
         <div
           className="trainingProgressFill"
           style={{
-            width: `${Math.min(
-              ((paso + 1) / totalPasos) * 100,
-              100
-            )}%`,
+            width: `${Math.min(((paso + 1) / totalPasos) * 100, 100)}%`,
           }}
         />
       </div>
 
-     {paso === 0 && (
-  <section className="trainingScreen">
-
-    <div
-      style={{
-        width: "100%",
-        marginBottom: "38px",
-        borderRadius: "18px",
-        overflow: "hidden",
-        border: "1px solid var(--line)",
-        background: "var(--white)",
-      }}
-    >
-      <img
-        src="/pesa01.png"
-        alt="Pesa 01 · Preguntas inesperadas"
-        style={{
-          display: "block",
-          width: "100%",
-          height: "auto",
-        }}
-      />
-    </div>
-
-    <span className="trainingTag">SPOT · 5 KG</span>
-
-    <h1>Una pregunta que no esperabas.</h1>
-
-    <div className="scene">
-      <p>Estáis en casa. Tu hijo se acerca y pregunta:</p>
-
-      <blockquote>
-        —Papá, ¿qué significa <strong>follar</strong>?
-      </blockquote>
-    </div>
-
-    <p className="trainingLead">
-      No buscamos todavía la respuesta perfecta.
-    </p>
-
-    <h2>¿Qué le responderías tú?</h2>
-
-    <textarea
-      value={respuesta}
-      onChange={(e) => setRespuesta(e.target.value)}
-      placeholder="Escribe lo primero que probablemente le dirías..."
-    />
-
-    <button
-      className="trainingButton"
-      onClick={avanzar}
-      disabled={!respuesta.trim()}
-    >
-      CONTINUAR →
-    </button>
-
-    <button className="dontKnow" onClick={avanzar}>
-      NO SÉ QUÉ DIRÍA
-    </button>
-  </section>
-)}
+      {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa01.png"
+              alt="Pesa 01 · Preguntas inesperadas"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 5 KG</span>
 
           <h1>Una pregunta que no esperabas.</h1>
@@ -257,10 +215,7 @@ export default function Pesa01() {
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-
-              <p>
-                No. Por eso te pregunto.
-              </p>
+              <p>No. Por eso te pregunto.</p>
             </div>
           </div>
 
