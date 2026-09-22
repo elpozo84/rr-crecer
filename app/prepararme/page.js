@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./prepararme.css";
 
 const etapas = [
   {
@@ -40,75 +41,74 @@ const etapas = [
 ];
 
 function hrefEtapa(edad) {
-  return `/prepararme/${edad.replace("–", "-").replace("+", "plus")}`;
+  if (edad === "16+") return "/prepararme/16+";
+  return `/prepararme/${edad.replace("–", "-")}`;
 }
 
 export default function Prepararme() {
   return (
-    <main className="premiumAgePage">
-      <header className="header premiumHeader">
-        <Link className="brand" href="/">
-          <span className="mark">RR</span>
-          <span>
+    <main className="rrPreparePage">
+      <header className="rrPrepareHeader">
+        <Link className="rrPrepareBrand" href="/">
+          <span className="rrPrepareMark">RR</span>
+          <span className="rrPrepareBrandText">
             <strong>CRECER</strong>
             <small>MÉTODO RUIZ RIVAS</small>
           </span>
         </Link>
 
-        <Link className="backLink" href="/">
+        <Link className="rrPrepareBack" href="/">
           ← VOLVER
         </Link>
       </header>
 
-      <section className="premiumAgeHero">
-        <div className="premiumAgeHeroInner">
-          <div className="premiumAgeCopy">
-            <div className="premiumKicker">
-              <span>RR · CRECER</span>
-              <i />
-              <span>QUIERO PREPARARME</span>
-            </div>
-
-            <h1>
-              ¿A quién quieres
-              <span> acompañar?</span>
-            </h1>
-
-            <p>
-              La misma conversación cambia mientras crecen. Elige una etapa
-              para ajustar el lenguaje, la profundidad y los entrenamientos.
-            </p>
+      <section className="rrPrepareHero">
+        <div className="rrPrepareCopy">
+          <div className="rrPrepareKicker">
+            <span>RR · CRECER</span>
+            <i />
+            <span>QUIERO PREPARARME</span>
           </div>
 
-          <div className="premiumAgeGuide">
-            <div className="premiumAgeGuideTop">
-              <span>ANTES DE EMPEZAR</span>
-              <b>RR</b>
-            </div>
+          <h1>
+            ¿A quién quieres
+            <em> acompañar?</em>
+          </h1>
 
-            <p>
-              No buscamos que memorices respuestas.
-              <strong>
-                {" "}
-                Entrenamos para que puedas construirlas cuando las necesites.
-              </strong>
-            </p>
+          <p>
+            La misma conversación cambia mientras crecen. Elige una etapa
+            para ajustar el lenguaje, la profundidad y los entrenamientos.
+          </p>
+        </div>
 
-            <div className="premiumAgeGuideRoute">
-              <span>OBSERVA</span>
-              <i />
-              <span>DESCUBRE</span>
-              <i />
-              <span>CONSTRUYE</span>
-            </div>
+        <div className="rrPrepareGuide">
+          <div className="rrPrepareGuideTop">
+            <span>ANTES DE EMPEZAR</span>
+            <b>RR</b>
+          </div>
+
+          <p>
+            No buscamos que memorices respuestas.
+            <strong>
+              {" "}
+              Entrenamos para que puedas construirlas cuando las necesites.
+            </strong>
+          </p>
+
+          <div className="rrPrepareGuideRoute">
+            <span>OBSERVA</span>
+            <i />
+            <span>DESCUBRE</span>
+            <i />
+            <span>CONSTRUYE</span>
           </div>
         </div>
       </section>
 
-      <section className="premiumAgeSelection">
-        <div className="premiumAgeHeading">
+      <section className="rrPrepareSelection">
+        <div className="rrPrepareHeading">
           <div>
-            <div className="sectionTag">ELIGE UNA ETAPA</div>
+            <span className="rrPrepareTag">ELIGE UNA ETAPA</span>
             <h2>La profundidad cambia. El vínculo permanece.</h2>
           </div>
 
@@ -118,24 +118,24 @@ export default function Prepararme() {
           </p>
         </div>
 
-        <div className="premiumAgeList">
+        <div className="rrPrepareAgeList">
           {etapas.map((etapa) => (
             <Link
               href={hrefEtapa(etapa.edad)}
-              className={`premiumAgeCard ${
-                etapa.disponible ? "premiumAgeCardFeatured" : ""
+              className={`rrPrepareAgeCard ${
+                etapa.disponible ? "rrPrepareAgeFeatured" : ""
               }`}
               key={etapa.edad}
             >
-              <span className="premiumAgeIndex">{etapa.numero}</span>
+              <span className="rrPrepareAgeIndex">{etapa.numero}</span>
 
-              <div className="premiumAgeYears">
+              <div className="rrPrepareAgeYears">
                 <strong>{etapa.edad}</strong>
                 <small>AÑOS</small>
               </div>
 
-              <div className="premiumAgeInfo">
-                <div className="premiumAgeTitleLine">
+              <div className="rrPrepareAgeInfo">
+                <div className="rrPrepareAgeTitle">
                   <span>{etapa.nombre}</span>
                   {etapa.disponible && <b>GIMNASIO DISPONIBLE</b>}
                 </div>
@@ -144,14 +144,14 @@ export default function Prepararme() {
                 <p>{etapa.idea}</p>
               </div>
 
-              <span className="premiumAgeArrow">→</span>
+              <span className="rrPrepareAgeArrow">→</span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="premiumAgePrinciple">
-        <div className="premiumAgePrincipleMark">RR</div>
+      <section className="rrPreparePrinciple">
+        <div className="rrPreparePrincipleMark">RR</div>
 
         <div>
           <span>UNA ORIENTACIÓN, NO UNA ETIQUETA</span>
@@ -172,7 +172,7 @@ export default function Prepararme() {
         </div>
       </section>
 
-      <section className="premiumAgeNext">
+      <section className="rrPrepareNext">
         <span>RR · CRECER</span>
         <p>Prepararse no es adelantarse a todo.</p>
         <h2>Es llegar a la conversación con más criterio que miedo.</h2>
