@@ -39,25 +39,18 @@ export default function Pesa07() {
 
       {paso === 0 && (
         <section className="trainingScreen">
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa07.png"
               alt="Pesa 07 · Pantallas y contenido inesperado"
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-              }}
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · PANTALLAS Y CONTENIDO INESPERADO</span>
+              <p>
+                Cuando aparece algo que no esperábamos, la primera reacción puede
+                decidir si la próxima vez viene a contárnoslo o intenta ocultarlo.
+              </p>
+            </div>
           </div>
 
           <span className="trainingTag">SPOT · 10 KG</span>
