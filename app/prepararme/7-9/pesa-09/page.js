@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PuenteRR from "../../../components/PuenteRR";
 
 export default function Pesa09() {
   const [paso, setPaso] = useState(0);
@@ -199,6 +200,15 @@ export default function Pesa09() {
           <p className="trainingLead">
             Ahora sabemos mucho mejor qué quiere comprender.
           </p>
+
+          <PuenteRR
+            origen="PESA 09"
+            destino="PESA 01"
+            titulo="Puede haber aparecido otra pregunta"
+            texto="Empezaste hablando de unos sonidos, pero la palabra «follar» puede abrir otra conversación: quizá tu hijo también quiera saber qué significa. Si esa es la pregunta que ha aparecido, puedes entrenarla ahora y después volver a esta Pesa."
+            href="/prepararme/7-9/pesa-01?volver=/prepararme/7-9/pesa-09&paso=3"
+            onContinuar={() => irA(4)}
+          />
 
           <div className="bigQuestion">
             <small>LA PREGUNTA REAL PODRÍA SER</small>
