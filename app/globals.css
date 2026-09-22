@@ -81,6 +81,13 @@ export default function PuenteRR({
        /* ========================================
    PUENTES RR
 ======================================== */
+         .puenteRRPrimary,
+  .puenteRRSecondary {
+    min-height: 52px;
+    padding: 15px;
+    font-size: 9px;
+  }
+}
 
 .puenteRR {
   margin: 48px 0;
