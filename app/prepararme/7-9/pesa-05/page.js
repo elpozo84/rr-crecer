@@ -39,25 +39,18 @@ export default function Pesa05() {
 
       {paso === 0 && (
         <section className="trainingScreen">
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa05.png"
               alt="Pesa 05 · De dónde vienen los bebés"
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-              }}
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · REPRODUCCIÓN Y PREGUNTAS</span>
+              <p>
+                Antes de explicarlo todo, descubre qué quiere saber. Responde con
+                verdad suficiente y deja abierta la siguiente pregunta.
+              </p>
+            </div>
           </div>
 
           <span className="trainingTag">SPOT · 5 KG</span>
