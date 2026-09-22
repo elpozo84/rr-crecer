@@ -3,45 +3,83 @@ import Link from "next/link";
 const pesas = [
   {
     id: "01",
+    kg: "5 → 10 KG",
     titulo: "PAPÁ, ¿QUÉ SIGNIFICA...?",
-    capacidad: "Responder preguntas inesperadas",
+    capacidad: "Preguntas inesperadas",
     descripcion:
       "Aprende a descubrir qué quiere saber realmente antes de lanzarte a explicar.",
-    estado: "ENTRENAR",
+    aprendizaje: "Descubre primero la pregunta real.",
     href: "/prepararme/7-9/pesa-01",
   },
   {
     id: "02",
+    kg: "5 → 10 KG",
     titulo: "DALE UN BESO",
-    capacidad: "Afecto, cuerpo y límites",
+    capacidad: "Cuerpo y límites",
     descripcion:
       "Entrena cómo enseñar autonomía corporal sin confundir educación, cariño y contacto físico obligatorio.",
-    estado: "ENTRENAR",
+    aprendizaje: "Mi límite importa. El del otro también.",
     href: "/prepararme/7-9/pesa-02",
   },
   {
     id: "03",
+    kg: "5 → 10 KG",
     titulo: "ES NUESTRO SECRETO",
-    capacidad: "Secretos, sorpresas y pedir ayuda",
+    capacidad: "Secretos y pedir ayuda",
     descripcion:
-      "Ayúdale a distinguir privacidad, sorpresas y situaciones que necesita poder contar.",
-    estado: "PRÓXIMAMENTE",
+      "Diferencia privacidad, sorpresas y secretos manteniendo siempre abierta la posibilidad de pedir ayuda.",
+    aprendizaje: "Pedir ayuda siempre debe seguir siendo posible.",
+    href: "/prepararme/7-9/pesa-03",
   },
   {
     id: "04",
+    kg: "5 → 10 KG",
     titulo: "¿POR QUÉ NO PUEDO ENTRAR?",
     capacidad: "Intimidad sin vergüenza",
     descripcion:
-      "Comprender que privado no significa malo y aprender a respetar espacios íntimos.",
-    estado: "PRÓXIMAMENTE",
+      "Aprende a enseñar intimidad y respeto por los espacios privados sin presentar el cuerpo como algo malo.",
+    aprendizaje: "Privado no significa malo.",
+    href: "/prepararme/7-9/pesa-04",
   },
   {
     id: "05",
+    kg: "5 → 10 KG",
     titulo: "¿DE DÓNDE VIENEN LOS BEBÉS?",
-    capacidad: "Hablar de reproducción",
+    capacidad: "Reproducción",
     descripcion:
-      "Responder con verdad, sencillez y una profundidad adecuada a lo que realmente pregunta.",
-    estado: "PRÓXIMAMENTE",
+      "Entrena cómo responder con verdad y ajustar la profundidad a lo que realmente quiere comprender.",
+    aprendizaje: "Verdad suficiente. Profundidad progresiva.",
+    href: "/prepararme/7-9/pesa-05",
+  },
+  {
+    id: "06",
+    kg: "5 → 10 KG",
+    titulo: "¿POR QUÉ SE LLAMA PENE / VULVA?",
+    capacidad: "Nombrar el cuerpo",
+    descripcion:
+      "Entrena cómo hablar de las partes del cuerpo con claridad, precisión y naturalidad.",
+    aprendizaje: "El cuerpo puede nombrarse sin vergüenza.",
+    href: "/prepararme/7-9/pesa-06",
+  },
+  {
+    id: "07",
+    kg: "10 → 20 KG",
+    titulo: "ME HA SALIDO ESTO EN EL MÓVIL",
+    capacidad: "Pantallas y contenido inesperado",
+    descripcion:
+      "Entrena qué hacer cuando aparece contenido para el que no estaba preparado sin cerrar la comunicación.",
+    aprendizaje: "Comprender primero. Proteger después.",
+    href: "/prepararme/7-9/pesa-07",
+  },
+  {
+    id: "08",
+    kg: "20 → 40 KG",
+    titulo: "INTEGRACIÓN",
+    capacidad: "Transferir lo aprendido",
+    descripcion:
+      "Una situación compleja mezcla límites, presión, secretos, pantallas y seguridad. Esta vez RR retira casi toda la ayuda.",
+    aprendizaje: "Reconoce el criterio y también cuándo pedir ayuda.",
+    href: "/prepararme/7-9/pesa-08",
   },
 ];
 
@@ -69,19 +107,19 @@ export default function Comprender79() {
         <div className="sectionTag">COMPRENDER</div>
 
         <h1>
-          No tienes que explicárselo
-          <em> todo hoy.</em>
+          No tienes que prepararte
+          <em> todas las respuestas.</em>
         </h1>
 
         <p>
-          En esta etapa entrenamos cómo hablar sobre el cuerpo, los límites,
-          las primeras preguntas sobre reproducción y cómo pedir ayuda.
+          Entrena criterios para hablar sobre el cuerpo, los límites, la
+          intimidad, la reproducción, las pantallas y cómo pedir ayuda.
         </p>
 
         <div className="progressBox">
           <div>
-            <span>PRIMER RECORRIDO</span>
-            <strong>5 Pesas</strong>
+            <span>RECORRIDO · COMPRENDER</span>
+            <strong>8 PESAS</strong>
           </div>
 
           <div className="progressTrack">
@@ -89,7 +127,8 @@ export default function Comprender79() {
           </div>
 
           <small>
-            Empieza por una Pesa. No necesitas completar todo de una vez.
+            Empieza con situaciones guiadas y termina tomando decisiones con
+            mucha menos ayuda.
           </small>
         </div>
       </section>
@@ -99,59 +138,89 @@ export default function Comprender79() {
           <span>GIMNASIO RR · CRECER</span>
 
           <h2>
-            Entrena hoy la conversación que mañana puede aparecer sola.
+            La ayuda disminuye a medida que el criterio empieza a ser tuyo.
           </h2>
         </div>
 
         <div className="weights">
-          {pesas.map((pesa) => {
-            const contenido = (
-              <>
-                <div className="weightNumber">
-                  {pesa.id}
-                </div>
-
-                <div className="weightBody">
-                  <span>{pesa.capacidad}</span>
-
-                  <h3>{pesa.titulo}</h3>
-
-                  <p>{pesa.descripcion}</p>
-                </div>
-
-                <div
-                  className={`weightStatus ${
-                    pesa.href ? "weightAvailable" : ""
-                  }`}
-                >
-                  {pesa.estado}
-
-                  {pesa.href && <b>→</b>}
-                </div>
-              </>
-            );
-
-            if (pesa.href) {
-              return (
-                <Link
-                  className="weightCard"
-                  href={pesa.href}
-                  key={pesa.id}
-                >
-                  {contenido}
-                </Link>
-              );
-            }
-
-            return (
-              <div
-                className="weightCard locked"
-                key={pesa.id}
-              >
-                {contenido}
+          {pesas.map((pesa) => (
+            <Link
+              className="weightCard"
+              href={pesa.href}
+              key={pesa.id}
+            >
+              <div className="weightNumber">
+                {pesa.id}
               </div>
-            );
-          })}
+
+              <div className="weightBody">
+                <span>
+                  {pesa.capacidad} · {pesa.kg}
+                </span>
+
+                <h3>{pesa.titulo}</h3>
+
+                <p>{pesa.descripcion}</p>
+
+                <small
+                  style={{
+                    display: "block",
+                    marginTop: "13px",
+                    color: "var(--green)",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {pesa.aprendizaje}
+                </small>
+              </div>
+
+              <div className="weightStatus weightAvailable">
+                ENTRENAR <b>→</b>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="method">
+        <div>
+          <div className="sectionTag">PROGRESIÓN RR</div>
+
+          <h2>No repetimos la misma dificultad.</h2>
+
+          <h2 className="accent">
+            Retiramos ayuda.
+          </h2>
+
+          <p>
+            Al principio RR señala qué mirar. Después tendrás que reconocer el
+            criterio, combinar aprendizajes y decidir qué hacer por ti mismo.
+          </p>
+        </div>
+
+        <div className="spot">
+          <span>PROGRESIÓN DEL RECORRIDO</span>
+
+          <div className="steps">
+            <b>5 KG · DESCUBRIR</b>
+            <i>↓</i>
+
+            <b>10 KG · RECONOCER</b>
+            <i>↓</i>
+
+            <b>20 KG · COMBINAR</b>
+            <i>↓</i>
+
+            <b>40 KG · DECIDIR</b>
+          </div>
+
+          <p>
+            El objetivo no es llegar a 40 KG porque sepas más teoría.
+          </p>
+
+          <strong>
+            Llegas porque necesitas menos ayuda para pensar.
+          </strong>
         </div>
       </section>
 
@@ -175,14 +244,56 @@ export default function Comprender79() {
         <span>PRINCIPIO RR · CRECER</span>
 
         <blockquote>
-          No buscamos que memorices qué decir en cada situación.
+          No queremos preparar a una familia para ocho conversaciones.
           <strong>
             {" "}
-            Entrenamos criterios que puedas utilizar cuando aparezca una
-            situación que nunca habíamos previsto.
+            Queremos que pueda responder mejor a conversaciones que todavía no
+            sabemos que existirán.
           </strong>
         </blockquote>
       </section>
+
+      <section className="safety">
+        <span>CUANDO ENTRENAR NO ES SUFICIENTE</span>
+
+        <h2>También entrenamos cuándo pedir ayuda.</h2>
+
+        <p>
+          Si una situación puede implicar abuso, coerción, violencia,
+          explotación, una amenaza o un riesgo para un menor, RR · Crecer deja
+          de tratarla como un simple entrenamiento educativo.
+        </p>
+
+        <p className="safetySmall">
+          RR · Crecer es una herramienta educativa y no sustituye atención
+          médica, psicológica ni servicios de protección infantil.
+        </p>
+      </section>
+
+      <section className="closing">
+        <span>7–9 · COMPRENDER</span>
+
+        <h2>Ocho Pesas.</h2>
+
+        <h2 className="accent">
+          Criterios que crecen contigo.
+        </h2>
+
+        <Link href="/prepararme/7-9/pesa-01" className="primary">
+          EMPEZAR PESA 01 <span>→</span>
+        </Link>
+      </section>
+
+      <footer>
+        <div>
+          <strong>RR · CRECER</strong>
+          <span>Un proyecto del Método Ruiz Rivas</span>
+        </div>
+
+        <span>
+          7–9 · COMPRENDER · 8 PESAS · 5–40 KG
+        </span>
+      </footer>
     </main>
   );
 }
