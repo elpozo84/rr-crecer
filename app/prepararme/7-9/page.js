@@ -88,12 +88,12 @@ const pesas = [
   {
     id: "08",
     imagen: "/pesa08.png",
-    kg: "20 → 40 KG",
+    kg: "20 → 30 KG",
     nivel: "DECIDIR",
     titulo: "INTEGRACIÓN",
     capacidad: "Transferir lo aprendido",
     descripcion:
-      "Una situación compleja mezcla límites, presión, secretos, pantallas y seguridad. Esta vez RR retira casi toda la ayuda.",
+      "Integra límites, presión, secretos, pantallas y seguridad. RR retira ayuda y te obliga a decidir cuándo seguir educando y cuándo proteger.",
     aprendizaje: "Reconoce el criterio y también cuándo pedir ayuda.",
     href: "/prepararme/7-9/pesa-08",
   },
@@ -181,7 +181,7 @@ export default function Comprender79() {
               <i />
               <span>20 KG</span>
               <i />
-              <span>40 KG</span>
+              <span>30 KG</span>
             </div>
           </div>
         </div>
@@ -293,7 +293,7 @@ export default function Comprender79() {
 
           <div>
             <span>04</span>
-            <strong>40 KG</strong>
+            <strong>30 KG</strong>
             <b>DECIDIR</b>
             <p>RR se aparta y construyes la respuesta con menos apoyo.</p>
           </div>
@@ -367,7 +367,7 @@ export default function Comprender79() {
           <span>Un proyecto del Método Ruiz Rivas</span>
         </div>
 
-        <span>7–9 · COMPRENDER · 9 PESAS · 5–40 KG</span>
+        <span>7–9 · COMPRENDER · 9 PESAS · 5–30 KG</span>
       </footer>
     </main>
   );
