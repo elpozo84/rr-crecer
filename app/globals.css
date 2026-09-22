@@ -633,3 +633,150 @@ footer strong {
     flex-direction: column;
   }
 }
+/* ========================================
+   RR CRECER · SELECCIÓN DE ETAPA
+======================================== */
+
+.backLink {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.agePage {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.ageHero {
+  padding: 100px 7% 60px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.ageHero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  margin: 22px 0 30px;
+}
+
+.ageHero p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.ageGrid {
+  width: min(1100px, 86%);
+  margin: 20px auto 100px;
+  border-top: 1px solid var(--line);
+}
+
+.ageCard {
+  min-height: 145px;
+  display: grid;
+  grid-template-columns: 150px 1fr 50px;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+  transition: padding 0.2s ease, background 0.2s ease;
+}
+
+.ageCard:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.ageNumber {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  color: var(--gold);
+}
+
+.ageName {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.ageInfo p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ageArrow {
+  font-size: 25px;
+  color: var(--green);
+  text-align: right;
+}
+
+.ageNote {
+  padding: 85px 10%;
+  background: var(--green);
+  color: white;
+  text-align: center;
+}
+
+.ageNote > span {
+  color: #d0ad6c;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+}
+
+.ageNote p {
+  max-width: 650px;
+  margin: 25px auto 18px;
+  color: #d8e1de;
+  line-height: 1.8;
+}
+
+.ageNote strong {
+  display: block;
+  max-width: 760px;
+  margin: auto;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .ageHero {
+    padding: 70px 22px 45px;
+  }
+
+  .ageHero h1 {
+    font-size: 48px;
+  }
+
+  .ageGrid {
+    width: calc(100% - 44px);
+    margin-bottom: 70px;
+  }
+
+  .ageCard {
+    grid-template-columns: 75px 1fr 25px;
+    gap: 15px;
+    min-height: 135px;
+  }
+
+  .ageNumber {
+    font-size: 29px;
+  }
+
+  .ageInfo p {
+    font-size: 13px;
+  }
+
+  .ageNote {
+    padding: 70px 25px;
+  }
+}
