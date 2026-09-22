@@ -2479,3 +2479,110 @@ textarea:focus {
   }
 }
 
+/* ========================================
+   RR · CRECER · CORRECCIÓN DE CONTRASTE
+   Selecciones y botones oscuros siempre legibles
+======================================== */
+
+/* Opciones seleccionadas: fuerza TODO el contenido a blanco */
+.emotionGrid button.selected,
+.emotionGrid button.selected *,
+.choiceList button.selectedChoice,
+.choiceList button.selectedChoice *,
+.choiceList button.selected,
+.choiceList button.selected * {
+  color: #ffffff !important;
+}
+
+/* El fondo animado nunca puede tapar el texto */
+.emotionGrid button,
+.choiceList button {
+  isolation: isolate;
+}
+
+.emotionGrid button::before,
+.choiceList button::before {
+  z-index: -1 !important;
+}
+
+.emotionGrid button.selected::before,
+.choiceList button.selectedChoice::before,
+.choiceList button.selected::before {
+  transform: translateX(0);
+}
+
+/* Botones principales: texto siempre por encima de la animación */
+.trainingButton,
+.primary {
+  isolation: isolate;
+  color: #ffffff !important;
+}
+
+.trainingButton::before,
+.primary::before {
+  z-index: -1 !important;
+}
+
+.trainingButton,
+.trainingButton *,
+.primary,
+.primary * {
+  color: #ffffff !important;
+}
+
+/* En hover dorado, texto azul noche para máximo contraste */
+@media (hover: hover) and (pointer: fine) {
+  .trainingButton:hover,
+  .trainingButton:hover *,
+  .primary:hover,
+  .primary:hover * {
+    color: #0b1928 !important;
+  }
+
+  .emotionGrid button.selected:hover,
+  .emotionGrid button.selected:hover *,
+  .choiceList button.selectedChoice:hover,
+  .choiceList button.selectedChoice:hover *,
+  .choiceList button.selected:hover,
+  .choiceList button.selected:hover * {
+    color: #ffffff !important;
+  }
+}
+
+/* Bloques oscuros del entrenamiento */
+.scene,
+.scene *,
+.conversation .childAnswer,
+.conversation .childAnswer *,
+.nextSpot,
+.nextSpot * {
+  color: #ffffff;
+}
+
+.scene .trainingTag,
+.scene > span,
+.nextSpot > span,
+.nextSpot strong {
+  color: var(--rr-gold-light) !important;
+}
+
+/* Conserva textos secundarios oscuros con contraste suave */
+.scene > p:not(blockquote p),
+.nextSpot p {
+  color: rgba(255,255,255,.76) !important;
+}
+
+/* Botones deshabilitados: siguen mostrando su etiqueta */
+.trainingButton:disabled,
+.trainingButton:disabled * {
+  color: rgba(255,255,255,.82) !important;
+}
+
+/* Seguridad */
+.puenteRRSafety,
+.puenteRRSafety h2,
+.puenteRRSafety .puenteRRText {
+  color: #ffffff !important;
+}
+
+
