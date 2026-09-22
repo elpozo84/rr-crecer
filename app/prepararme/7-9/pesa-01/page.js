@@ -9,10 +9,16 @@ export default function Pesa01() {
   const [emocion, setEmocion] = useState("");
   const [respuestaFinal, setRespuestaFinal] = useState("");
 
-  const avanzar = () => {
+  const irA = (numero) => {
+    setPaso(numero);
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setPaso((p) => p + 1);
   };
+
+  const avanzar = () => {
+    irA(paso + 1);
+  };
+
+  const totalPasos = 11;
 
   return (
     <main className="trainingPage">
@@ -26,13 +32,15 @@ export default function Pesa01() {
           <small>PESA 01</small>
         </div>
 
-        <div className="kg">5 KG</div>
+        <div className="kg">{paso <= 6 ? "5 KG" : "10 KG"}</div>
       </header>
 
       <div className="trainingProgress">
         <div
           className="trainingProgressFill"
-          style={{ width: `${((paso + 1) / 7) * 100}%` }}
+          style={{
+            width: `${Math.min(((paso + 1) / totalPasos) * 100, 100)}%`,
+          }}
         />
       </div>
 
@@ -212,6 +220,7 @@ export default function Pesa01() {
 
           <div className="reflectionBox">
             <h2>¿Responderías exactamente lo mismo ahora?</h2>
+
             <p>
               No necesitamos convertir cada pregunta en una gran explicación.
               Podemos responder a lo que el niño necesita comprender y dejar
@@ -243,6 +252,7 @@ export default function Pesa01() {
 
           <div className="criterionReminder">
             <span>NO BUSQUES UNA FRASE PERFECTA</span>
+
             <p>
               Busca una respuesta verdadera, comprensible para su edad y que
               permita seguir conversando.
@@ -254,14 +264,14 @@ export default function Pesa01() {
             onClick={avanzar}
             disabled={!respuestaFinal.trim()}
           >
-            TERMINAR ENTRENAMIENTO →
+            TERMINAR 5 KG →
           </button>
         </section>
       )}
 
       {paso === 6 && (
         <section className="trainingScreen finishScreen">
-          <span className="trainingTag">REPLAY RR</span>
+          <span className="trainingTag">REPLAY RR · 5 KG</span>
 
           <div className="finishMark">RR</div>
 
@@ -291,15 +301,177 @@ export default function Pesa01() {
           </div>
 
           <div className="nextSpot">
-            <span>PRÓXIMO SPOT</span>
+            <span>SIGUIENTE NIVEL</span>
             <strong>10 KG</strong>
+
             <p>
-              La próxima vez el niño sabrá más y la conversación será un poco
-              más difícil.
+              Ahora RR retirará parte de la ayuda. Tendrás que reconocer por ti
+              mismo qué criterio necesitas.
             </p>
           </div>
 
-          <Link href="/prepararme/7-9" className="trainingButton linkButton">
+          <div className="finishActions">
+            <button className="trainingButton" onClick={() => irA(7)}>
+              SUBIR A 10 KG →
+            </button>
+
+            <Link
+              href="/prepararme/7-9"
+              className="secondaryTrainingButton"
+            >
+              VOLVER AL GIMNASIO
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {paso === 7 && (
+        <section className="trainingScreen">
+          <span className="trainingTag">SPOT · 10 KG</span>
+
+          <h1>Ahora sabe algo más.</h1>
+
+          <div className="scene">
+            <p>Otro día tu hijo vuelve con una pregunta.</p>
+
+            <blockquote>
+              —Papá, Marcos dice que sus padres <strong>follan</strong>.
+              ¿Eso es verdad?
+            </blockquote>
+          </div>
+
+          <p className="trainingLead">
+            Esta vez RR no va a decirte inmediatamente qué preguntar.
+          </p>
+
+          <h2>¿Cuál sería tu primer movimiento?</h2>
+
+          <div className="choiceList">
+            <button onClick={() => irA(8)}>
+              Explicarle directamente qué significa tener relaciones sexuales.
+            </button>
+
+            <button onClick={() => irA(9)}>
+              Preguntarle qué entiende él por esa palabra y qué quiere saber.
+            </button>
+
+            <button onClick={() => irA(8)}>
+              Decirle que es algo privado de sus padres y cambiar de tema.
+            </button>
+
+            <button onClick={() => irA(8)}>
+              Preguntarle quién se lo ha contado y decirle que esas cosas no se
+              hablan en el colegio.
+            </button>
+          </div>
+        </section>
+      )}
+
+      {paso === 8 && (
+        <section className="trainingScreen">
+          <span className="trainingTag">REPLAY INMEDIATO</span>
+
+          <h1>Has respondido antes de descubrir la pregunta.</h1>
+
+          <p className="trainingLead">
+            Puede que tu respuesta terminara siendo adecuada. El problema es
+            que todavía no sabes qué quiere comprender realmente.
+          </p>
+
+          <div className="criterionReminder">
+            <span>RECUPERA EL CRITERIO DE 5 KG</span>
+
+            <p>
+              Una misma palabra puede esconder preguntas muy diferentes.
+              Antes de preparar la explicación, descubre qué sabe y qué quiere
+              saber.
+            </p>
+          </div>
+
+          <button className="trainingButton" onClick={() => irA(7)}>
+            VOLVER AL SPOT →
+          </button>
+        </section>
+      )}
+
+      {paso === 9 && (
+        <section className="trainingScreen">
+          <span className="trainingTag">
+            HAS TRANSFERIDO EL CRITERIO
+          </span>
+
+          <h1>No has memorizado una frase.</h1>
+
+          <p className="trainingLead">
+            Has reconocido qué herramienta necesitabas en una situación
+            diferente.
+          </p>
+
+          <div className="conversation">
+            <div>
+              <span>TÚ</span>
+              <p>
+                ¿Qué crees tú que significa? ¿Qué quieres saber exactamente?
+              </p>
+            </div>
+
+            <div className="childAnswer">
+              <span>TU HIJO</span>
+              <p>
+                Marcos dice que es lo que hacen un hombre y una mujer para
+                tener bebés. ¿Es así?
+              </p>
+            </div>
+          </div>
+
+          <div className="bigQuestion">
+            <small>AHORA SÍ TENEMOS UNA PREGUNTA</small>
+            <h2>¿Cómo se hacen los bebés?</h2>
+          </div>
+
+          <p className="trainingLead">
+            Ya no estamos ante una palabra escuchada en el recreo. Ahora quiere
+            comprender algo sobre reproducción.
+          </p>
+
+          <button className="trainingButton" onClick={() => irA(10)}>
+            CONTINUAR →
+          </button>
+        </section>
+      )}
+
+      {paso === 10 && (
+        <section className="trainingScreen finishScreen">
+          <span className="trainingTag">10 KG SUPERADOS</span>
+
+          <div className="finishMark">10</div>
+
+          <h1>El criterio empieza a ser tuyo.</h1>
+
+          <div className="lesson">
+            <span>LO QUE ACABAS DE ENTRENAR</span>
+
+            <blockquote>
+              La misma palabra puede esconder preguntas distintas.
+              <strong> Primero descubre la pregunta real.</strong>
+            </blockquote>
+          </div>
+
+          <div className="nextSpot">
+            <span>LO QUE ACABA DE OCURRIR</span>
+
+            <strong>Has abierto la siguiente puerta.</strong>
+
+            <p>
+              Tu hijo ya no pregunta solamente qué significa una palabra.
+              Ahora quiere comprender cómo comienza un embarazo.
+            </p>
+          </div>
+
+          <Link
+            href="/prepararme/7-9"
+            className="trainingButton linkButton"
+          >
             VOLVER AL GIMNASIO →
           </Link>
         </section>
