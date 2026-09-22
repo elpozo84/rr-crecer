@@ -35,10 +35,7 @@ export default function Pesa09() {
         <div
           className="trainingProgressFill"
           style={{
-            width: `${Math.min(
-              ((paso + 1) / totalPasos) * 100,
-              100
-            )}%`,
+            width: `${Math.min(((paso + 1) / totalPasos) * 100, 100)}%`,
           }}
         />
       </div>
@@ -48,6 +45,27 @@ export default function Pesa09() {
           <span className="trainingTag">SPOT · 10 KG</span>
 
           <h1>«¿Por qué hace esos ruidos?»</h1>
+
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa09.png"
+              alt="Pesa 09 · ¿Por qué hace esos ruidos?"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
 
           <div className="scene">
             <p>
@@ -136,9 +154,7 @@ export default function Pesa09() {
           <div className="factStory">
             <div>
               <span>HECHO</span>
-              <p>
-                Un niño hace unos sonidos y otros niños se ríen.
-              </p>
+              <p>Un niño hace unos sonidos y otros niños se ríen.</p>
             </div>
 
             <div>
@@ -304,8 +320,8 @@ export default function Pesa09() {
 
           <div className="scene">
             <blockquote>
-              —Papá, hay un niño que hace esos ruidos y todos se ríen.
-              ¿Por qué los hace?
+              —Papá, hay un niño que hace esos ruidos y todos se ríen. ¿Por qué
+              los hace?
             </blockquote>
           </div>
 
@@ -418,8 +434,8 @@ export default function Pesa09() {
           <h1>No necesitamos elegir entre prohibir e ignorar.</h1>
 
           <p className="trainingLead">
-            La situación permite enseñar algo más útil que una prohibición:
-            cómo decidir cuando el grupo empuja en una dirección.
+            La situación permite enseñar algo más útil que una prohibición: cómo
+            decidir cuando el grupo empuja en una dirección.
           </p>
 
           <div className="criterionReminder">
@@ -456,9 +472,7 @@ export default function Pesa09() {
 
           <div className="bigQuestion">
             <small>PREGUNTA RR</small>
-            <h2>
-              «Si nadie más se riera, ¿tú seguirías haciéndolo?»
-            </h2>
+            <h2>«Si nadie más se riera, ¿tú seguirías haciéndolo?»</h2>
           </div>
 
           <p className="trainingLead">
@@ -482,7 +496,8 @@ export default function Pesa09() {
             <div className="childAnswer">
               <span>TU HIJO</span>
               <p>
-                ¿Y si ese niño hace esos ruidos porque ha escuchado a sus padres?
+                ¿Y si ese niño hace esos ruidos porque ha escuchado a sus
+                padres?
               </p>
             </div>
 
@@ -635,8 +650,8 @@ export default function Pesa09() {
 
           <div className="scene">
             <blockquote>
-              —Papá, hay un niño que hace esos ruidos y todos se ríen.
-              ¿Por qué los hace?
+              —Papá, hay un niño que hace esos ruidos y todos se ríen. ¿Por qué
+              los hace?
             </blockquote>
           </div>
 
@@ -665,7 +680,9 @@ export default function Pesa09() {
 
             <div>
               <span>GRUPO ≠ CRITERIO</span>
-              <p>Que todos participen no decide automáticamente lo que hago.</p>
+              <p>
+                Que todos participen no decide automáticamente lo que hago.
+              </p>
             </div>
           </div>
 
