@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createClient } from "../../../../utils/supabase/client";
 
 const emocionesDisponibles = [
   "Sorpresa",
@@ -65,6 +66,46 @@ const frasesHerramienta = [
 
 export default function Pesa09() {
   const [paso, setPaso] = useState(0);
+
+  useEffect(() => {
+    const registrarInicio = async () => {
+      const supabase = createClient();
+
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (!user) return;
+
+      const { data: progresoActual } = await supabase
+        .from("training_progress")
+        .select("status, started_at, completed_at")
+        .eq("user_id", user.id)
+        .eq("stage", "7-9")
+        .eq("weight_number", 1)
+        .maybeSingle();
+
+      if (progresoActual?.status === "completed") return;
+
+      await supabase.from("training_progress").upsert(
+        {
+          user_id: user.id,
+          stage: "7-9",
+          weight_number: 1,
+          status: "started",
+          kg: 5,
+          started_at: progresoActual?.started_at || new Date().toISOString(),
+          completed_at: null,
+          updated_at: new Date().toISOString(),
+        },
+        {
+          onConflict: "user_id,stage,weight_number",
+        }
+      );
+    };
+
+    registrarInicio();
+  }, []);
   const [respuestaInicial, setRespuestaInicial] = useState("");
   const [emociones, setEmociones] = useState([]);
   const [pensamiento, setPensamiento] = useState("");
@@ -87,6 +128,35 @@ export default function Pesa09() {
         ? actuales.filter((item) => item !== emocion)
         : [...actuales, emocion]
     );
+  };
+
+  const completarEntrenamiento = async () => {
+    const supabase = createClient();
+
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (user) {
+      const ahora = new Date().toISOString();
+
+      await supabase.from("training_progress").upsert(
+        {
+          user_id: user.id,
+          stage: "7-9",
+          weight_number: 1,
+          status: "completed",
+          kg: 20,
+          completed_at: ahora,
+          updated_at: ahora,
+        },
+        {
+          onConflict: "user_id,stage,weight_number",
+        }
+      );
+    }
+
+    irA(11);
   };
 
   return (
