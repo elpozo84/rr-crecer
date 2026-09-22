@@ -1,0 +1,41 @@
+.rrAccessPage{
+ --n:#081522;--n2:#0b1928;--n3:#132b40;--g:#b88e48;--gl:#e0c58e;
+ --w:#fff;--mut:rgba(255,255,255,.62);--line:rgba(255,255,255,.13);
+ min-height:100vh;background:linear-gradient(135deg,#07131f 0%,#0b1928 62%,#10283b 100%)!important;color:#fff;overflow-x:hidden
+}
+.rrAccessPage *{box-sizing:border-box}.rrAccessPage a{text-decoration:none;color:inherit}
+.rrAccessHeader{width:min(1240px,calc(100% - 64px));height:88px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.rrAccessBrand{display:flex;align-items:center;gap:12px}.rrAccessMark{width:42px;height:42px;border:1px solid rgba(224,197,142,.48);border-radius:50%;display:grid;place-items:center;font:15px Georgia,serif;color:var(--gl)}
+.rrAccessBrandText{display:flex;flex-direction:column}.rrAccessBrandText strong{font-size:12px;letter-spacing:.18em}.rrAccessBrandText small{font-size:8px;letter-spacing:.13em;color:rgba(255,255,255,.45)}
+.rrAccessBack{font-size:10px;font-weight:800;letter-spacing:.12em;color:rgba(255,255,255,.68)!important}
+
+.rrAccessShell{position:relative;width:min(1240px,calc(100% - 64px));margin:auto;padding:76px 0 82px;display:grid;grid-template-columns:1.03fr .78fr;gap:105px;align-items:center}
+.rrAccessShell:before{content:"RR";position:absolute;left:-85px;top:10px;font:310px/1 Georgia,serif;color:rgba(255,255,255,.018);pointer-events:none}
+.rrAccessIntro,.rrAccessCard{position:relative;z-index:1}
+.rrAccessTag{color:var(--gl);font-size:9px;font-weight:900;letter-spacing:.17em}
+.rrAccessIntro h1{max-width:650px;margin:22px 0 28px;font:400 clamp(58px,5.7vw,88px)/.92 Georgia,serif;letter-spacing:-.045em;color:#fff!important}
+.rrAccessIntro h1 em{display:block;color:var(--gl)!important;font-weight:400}
+.rrAccessLead{max-width:650px;margin:0;color:var(--mut)!important;font-size:15px;line-height:1.8}
+.rrAccessPromise{max-width:650px;margin-top:38px;padding:25px 26px;display:grid;grid-template-columns:50px 1fr;gap:20px;align-items:start;border:1px solid rgba(224,197,142,.26);background:rgba(255,255,255,.035)!important}
+.rrAccessPromise>span{width:46px;height:46px;border:1px solid rgba(224,197,142,.4);border-radius:50%;display:grid;place-items:center;font:15px Georgia,serif;color:var(--gl)}
+.rrAccessPromise strong{display:block;color:#fff!important;font-size:12px}.rrAccessPromise p{margin:7px 0 0;color:rgba(255,255,255,.52)!important;font-size:11px;line-height:1.6}
+.rrAccessPoints{max-width:650px;margin-top:32px;border-top:1px solid var(--line)}
+.rrAccessPoints>div{display:grid;grid-template-columns:38px 1fr;gap:18px;padding:19px 0;border-bottom:1px solid var(--line)}
+.rrAccessPoints>div>span{font:16px Georgia,serif;color:var(--gl)}.rrAccessPoints p{margin:0}.rrAccessPoints strong{display:block;color:#fff!important;font-size:11px}.rrAccessPoints small{display:block;margin-top:5px;color:rgba(255,255,255,.48);font-size:10px;line-height:1.5}
+
+.rrAccessCard{padding:34px 36px 30px;background:#fff!important;color:#102231!important;border-top:3px solid var(--g);box-shadow:0 35px 85px rgba(0,0,0,.32)}
+.rrAccessCardTop{display:flex;justify-content:space-between;color:#687782;font-size:8px;font-weight:900;letter-spacing:.14em}.rrAccessCardTop b{color:var(--g)}
+.rrAccessTabs{margin:28px 0 32px;padding:5px;display:grid;grid-template-columns:1fr 1fr;background:#f2f4f6}
+.rrAccessTabs button{height:45px;border:0;background:transparent;color:#687782;font-size:9px;font-weight:900;letter-spacing:.1em;cursor:pointer}.rrAccessTabs button.active{background:var(--n2);color:#fff;box-shadow:0 8px 20px rgba(8,21,34,.15)}
+.rrAccessCardCopy h2{margin:0;font:400 34px/1.05 Georgia,serif;color:#102231!important}.rrAccessCardCopy p{margin:10px 0 27px;color:#687782!important;font-size:11px;line-height:1.6}
+.rrAccessForm{display:grid;gap:19px}.rrAccessForm label>span{display:block;margin-bottom:8px;color:#102231;font-size:8px;font-weight:900;letter-spacing:.13em}
+.rrAccessForm input{width:100%;height:53px;padding:0 15px;border:1px solid rgba(11,25,40,.16);border-radius:0;background:#fff;color:#102231;font:14px inherit;outline:none;transition:.2s}.rrAccessForm input:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(184,142,72,.08)}
+.rrAccessSubmit{height:55px;padding:0 18px;border:0;background:var(--n2);color:#fff;display:flex;align-items:center;justify-content:space-between;font-size:9px;font-weight:900;letter-spacing:.1em;cursor:pointer}.rrAccessSubmit b{font-size:18px;font-weight:400;color:var(--gl)}.rrAccessSubmit:disabled{opacity:.6;cursor:wait}
+.rrAccessMessage{padding:13px 15px;border:1px solid;font-size:10px}.rrAccessMessage strong{font-size:8px;letter-spacing:.1em}.rrAccessMessage p{margin:5px 0 0!important;font-size:10px!important}.rrAccessError{border-color:#c98c86;background:#fff6f5;color:#7c302b}.rrAccessSuccess{border-color:#7fa48e;background:#f4faf6;color:#28583c}
+.rrAccessDivider{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin:28px 0 20px}.rrAccessDivider span{height:1px;background:rgba(11,25,40,.12)}.rrAccessDivider small{color:var(--g);font:11px Georgia,serif}
+.rrAccessPrivacy{max-width:360px;margin:0 auto;text-align:center;color:#687782!important;font-size:9px;line-height:1.55}.rrAccessWithout{display:block;margin-top:20px;text-align:center;color:#102231!important;font-size:8px;font-weight:900;letter-spacing:.11em}
+.rrAccessFooter{width:min(1240px,calc(100% - 64px));min-height:94px;margin:auto;display:flex;align-items:center;gap:18px;border-top:1px solid var(--line)}.rrAccessFooter strong{font-size:10px;letter-spacing:.12em}.rrAccessFooter span{color:rgba(255,255,255,.4);font-size:9px}
+
+@media(hover:hover){.rrAccessSubmit:hover{background:var(--g)}.rrAccessWithout:hover{color:var(--g)!important}.rrAccessBack:hover{color:var(--gl)!important}}
+@media(max-width:900px){.rrAccessShell{grid-template-columns:1fr;gap:55px}.rrAccessCard{max-width:590px;width:100%}.rrAccessIntro{max-width:720px}}
+@media(max-width:620px){.rrAccessHeader,.rrAccessShell,.rrAccessFooter{width:calc(100% - 36px)}.rrAccessHeader{height:74px}.rrAccessShell{padding:58px 0}.rrAccessIntro h1{font-size:clamp(50px,14vw,68px)}.rrAccessPromise{padding:20px}.rrAccessCard{padding:28px 21px 25px}.rrAccessFooter{padding:25px 0;min-height:auto;flex-direction:column;align-items:flex-start}}
