@@ -6849,3 +6849,112 @@ textarea:focus {
     padding-bottom: 25px;
   }
 }
+
+
+
+/* ========================================
+   RR · CRECER · HOTFIX V5
+   HOME: estados seguros
+   PESAS: restauración de contenedor base
+======================================== */
+
+/* HOME: jamás convertir las puertas oscuras en blanco al hover/focus/click */
+.premiumHome .premiumChoose .premiumCard,
+.premiumHome .premiumChoose .premiumCard:link,
+.premiumHome .premiumChoose .premiumCard:visited,
+.premiumHome .premiumChoose .premiumCard:focus,
+.premiumHome .premiumChoose .premiumCard:focus-visible,
+.premiumHome .premiumChoose .premiumCard:active,
+.premiumHome .premiumChoose .premiumCardSerious,
+.premiumHome .premiumChoose .premiumCardSerious:link,
+.premiumHome .premiumChoose .premiumCardSerious:visited,
+.premiumHome .premiumChoose .premiumCardSerious:focus,
+.premiumHome .premiumChoose .premiumCardSerious:focus-visible,
+.premiumHome .premiumChoose .premiumCardSerious:active {
+  background: transparent !important;
+  color: #ffffff !important;
+  outline: none;
+}
+
+.premiumHome .premiumChoose .premiumCard:nth-child(2),
+.premiumHome .premiumChoose .premiumCard:nth-child(2):focus,
+.premiumHome .premiumChoose .premiumCard:nth-child(2):active {
+  background: rgba(255,255,255,.025) !important;
+}
+
+.premiumHome .premiumChoose .premiumCardSerious,
+.premiumHome .premiumChoose .premiumCardSerious:focus,
+.premiumHome .premiumChoose .premiumCardSerious:active {
+  background: rgba(184,142,72,.055) !important;
+}
+
+.premiumHome .premiumChoose .premiumCard h3,
+.premiumHome .premiumChoose .premiumCard p,
+.premiumHome .premiumChoose .premiumCardSerious h3,
+.premiumHome .premiumChoose .premiumCardSerious p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.premiumHome .premiumChoose .premiumCard h3,
+.premiumHome .premiumChoose .premiumCardSerious h3 {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumChoose .premiumCard p,
+.premiumHome .premiumChoose .premiumCardSerious p {
+  color: rgba(255,255,255,.64) !important;
+}
+
+@media (hover:hover) {
+  .premiumHome .premiumChoose .premiumCard:hover,
+  .premiumHome .premiumChoose .premiumCardSerious:hover {
+    background: rgba(255,255,255,.045) !important;
+    color: #ffffff !important;
+  }
+}
+
+/* PESAS: proteger la estructura de entrenamiento de reglas de otras páginas */
+.trainingPage {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #102231;
+}
+
+.trainingPage .trainingHeader {
+  width: 100%;
+}
+
+.trainingPage .trainingScreen {
+  width: min(820px, calc(100% - 44px)) !important;
+  max-width: 820px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.trainingPage .trainingScreen > * {
+  max-width: 100%;
+}
+
+.trainingPage .trainingScreen p,
+.trainingPage .trainingScreen li {
+  overflow-wrap: break-word;
+}
+
+/* Evita contenido pegado/cortado al borde aunque una Pesa use wrappers adicionales */
+.trainingPage main,
+.trainingPage section {
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .trainingPage .trainingScreen {
+    width: calc(100% - 36px) !important;
+    padding-top: 55px !important;
+    padding-bottom: 85px !important;
+  }
+}
