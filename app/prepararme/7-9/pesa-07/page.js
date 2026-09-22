@@ -39,6 +39,27 @@ export default function Pesa07() {
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa07.png"
+              alt="Pesa 07 · Pantallas y contenido inesperado"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 10 KG</span>
 
           <h1>«Me ha salido esto en el móvil.»</h1>
@@ -125,9 +146,7 @@ export default function Pesa07() {
           <div className="factStory">
             <div>
               <span>HECHO</span>
-              <p>
-                Ha visto algo, lo ha cerrado y ha venido a contártelo.
-              </p>
+              <p>Ha visto algo, lo ha cerrado y ha venido a contártelo.</p>
             </div>
 
             <div>
@@ -178,9 +197,7 @@ export default function Pesa07() {
 
             <div>
               <span>TÚ</span>
-              <p>
-                Vale. ¿Lo viste mucho rato o lo cerraste enseguida?
-              </p>
+              <p>Vale. ¿Lo viste mucho rato o lo cerraste enseguida?</p>
             </div>
 
             <div className="childAnswer">
@@ -219,9 +236,7 @@ export default function Pesa07() {
           <div className="conversation">
             <div>
               <span>SI VUELVE A OCURRIR</span>
-              <p>
-                Puedes cerrar la imagen o el vídeo y venir a decírmelo.
-              </p>
+              <p>Puedes cerrar la imagen o el vídeo y venir a decírmelo.</p>
             </div>
 
             <div>
@@ -334,9 +349,7 @@ export default function Pesa07() {
           <h1>Ahora hay otra persona al otro lado.</h1>
 
           <div className="scene">
-            <p>
-              Tu hijo se acerca con el móvil y te dice:
-            </p>
+            <p>Tu hijo se acerca con el móvil y te dice:</p>
 
             <blockquote>
               —Un niño me ha enviado una imagen de gente desnuda.
