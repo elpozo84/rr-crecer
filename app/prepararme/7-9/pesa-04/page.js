@@ -39,25 +39,18 @@ export default function Pesa04() {
 
       {paso === 0 && (
         <section className="trainingScreen">
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa04.png"
               alt="Pesa 04 · Intimidad sin vergüenza"
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-              }}
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · INTIMIDAD SIN VERGÜENZA</span>
+              <p>
+                Tener intimidad no significa esconder algo malo. También podemos
+                enseñar que el cuerpo es normal y que la privacidad se respeta.
+              </p>
+            </div>
           </div>
 
           <span className="trainingTag">SPOT · 5 KG</span>
