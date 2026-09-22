@@ -39,25 +39,18 @@ export default function Pesa06() {
 
       {paso === 0 && (
         <section className="trainingScreen">
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa06.png"
               alt="Pesa 06 · Nombrar el cuerpo"
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-              }}
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · NOMBRAR EL CUERPO</span>
+              <p>
+                Poner palabras correctas al cuerpo no elimina la intimidad.
+                Ayuda a hablar de él con claridad y sin convertirlo en algo prohibido.
+              </p>
+            </div>
           </div>
 
           <span className="trainingTag">SPOT · 5 KG</span>
