@@ -57,6 +57,27 @@ export default function Pesa08() {
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa08.png"
+              alt="Pesa 08 · Integración"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 20 KG</span>
 
           <h1>Esta vez RR no te dirá qué estás entrenando.</h1>
@@ -67,9 +88,7 @@ export default function Pesa08() {
               lo habitual.
             </p>
 
-            <p>
-              Después de un rato te dice:
-            </p>
+            <p>Después de un rato te dice:</p>
 
             <blockquote>
               —Papá, hoy pasó una cosa rara.
@@ -161,9 +180,7 @@ export default function Pesa08() {
 
             <div>
               <span>LÍMITE</span>
-              <p>
-                El niño expresó que no quería ver algo.
-              </p>
+              <p>El niño expresó que no quería ver algo.</p>
             </div>
           </div>
 
