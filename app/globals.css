@@ -6409,3 +6409,443 @@ textarea:focus {
     color: var(--home-navy) !important;
   }
 }
+
+
+
+/* ========================================
+   RR · CRECER · HOME V4
+   CONTINUIDAD CINEMATOGRÁFICA
+   ¿QUÉ NECESITAS? + EDADES EN AZUL NOCHE
+======================================== */
+
+/* ----------------------------------------
+   ¿QUÉ NECESITAS?
+   De dashboard blanco a bloque editorial.
+---------------------------------------- */
+.premiumHome .premiumChoose {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(184,142,72,.10), transparent 28%),
+    linear-gradient(135deg, #07131f 0%, #0b1928 58%, #132b40 100%) !important;
+  color: #ffffff;
+}
+
+.premiumHome .premiumChoose::before {
+  content: "RR";
+  position: absolute;
+  right: -1.5vw;
+  bottom: -7vw;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: min(30vw, 470px);
+  line-height: .8;
+  color: rgba(255,255,255,.018);
+  pointer-events: none;
+}
+
+.premiumHome .premiumChoose .sectionTag {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumChoose .premiumSectionHead {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  padding-bottom: 42px;
+  margin-bottom: 0;
+}
+
+.premiumHome .premiumChoose .premiumSectionHead h2 {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumChoose .premiumSectionHead > p {
+  color: rgba(255,255,255,.62) !important;
+}
+
+/* Las cuatro puertas dejan de ser cajas */
+.premiumHome .premiumCards {
+  position: relative;
+  z-index: 2;
+  display: block !important;
+  border-top: 0 !important;
+}
+
+.premiumHome .premiumCard,
+.premiumHome .premiumCardSerious {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: 90px minmax(280px, .9fr) minmax(300px, 1.15fr) 54px;
+  align-items: center;
+  gap: 26px;
+  min-height: 0 !important;
+  padding: 38px 4px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  overflow: hidden;
+}
+
+.premiumHome .premiumCard::before,
+.premiumHome .premiumCardSerious::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(184,142,72,.00), rgba(184,142,72,.075), rgba(255,255,255,.015));
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.premiumHome .premiumCard::after,
+.premiumHome .premiumCardSerious::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--home-gold), var(--home-gold-light));
+  transition: width .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.premiumHome .premiumCardTop {
+  display: contents !important;
+}
+
+.premiumHome .premiumCardTop span {
+  grid-column: 1;
+  position: relative;
+  z-index: 2;
+  color: var(--home-gold-light) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px !important;
+  font-weight: 500;
+  transition: transform .3s ease, color .3s ease;
+}
+
+.premiumHome .premiumCardTop > i,
+.premiumHome .premiumCardTop > svg,
+.premiumHome .premiumCardTop > strong,
+.premiumHome .premiumCardTop > a {
+  display: none !important;
+}
+
+.premiumHome .premiumCardTop::after {
+  display: none !important;
+}
+
+.premiumHome .premiumCard h3,
+.premiumHome .premiumCardSerious h3 {
+  grid-column: 2;
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 2.25vw, 36px) !important;
+  line-height: 1.03 !important;
+  letter-spacing: -.025em;
+}
+
+.premiumHome .premiumCard p,
+.premiumHome .premiumCardSerious p {
+  grid-column: 3;
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  margin: 0 !important;
+  color: rgba(255,255,255,.60) !important;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.premiumHome .premiumCard > strong,
+.premiumHome .premiumCardSerious > strong {
+  grid-column: 4;
+  position: relative;
+  z-index: 2;
+  display: flex !important;
+  align-items: center;
+  justify-content: center !important;
+  width: 46px;
+  height: 46px;
+  margin: 0 0 0 auto !important;
+  border: 1px solid rgba(224,197,142,.30);
+  border-radius: 50%;
+  color: transparent !important;
+  font-size: 0 !important;
+  transition: background .3s ease, border-color .3s ease, transform .3s ease;
+}
+
+.premiumHome .premiumCard > strong::after,
+.premiumHome .premiumCardSerious > strong::after {
+  content: "→";
+  color: var(--home-gold-light) !important;
+  font-size: 19px !important;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+
+/* 02: puerta protagonista */
+.premiumHome .premiumCard:nth-child(2) {
+  background: rgba(255,255,255,.025) !important;
+}
+
+.premiumHome .premiumCard:nth-child(2) .premiumCardTop span::after {
+  content: "AHORA";
+  display: inline-block;
+  margin-left: 13px;
+  padding: 5px 8px;
+  border: 1px solid rgba(224,197,142,.34);
+  border-radius: 999px;
+  color: var(--home-gold-light);
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  vertical-align: middle;
+}
+
+/* 04 sigue siendo seguridad, pero dentro del mismo lenguaje */
+.premiumHome .premiumCardSerious {
+  background: rgba(184,142,72,.055) !important;
+}
+
+.premiumHome .premiumCardSerious h3 {
+  color: #ffffff !important;
+}
+
+/* ----------------------------------------
+   LA CONVERSACIÓN CAMBIA CON LA EDAD
+   Ahora pertenece al mismo universo visual.
+---------------------------------------- */
+.premiumHome .premiumStages {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 90%, rgba(184,142,72,.08), transparent 27%),
+    linear-gradient(135deg, #07131f 0%, #0b1928 56%, #17324a 100%) !important;
+  color: #ffffff;
+}
+
+.premiumHome .premiumStages::after {
+  content: "04—16+";
+  position: absolute;
+  right: -1vw;
+  top: 6%;
+  color: rgba(255,255,255,.018);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: min(13vw, 190px);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.premiumHome .premiumStages .sectionTag {
+  color: var(--home-gold-light) !important;
+}
+
+.premiumHome .premiumStages .premiumSectionHead {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.premiumHome .premiumStages .premiumSectionHead h2 {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumStages .premiumSectionHead > p {
+  color: rgba(255,255,255,.62) !important;
+}
+
+.premiumHome .premiumStageList {
+  position: relative;
+  z-index: 2;
+  border-color: rgba(255,255,255,.14) !important;
+}
+
+.premiumHome .premiumStage {
+  position: relative;
+  background: transparent !important;
+  border-color: rgba(255,255,255,.14) !important;
+  transition: background .3s ease, padding-left .3s ease;
+}
+
+.premiumHome .premiumStage::before {
+  background: var(--home-gold) !important;
+}
+
+.premiumHome .premiumStageIndex {
+  color: rgba(255,255,255,.36) !important;
+}
+
+.premiumHome .premiumStage > strong {
+  color: var(--home-gold-light) !important;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.premiumHome .premiumStage b {
+  color: #ffffff !important;
+}
+
+.premiumHome .premiumStage p {
+  color: rgba(255,255,255,.58) !important;
+}
+
+.premiumHome .premiumStageArrow {
+  color: var(--home-gold-light) !important;
+}
+
+/* Frase real de cada edad usando el contenido ya existente como base visual */
+.premiumHome .premiumStage:nth-child(1)::after {
+  content: "«¿Por qué yo tengo pene y ella no?»";
+}
+.premiumHome .premiumStage:nth-child(2)::after {
+  content: "«Papá, ¿qué significa follar?»";
+}
+.premiumHome .premiumStage:nth-child(3)::after {
+  content: "«Me han mandado una foto.»";
+}
+.premiumHome .premiumStage:nth-child(4)::after {
+  content: "«Todos dicen que ya lo han hecho.»";
+}
+.premiumHome .premiumStage:nth-child(5)::after {
+  content: "«No quiero que me soluciones nada.»";
+}
+
+.premiumHome .premiumStage::after {
+  position: absolute;
+  right: 92px;
+  top: 50%;
+  max-width: 330px;
+  transform: translateY(-50%) translateX(8px);
+  color: rgba(255,255,255,.0);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.3;
+  transition: color .3s ease, transform .3s ease;
+  pointer-events: none;
+}
+
+/* Hover premium */
+@media (hover:hover) {
+  .premiumHome .premiumCard:hover,
+  .premiumHome .premiumCardSerious:hover {
+    background: rgba(255,255,255,.035) !important;
+  }
+
+  .premiumHome .premiumCard:hover::before,
+  .premiumHome .premiumCardSerious:hover::before {
+    opacity: 1;
+  }
+
+  .premiumHome .premiumCard:hover::after,
+  .premiumHome .premiumCardSerious:hover::after {
+    width: 100%;
+  }
+
+  .premiumHome .premiumCard:hover .premiumCardTop span,
+  .premiumHome .premiumCardSerious:hover .premiumCardTop span {
+    transform: translateX(8px);
+    color: #ffffff !important;
+  }
+
+  .premiumHome .premiumCard:hover > strong,
+  .premiumHome .premiumCardSerious:hover > strong {
+    background: var(--home-gold);
+    border-color: var(--home-gold);
+    transform: translateX(4px);
+  }
+
+  .premiumHome .premiumCard:hover > strong::after,
+  .premiumHome .premiumCardSerious:hover > strong::after {
+    color: #ffffff !important;
+    transform: translateX(3px);
+  }
+
+  .premiumHome .premiumStage:hover {
+    background: rgba(255,255,255,.035) !important;
+    padding-left: 12px;
+    box-shadow: none !important;
+  }
+
+  .premiumHome .premiumStage:hover::after {
+    color: rgba(255,255,255,.82);
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .premiumHome .premiumStage:hover p {
+    opacity: .25;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .premiumHome .premiumCard,
+  .premiumHome .premiumCardSerious {
+    grid-template-columns: 62px minmax(230px, .85fr) 1fr 48px;
+    gap: 18px;
+  }
+
+  .premiumHome .premiumStage::after {
+    display: none;
+  }
+}
+
+/* Móvil: mantiene la experiencia, no depende de hover */
+@media (max-width: 760px) {
+  .premiumHome .premiumChoose .premiumSectionHead,
+  .premiumHome .premiumStages .premiumSectionHead {
+    padding-bottom: 28px;
+  }
+
+  .premiumHome .premiumCard,
+  .premiumHome .premiumCardSerious {
+    display: grid !important;
+    grid-template-columns: 1fr 48px;
+    gap: 12px 16px;
+    padding: 28px 0 !important;
+  }
+
+  .premiumHome .premiumCardTop {
+    display: block !important;
+    grid-column: 1;
+  }
+
+  .premiumHome .premiumCardTop span {
+    font-size: 18px !important;
+  }
+
+  .premiumHome .premiumCard h3,
+  .premiumHome .premiumCardSerious h3 {
+    grid-column: 1 / -1;
+    font-size: 27px !important;
+  }
+
+  .premiumHome .premiumCard p,
+  .premiumHome .premiumCardSerious p {
+    grid-column: 1;
+    font-size: 13px;
+  }
+
+  .premiumHome .premiumCard > strong,
+  .premiumHome .premiumCardSerious > strong {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: end;
+  }
+
+  .premiumHome .premiumStage {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
