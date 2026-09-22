@@ -40,6 +40,21 @@ const stages = [
   ["16+", "RESPONSABILIZARSE", "Sexualidad · relaciones · cuidado · decisiones · responsabilidad"],
 ];
 
+const questions = [
+  ["4–6", "¿Por qué yo tengo pene y ella no?"],
+  ["7–9", "Papá, ¿qué significa follar?"],
+  ["10–12", "Me han mandado una foto."],
+  ["13–15", "Todos dicen que ya lo han hecho."],
+  ["16+", "He hecho algo y no sé qué hacer."],
+];
+
+const kgSteps = [
+  ["5 KG", "RR TE ACOMPAÑA", "Ves el criterio y construimos casi contigo."],
+  ["10 KG", "ELIGES", "RR ofrece opciones y empiezas a decidir."],
+  ["20 KG", "CONSTRUYES", "Retiramos ayudas y quedan las preguntas necesarias."],
+  ["30 KG", "RESPONDES", "El SPOT aparece. El criterio ya es tuyo."],
+];
+
 export default function Home() {
   return (
     <main className="premiumHome">
@@ -73,48 +88,48 @@ export default function Home() {
               <span>EDUCACIÓN PARA CRECER JUNTOS</span>
             </div>
 
-            <h1>
-              Hay conversaciones
-              <span> que crecen con ellos.</span>
+            <h1 aria-label="Un día te preguntará algo que no has preparado.">
+              <span>UN DÍA</span>
+              <span>TE PREGUNTARÁ</span>
+              <span>ALGO QUE NO</span>
+              <span>HAS PREPARADO.</span>
             </h1>
 
             <p className="premiumHeroLead">
-              Educación afectiva, corporal y sexual para familias.
+              No necesitas tener todas las respuestas.
             </p>
 
             <p className="premiumHeroText">
-              No necesitas tener todas las respuestas.
-              <strong> Necesitas que puedan seguir preguntándote.</strong>
+              <strong>Necesitas que puedan seguir preguntándote.</strong>{" "}
+              Entrena hoy las conversaciones que algún día llegarán.
             </p>
 
             <div className="premiumHeroActions">
               <Link href="/prepararme" className="premiumPrimary">
-                <span>EMPEZAR GRATIS</span>
+                <span>EMPEZAR A ENTRENAR</span>
                 <b>→</b>
               </Link>
 
-              <a href="#como" className="premiumSecondary">
-                VER CÓMO FUNCIONA
+              <a href="#impacto" className="premiumSecondary">
+                DESCUBRIR RR · CRECER
               </a>
             </div>
 
             <p className="premiumMicro">
-              Para madres, padres y cuidadores · Entrenamiento progresivo según
-              su etapa
+              45 ENTRENAMIENTOS · 5 ETAPAS · SITUACIONES REALES
             </p>
           </div>
 
           <div className="premiumHeroPanel">
             <div className="premiumPanelTop">
-              <span>UN SPOT REAL</span>
+              <span>SPOT REAL · 7–9</span>
               <b>10 KG</b>
             </div>
 
             <div className="premiumQuote">
               <small>TU HIJO TE PREGUNTA</small>
               <p>
-                “Papá, hay un niño que hace unos ruidos y todos se ríen.
-                <strong> ¿Por qué los hace?</strong>”
+                “Papá, ¿qué significa <strong>follar</strong>?”
               </p>
             </div>
 
@@ -122,7 +137,7 @@ export default function Home() {
 
             <div className="premiumPanelBottom">
               <span>NO BUSQUES LA FRASE PERFECTA</span>
-              <strong>Aprende a construir tu respuesta.</strong>
+              <strong>¿Qué responderías ahora?</strong>
             </div>
 
             <div className="premiumPanelMark">RR</div>
@@ -130,17 +145,60 @@ export default function Home() {
         </div>
 
         <div className="premiumGrowth">
-          <span>CUERPO</span>
-          <i />
-          <span>PREGUNTAS</span>
-          <i />
-          <span>PUBERTAD</span>
-          <i />
-          <span>SEXUALIDAD</span>
-          <i />
-          <span>RELACIONES</span>
-          <i />
+          <span>CUERPO</span><i />
+          <span>PREGUNTAS</span><i />
+          <span>PUBERTAD</span><i />
+          <span>SEXUALIDAD</span><i />
+          <span>RELACIONES</span><i />
           <span>RESPONSABILIDAD</span>
+        </div>
+      </section>
+
+      <section className="premiumImpact" id="impacto">
+        <div className="premiumImpactInner">
+          <div className="premiumImpactKicker">LA PREGUNTA LLEGARÁ SIN AVISAR</div>
+          <h2>
+            No puedes preparar todas las preguntas.
+            <br />
+            <em>Puedes entrenar cómo responder.</em>
+          </h2>
+
+          <div className="premiumQuestions">
+            {questions.map(([age, question]) => (
+              <div className="premiumQuestion" key={`${age}-${question}`}>
+                <span>{age}</span>
+                <p>«{question}»</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="premiumKgStory" id="como">
+        <div className="premiumKgInner">
+          <div className="premiumKgHead">
+            <div>
+              <div className="sectionTag">GIMNASIO RR</div>
+              <h2>RR te ayuda cada vez menos.</h2>
+            </div>
+            <p>
+              No vienes a memorizar respuestas. Empiezas con apoyo y lo vamos
+              retirando para que aprendas a construir una respuesta cuando
+              todavía no sabes qué decir.
+            </p>
+          </div>
+
+          <div className="premiumKgTrack">
+            {kgSteps.map(([kg, title, text]) => (
+              <div className="premiumKgStep" key={kg}>
+                <div className="premiumKgDot">{kg}</div>
+                <div>
+                  <strong>{title}</strong>
+                  <p>{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -172,10 +230,8 @@ export default function Home() {
             <div className="sectionTag">EMPECEMOS POR HOY</div>
             <h2>¿Qué necesitas?</h2>
           </div>
-
           <p>
-            No todas las conversaciones empiezan igual. Entra por donde estés
-            hoy.
+            No todas las conversaciones empiezan igual. Entra por donde estés hoy.
           </p>
         </div>
 
@@ -190,27 +246,23 @@ export default function Home() {
                 <span>{item.number}</span>
                 <b>→</b>
               </div>
-
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
-
               <strong>{item.action}</strong>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="premiumMethod" id="como">
+      <section className="premiumMethod">
         <div className="premiumMethodCopy">
           <div className="sectionTag">MÉTODO RR</div>
-
           <h2>
             No vienes solamente a leer.
             <span> Vienes a entrenar.</span>
           </h2>
-
           <p>
             Practica situaciones reales antes de encontrártelas fuera de la
             pantalla. Empiezas con ayuda y, poco a poco, RR la retira para que
@@ -235,45 +287,11 @@ export default function Home() {
           </div>
 
           <div className="premiumTrainingSteps">
-            <div>
-              <span>01</span>
-              <p>
-                <b>NOTO</b>
-                <small>Qué he sentido y pensado.</small>
-              </p>
-            </div>
-
-            <div>
-              <span>02</span>
-              <p>
-                <b>SEPARO</b>
-                <small>Hecho ≠ Historia.</small>
-              </p>
-            </div>
-
-            <div>
-              <span>03</span>
-              <p>
-                <b>DESCUBRO</b>
-                <small>Qué necesita realmente saber.</small>
-              </p>
-            </div>
-
-            <div>
-              <span>04</span>
-              <p>
-                <b>CONSTRUYO</b>
-                <small>Mi propia respuesta.</small>
-              </p>
-            </div>
-
-            <div>
-              <span>05</span>
-              <p>
-                <b>REPLAY</b>
-                <small>Comparo antes y después.</small>
-              </p>
-            </div>
+            <div><span>01</span><p><b>NOTO</b><small>Qué he sentido y pensado.</small></p></div>
+            <div><span>02</span><p><b>SEPARO</b><small>Hecho ≠ Historia.</small></p></div>
+            <div><span>03</span><p><b>DESCUBRO</b><small>Qué necesita realmente saber.</small></p></div>
+            <div><span>04</span><p><b>CONSTRUYO</b><small>Mi propia respuesta.</small></p></div>
+            <div><span>05</span><p><b>REPLAY</b><small>Comparo antes y después.</small></p></div>
           </div>
 
           <Link href="/prepararme" className="premiumTrainingButton">
@@ -289,10 +307,9 @@ export default function Home() {
             <div className="sectionTag">CRECE CON ELLOS</div>
             <h2>La conversación cambia con la edad.</h2>
           </div>
-
           <p>
-            No tienes que explicarlo todo hoy. La profundidad cambia a medida
-            que crecen.
+            No tienes que explicarlo todo hoy. La profundidad cambia a medida que
+            crecen.
           </p>
         </div>
 
@@ -306,14 +323,11 @@ export default function Home() {
               <span className="premiumStageIndex">
                 {String(index + 1).padStart(2, "0")}
               </span>
-
               <strong>{age}</strong>
-
               <div>
                 <b>{title}</b>
                 <p>{text}</p>
               </div>
-
               <span className="premiumStageArrow">→</span>
             </Link>
           ))}
@@ -325,12 +339,10 @@ export default function Home() {
           <span>MI CUERPO</span>
           <h2>Puedo poner límites.</h2>
         </div>
-
         <div className="premiumPrincipleMark">
           <span>RR</span>
           <small>CRITERIO</small>
         </div>
-
         <div>
           <span>TU CUERPO</span>
           <h2>Tengo que respetar los tuyos.</h2>
@@ -339,41 +351,32 @@ export default function Home() {
 
       <section className="premiumSafety">
         <div className="premiumSafetyIcon">!</div>
-
         <div>
           <span>CUANDO ENTRENAR NO ES SUFICIENTE</span>
           <h2>Hay situaciones que necesitan ayuda.</h2>
         </div>
-
         <div className="premiumSafetyText">
           <p>
             Si una situación puede implicar riesgo, abuso, coerción o un problema
             de salud, RR · Crecer deja de ser un gimnasio y orienta hacia recursos
             profesionales adecuados.
           </p>
-
           <p>
             RR · Crecer es una herramienta educativa y no sustituye atención
             médica, psicológica ni servicios de protección infantil.
           </p>
-
-          <Link href="/orientacion">
-            HA PASADO ALGO <b>→</b>
-          </Link>
+          <Link href="/orientacion">HA PASADO ALGO <b>→</b></Link>
         </div>
       </section>
 
       <section className="premiumClosing">
         <span>RR · CRECER</span>
-
         <h2>
           No necesitas tener
           <br />
           todas las respuestas.
         </h2>
-
         <p>Necesitas que puedan seguir preguntándote.</p>
-
         <Link href="/prepararme" className="premiumPrimary">
           <span>EMPEZAR RR · CRECER</span>
           <b>→</b>
@@ -385,7 +388,6 @@ export default function Home() {
           <strong>RR · CRECER</strong>
           <span>Un proyecto del Método Ruiz Rivas</span>
         </div>
-
         <span>Educación · Entrenamiento · Conversación</span>
       </footer>
     </main>
