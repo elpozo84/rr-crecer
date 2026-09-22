@@ -78,3 +78,226 @@ export default function PuenteRR({
     </aside>
   );
 }
+       /* ========================================
+   PUENTES RR
+======================================== */
+
+.puenteRR {
+  margin: 48px 0;
+  padding: 34px;
+  border: 1px solid rgba(179, 139, 71, 0.38);
+  background: #fffdf8;
+  box-shadow: 0 18px 50px rgba(24, 43, 42, 0.06);
+}
+
+.puenteRRTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.puenteRRIcon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.puenteRREyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+}
+
+.puenteRR h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.puenteRRText {
+  margin: 26px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.puenteRRRoute {
+  margin: 30px 0;
+  padding: 24px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.puenteRRRoute > div {
+  min-width: 0;
+}
+
+.puenteRRRoute small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+}
+
+.puenteRRRoute strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.puenteRRArrow {
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+}
+
+.puenteRRActions {
+  display: grid;
+  gap: 10px;
+}
+
+.puenteRRPrimary,
+.puenteRRSecondary {
+  width: 100%;
+  min-height: 54px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.puenteRRPrimary {
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: white;
+}
+
+.puenteRRPrimary:hover {
+  background: var(--green2);
+  border-color: var(--green2);
+}
+
+.puenteRRSecondary {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--green);
+}
+
+.puenteRRSecondary:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.puenteRRNote {
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* PUENTE DE SEGURIDAD */
+
+.puenteRRSafety {
+  border-color: var(--green);
+  background: var(--green);
+  color: white;
+}
+
+.puenteRRSafety .puenteRRIcon {
+  border-color: #d0ad6c;
+  color: #d0ad6c;
+}
+
+.puenteRRSafety .puenteRREyebrow {
+  color: #d0ad6c;
+}
+
+.puenteRRSafety h2 {
+  color: white;
+}
+
+.puenteRRSafety .puenteRRText {
+  color: #d8e1de;
+}
+
+.puenteRRSafety .puenteRRPrimary {
+  border-color: #d0ad6c;
+  background: #d0ad6c;
+  color: var(--ink);
+}
+
+.puenteRRSafety .puenteRRPrimary:hover {
+  opacity: 0.9;
+}
+
+/* PUENTES RR · MÓVIL */
+
+@media (max-width: 800px) {
+  .puenteRR {
+    margin: 38px 0;
+    padding: 25px;
+  }
+
+  .puenteRRTop {
+    gap: 15px;
+  }
+
+  .puenteRRIcon {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+    font-size: 13px;
+  }
+
+  .puenteRR h2 {
+    font-size: 24px;
+  }
+
+  .puenteRRRoute {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .puenteRRArrow {
+    transform: rotate(90deg);
+    width: fit-content;
+  }
+
+  .puenteRRPrimary,
+  .puenteRRSecondary {
+    min-height: 52px;
+    padding: 15px;
+    font-size: 9px;
+  }
+}
