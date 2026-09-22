@@ -42,25 +42,18 @@ export default function Pesa02() {
 
       {paso === 0 && (
         <section className="trainingScreen">
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa02.png"
               alt="Pesa 02 · Cuerpo y límites"
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-              }}
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · CUERPO Y LÍMITES</span>
+              <p>
+                Una situación cotidiana puede enseñar a la vez educación,
+                autonomía corporal y respeto.
+              </p>
+            </div>
           </div>
 
           <span className="trainingTag">SPOT · 5 KG</span>
