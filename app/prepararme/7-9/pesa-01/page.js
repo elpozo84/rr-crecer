@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { startTraining, completeTraining } from "../../../../utils/trainingProgress";
+import TrainingProgressTracker from "../../../../components/TrainingProgressTracker";
+import { useState } from "react";
 
 const emocionesDisponibles = [
   "Sorpresa",
@@ -67,13 +67,6 @@ const frasesHerramienta = [
 export default function Pesa09() {
   const [paso, setPaso] = useState(0);
 
-  useEffect(() => {
-    startTraining({
-      stage: "7-9",
-      weightNumber: 1,
-      kg: 5,
-    });
-  }, []);
 
   const [respuestaInicial, setRespuestaInicial] = useState("");
   const [emociones, setEmociones] = useState([]);
@@ -99,18 +92,16 @@ export default function Pesa09() {
     );
   };
 
-  const completarEntrenamiento = async () => {
-    await completeTraining({
-      stage: "7-9",
-      weightNumber: 1,
-      kg: 20,
-    });
-
-    irA(11);
-  };
 
   return (
     <main className="trainingPage">
+      <TrainingProgressTracker
+        stage="7-9"
+        weightNumber={1}
+        startedKg={5}
+        completedKg={20}
+        completed={paso === 11}
+      />
       <header className="trainingHeader">
         <Link href="/prepararme/7-9" className="backLink">
           ← SALIR DE LA PESA
@@ -594,7 +585,7 @@ export default function Pesa09() {
 
           <button
             className="trainingButton"
-            onClick={completarEntrenamiento}
+            onClick={() => irA(11)}
             disabled={!respuestaTransferencia.trim()}
           >
             TERMINAR ENTRENAMIENTO →
