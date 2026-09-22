@@ -39,6 +39,27 @@ export default function Pesa04() {
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa04.png"
+              alt="Pesa 04 · Intimidad sin vergüenza"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 5 KG</span>
 
           <h1>«¿Por qué no puedo entrar?»</h1>
@@ -148,9 +169,7 @@ export default function Pesa04() {
           <div className="conversation">
             <div>
               <span>TÚ</span>
-              <p>
-                No estoy haciendo nada malo. Me estoy cambiando.
-              </p>
+              <p>No estoy haciendo nada malo. Me estoy cambiando.</p>
             </div>
 
             <div className="childAnswer">
@@ -354,7 +373,9 @@ export default function Pesa04() {
         <section className="trainingScreen">
           <span className="trainingTag">REPLAY INMEDIATO</span>
 
-          <h1>La intimidad no depende de si a nosotros nos parece necesaria.</h1>
+          <h1>
+            La intimidad no depende de si a nosotros nos parece necesaria.
+          </h1>
 
           <p className="trainingLead">
             Que lo hayamos bañado, cambiado o visto desnudo muchas veces no
