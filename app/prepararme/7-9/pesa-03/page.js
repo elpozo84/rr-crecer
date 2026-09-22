@@ -39,25 +39,18 @@ export default function Pesa03() {
 
       {paso === 0 && (
         <section className="trainingScreen">
-          <div
-            style={{
-              width: "100%",
-              marginBottom: "38px",
-              borderRadius: "18px",
-              overflow: "hidden",
-              border: "1px solid rgba(0,0,0,0.08)",
-              background: "#fff",
-            }}
-          >
+          <div className="trainingVisual">
             <img
               src="/pesa03.png"
               alt="Pesa 03 · Es nuestro secreto"
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-              }}
             />
+            <div className="trainingVisualCaption">
+              <span>SPOT RR · SECRETOS Y PEDIR AYUDA</span>
+              <p>
+                No se trata de prohibir todos los secretos. Se trata de que pedir
+                ayuda siempre siga siendo posible.
+              </p>
+            </div>
           </div>
 
           <span className="trainingTag">SPOT · 5 KG</span>
