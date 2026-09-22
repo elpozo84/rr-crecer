@@ -6958,3 +6958,822 @@ textarea:focus {
     padding-bottom: 85px !important;
   }
 }
+
+
+
+/* ========================================
+   RR · CRECER · GIMNASIO PREMIUM V1
+   Patrón maestro de etapas · azul noche
+   Scope: .premiumGymPage
+======================================== */
+
+.premiumGymPage {
+  --gym-navy: #081522;
+  --gym-navy-2: #0b1928;
+  --gym-navy-3: #132b40;
+  --gym-blue: #17324a;
+  --gym-gold: #b88e48;
+  --gym-gold-light: #e0c58e;
+  --gym-white: #ffffff;
+  --gym-muted: rgba(255,255,255,.64);
+  --gym-line: rgba(255,255,255,.13);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 84% 4%, rgba(184,142,72,.09), transparent 24%),
+    linear-gradient(180deg, #081522 0%, #0b1928 52%, #081522 100%);
+  color: #fff;
+}
+
+.premiumGymPage *,
+.premiumGymPage *::before,
+.premiumGymPage *::after {
+  box-sizing: border-box;
+}
+
+.premiumGymPage a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER */
+.premiumGymHeader {
+  width: min(1240px, calc(100% - 64px));
+  min-height: 88px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumGymBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.premiumGymMark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(224,197,142,.42);
+  border-radius: 50%;
+  color: var(--gym-gold-light);
+  font-family: Georgia, serif;
+  font-size: 15px;
+  letter-spacing: .05em;
+}
+
+.premiumGymBrandText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.premiumGymBrandText b {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .18em;
+}
+
+.premiumGymBrandText small {
+  color: rgba(255,255,255,.45);
+  font-size: 8px;
+  letter-spacing: .13em;
+}
+
+.premiumGymNav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.premiumGymNav a {
+  color: rgba(255,255,255,.64);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  transition: color .2s ease;
+}
+
+.premiumGymNav a:hover {
+  color: var(--gym-gold-light);
+}
+
+/* HERO */
+.premiumGymHero {
+  position: relative;
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 96px 0 92px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(330px, .65fr);
+  gap: clamp(58px, 8vw, 120px);
+  align-items: end;
+}
+
+.premiumGymHero::after {
+  content: "13—15";
+  position: absolute;
+  right: -18px;
+  top: 22px;
+  z-index: 0;
+  color: rgba(255,255,255,.018);
+  font-family: Georgia, serif;
+  font-size: clamp(120px, 17vw, 260px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.premiumGymHeroCopy,
+.premiumGymHeroPanel {
+  position: relative;
+  z-index: 1;
+}
+
+.premiumEyebrow,
+.premiumGymHeroPanel > span,
+.premiumGymPrinciple > span,
+.premiumGymIntro span,
+.premiumSectionHeading span,
+.premiumGymMethod > div:first-child > span,
+.premiumSafetyBlock > div:first-child > span,
+.premiumGymClosing > span {
+  color: var(--gym-gold-light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.premiumGymHero h1 {
+  max-width: 800px;
+  margin: 22px 0 26px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 6.2vw, 94px);
+  font-weight: 400;
+  line-height: .93;
+  letter-spacing: -.045em;
+}
+
+.premiumGymHero h1 em {
+  display: block;
+  color: var(--gym-gold-light);
+  font-weight: 400;
+}
+
+.premiumGymLead {
+  max-width: 690px;
+  margin: 0;
+  color: var(--gym-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.premiumGymHeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.premiumPrimaryButton,
+.premiumSecondaryButton,
+.premiumSafetyButton {
+  min-height: 52px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .11em;
+  transition: transform .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+}
+
+.premiumPrimaryButton {
+  background: var(--gym-gold);
+  border: 1px solid var(--gym-gold);
+  color: #fff !important;
+}
+
+.premiumSecondaryButton {
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff !important;
+}
+
+.premiumGymHeroPanel {
+  padding: 32px 0 8px 32px;
+  border-left: 1px solid rgba(224,197,142,.38);
+}
+
+.premiumGymHeroPanel strong {
+  display: block;
+  margin: 11px 0 17px;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.premiumGymHeroPanel p {
+  margin: 0;
+  color: rgba(255,255,255,.58);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.premiumGymScale {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.premiumGymScale span {
+  color: var(--gym-gold-light);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.premiumGymScale div {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gym-gold), rgba(224,197,142,.18));
+}
+
+/* PRINCIPIO */
+.premiumGymPrinciple {
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 68px 0;
+  border-top: 1px solid var(--gym-line);
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumGymPrinciple blockquote {
+  max-width: 1050px;
+  margin: 20px 0 0;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 3.2vw, 50px);
+  font-weight: 400;
+  line-height: 1.13;
+}
+
+.premiumGymPrinciple blockquote strong {
+  color: var(--gym-gold-light);
+  font-weight: 400;
+}
+
+/* INTRO */
+.premiumGymIntro {
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 76px 0;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 90px;
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumGymIntro h2 {
+  margin: 12px 0 0;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1.04;
+}
+
+.premiumGymIntro > p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--gym-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* PESAS */
+.premiumWeightsSection {
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.premiumSectionHeading {
+  display: grid;
+  grid-template-columns: 1fr .75fr;
+  gap: 70px;
+  align-items: end;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumSectionHeading h2 {
+  margin: 12px 0 0;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 4.3vw, 62px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.premiumSectionHeading > p {
+  margin: 0;
+  color: var(--gym-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.premiumWeightsList {
+  display: grid;
+}
+
+.premiumWeightCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 170px 54px 110px minmax(0,1fr) 46px;
+  gap: 26px;
+  align-items: center;
+  min-height: 170px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--gym-line);
+  color: #fff;
+  transition: background .28s ease, padding .28s ease;
+}
+
+.premiumWeightVisual {
+  position: relative;
+  width: 170px;
+  height: 118px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--gym-navy-3);
+}
+
+.premiumWeightVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.72) contrast(1.03);
+  transition: transform .45s ease, filter .45s ease;
+}
+
+.premiumWeightVisualShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(8,21,34,.76));
+}
+
+.premiumWeightVisual > span {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.premiumWeightNumber {
+  color: rgba(255,255,255,.22);
+  font-family: Georgia, serif;
+  font-size: 34px;
+}
+
+.premiumWeightMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.premiumWeightMeta span {
+  color: var(--gym-gold-light);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.premiumWeightMeta small {
+  color: rgba(255,255,255,.45);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.premiumWeightContent > span {
+  color: var(--gym-gold-light);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.premiumWeightContent h3 {
+  margin: 7px 0 7px;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 400;
+  line-height: 1.06;
+}
+
+.premiumWeightContent p {
+  max-width: 670px;
+  margin: 0;
+  color: rgba(255,255,255,.55);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.premiumWeightArrow {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(224,197,142,.26);
+  border-radius: 50%;
+  color: var(--gym-gold-light);
+  transition: background .25s ease, transform .25s ease;
+}
+
+.premiumWeightCard.featured {
+  background: rgba(184,142,72,.055);
+}
+
+/* PROGRESIÓN */
+.premiumGymJourney {
+  padding: 92px max(32px, calc((100vw - 1240px)/2));
+  background: rgba(255,255,255,.025);
+  border-top: 1px solid var(--gym-line);
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumJourneyGrid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--gym-line);
+  border-left: 1px solid var(--gym-line);
+}
+
+.premiumJourneyGrid article {
+  min-height: 210px;
+  padding: 28px;
+  border-right: 1px solid var(--gym-line);
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumJourneyGrid article > span,
+.premiumMethodSteps article > span {
+  color: var(--gym-gold-light);
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
+
+.premiumJourneyGrid strong,
+.premiumMethodSteps strong {
+  display: block;
+  margin-top: 32px;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.premiumJourneyGrid p,
+.premiumMethodSteps p {
+  margin: 10px 0 0;
+  color: rgba(255,255,255,.56);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* MÉTODO */
+.premiumGymMethod {
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.premiumGymMethod > div:first-child {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 60px;
+  align-items: end;
+  padding-bottom: 38px;
+  border-bottom: 1px solid var(--gym-line);
+}
+
+.premiumGymMethod h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 4.2vw, 62px);
+  font-weight: 400;
+}
+
+.premiumMethodSteps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-left: 1px solid var(--gym-line);
+}
+
+.premiumMethodSteps article {
+  min-height: 230px;
+  padding: 28px 22px;
+  border-right: 1px solid var(--gym-line);
+  border-bottom: 1px solid var(--gym-line);
+}
+
+/* SEGURIDAD */
+.premiumSafetyBlock {
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto 96px;
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr auto;
+  gap: 46px;
+  align-items: center;
+  border: 1px solid rgba(224,197,142,.26);
+  background: rgba(184,142,72,.055);
+}
+
+.premiumSafetyBlock h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.premiumSafetyBlock > p {
+  margin: 0;
+  color: var(--gym-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.premiumSafetyButton {
+  border: 1px solid var(--gym-gold);
+  color: var(--gym-gold-light) !important;
+  white-space: nowrap;
+}
+
+/* CIERRE */
+.premiumGymClosing {
+  padding: 105px max(32px, calc((100vw - 1050px)/2));
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(184,142,72,.12), transparent 34%),
+    #07131f;
+  border-top: 1px solid var(--gym-line);
+}
+
+.premiumGymClosing h2 {
+  max-width: 980px;
+  margin: 18px auto 36px;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.premiumGymClosing h2 em {
+  display: block;
+  color: var(--gym-gold-light);
+  font-weight: 400;
+}
+
+/* FOOTER */
+.premiumGymFooter {
+  width: min(1240px, calc(100% - 64px));
+  min-height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid var(--gym-line);
+}
+
+.premiumGymFooter > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.premiumGymFooter strong {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.premiumGymFooter span,
+.premiumGymFooter a {
+  color: rgba(255,255,255,.46);
+  font-size: 10px;
+}
+
+@media (hover:hover) {
+  .premiumPrimaryButton:hover,
+  .premiumSafetyButton:hover {
+    transform: translateY(-2px);
+    background: var(--gym-gold-light);
+    border-color: var(--gym-gold-light);
+    color: var(--gym-navy) !important;
+  }
+
+  .premiumSecondaryButton:hover {
+    transform: translateY(-2px);
+    border-color: var(--gym-gold-light);
+    color: var(--gym-gold-light) !important;
+  }
+
+  .premiumWeightCard:hover {
+    padding-left: 18px;
+    padding-right: 18px;
+    background: rgba(255,255,255,.035);
+  }
+
+  .premiumWeightCard:hover .premiumWeightVisual img {
+    transform: scale(1.045);
+    filter: saturate(.9) contrast(1.05);
+  }
+
+  .premiumWeightCard:hover .premiumWeightArrow {
+    background: var(--gym-gold);
+    color: #fff;
+    transform: translateX(4px);
+  }
+}
+
+/* TABLET */
+@media (max-width: 980px) {
+  .premiumGymHero {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .premiumGymHeroPanel {
+    max-width: 650px;
+  }
+
+  .premiumGymIntro,
+  .premiumSectionHeading {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .premiumWeightCard {
+    grid-template-columns: 140px 44px 90px minmax(0,1fr) 42px;
+    gap: 18px;
+  }
+
+  .premiumWeightVisual {
+    width: 140px;
+    height: 100px;
+  }
+
+  .premiumJourneyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .premiumMethodSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .premiumSafetyBlock {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .premiumSafetyButton {
+    justify-self: start;
+  }
+}
+
+/* MÓVIL */
+@media (max-width: 700px) {
+  .premiumGymHeader,
+  .premiumGymHero,
+  .premiumGymPrinciple,
+  .premiumGymIntro,
+  .premiumWeightsSection,
+  .premiumGymMethod,
+  .premiumSafetyBlock,
+  .premiumGymFooter {
+    width: calc(100% - 36px);
+  }
+
+  .premiumGymHeader {
+    min-height: 74px;
+  }
+
+  .premiumGymNav {
+    gap: 14px;
+  }
+
+  .premiumGymNav a:nth-child(1) {
+    display: none;
+  }
+
+  .premiumGymHero {
+    padding: 68px 0 62px;
+  }
+
+  .premiumGymHero h1 {
+    font-size: clamp(49px, 14vw, 68px);
+  }
+
+  .premiumGymHeroPanel {
+    padding: 26px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(224,197,142,.35);
+  }
+
+  .premiumGymPrinciple {
+    padding: 52px 0;
+  }
+
+  .premiumGymIntro {
+    padding: 56px 0;
+  }
+
+  .premiumWeightsSection,
+  .premiumGymMethod {
+    padding: 68px 0;
+  }
+
+  .premiumWeightCard {
+    grid-template-columns: 96px 1fr 42px;
+    gap: 14px;
+    padding: 20px 0;
+  }
+
+  .premiumWeightVisual {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 96px;
+    height: 108px;
+  }
+
+  .premiumWeightNumber {
+    display: none;
+  }
+
+  .premiumWeightMeta {
+    grid-column: 2;
+  }
+
+  .premiumWeightContent {
+    grid-column: 2;
+  }
+
+  .premiumWeightContent p {
+    display: none;
+  }
+
+  .premiumWeightArrow {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .premiumJourneyGrid,
+  .premiumMethodSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .premiumGymJourney {
+    padding: 68px 18px;
+  }
+
+  .premiumGymMethod > div:first-child {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .premiumSafetyBlock {
+    margin-bottom: 68px;
+    padding: 28px 22px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .premiumGymClosing {
+    padding: 78px 20px;
+  }
+
+  .premiumGymFooter {
+    padding: 26px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
