@@ -39,6 +39,27 @@ export default function Pesa06() {
 
       {paso === 0 && (
         <section className="trainingScreen">
+          <div
+            style={{
+              width: "100%",
+              marginBottom: "38px",
+              borderRadius: "18px",
+              overflow: "hidden",
+              border: "1px solid rgba(0,0,0,0.08)",
+              background: "#fff",
+            }}
+          >
+            <img
+              src="/pesa06.png"
+              alt="Pesa 06 · Nombrar el cuerpo"
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <span className="trainingTag">SPOT · 5 KG</span>
 
           <h1>«¿Por qué se llama pene?»</h1>
@@ -114,9 +135,7 @@ export default function Pesa06() {
           <div className="factStory">
             <div>
               <span>HECHO</span>
-              <p>
-                Pene y vulva son nombres de partes del cuerpo.
-              </p>
+              <p>Pene y vulva son nombres de partes del cuerpo.</p>
             </div>
 
             <div>
@@ -165,9 +184,7 @@ export default function Pesa06() {
 
             <div className="childAnswer">
               <span>TU HIJO</span>
-              <p>
-                Pero Marcos le llama de otra manera.
-              </p>
+              <p>Pero Marcos le llama de otra manera.</p>
             </div>
 
             <div>
