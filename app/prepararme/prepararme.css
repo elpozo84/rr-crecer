@@ -1,0 +1,49 @@
+.rrPreparePage{
+  --navy:#081522;--navy2:#0b1928;--navy3:#132b40;
+  --gold:#b88e48;--gold2:#e0c58e;--white:#fff;
+  --muted:rgba(255,255,255,.64);--line:rgba(255,255,255,.13);
+  min-height:100vh;background:linear-gradient(180deg,#081522 0%,#0b1928 55%,#07131f 100%)!important;color:#fff;overflow-x:hidden
+}
+.rrPreparePage *{box-sizing:border-box}.rrPreparePage a{text-decoration:none;color:inherit}
+.rrPrepareHeader{width:min(1240px,calc(100% - 64px));height:88px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.rrPrepareBrand{display:flex;align-items:center;gap:12px}.rrPrepareMark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(224,197,142,.45);border-radius:50%;font:15px Georgia,serif;color:var(--gold2)}
+.rrPrepareBrandText{display:flex;flex-direction:column}.rrPrepareBrandText strong{font-size:12px;letter-spacing:.18em}.rrPrepareBrandText small{font-size:8px;letter-spacing:.13em;color:rgba(255,255,255,.45)}
+.rrPrepareBack{font-size:10px;font-weight:800;letter-spacing:.12em;color:rgba(255,255,255,.7)!important}
+
+.rrPrepareHero{position:relative;width:min(1240px,calc(100% - 64px));margin:auto;padding:100px 0 96px;display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:center}
+.rrPrepareHero:after{content:"RR";position:absolute;right:-35px;top:10px;font:250px/1 Georgia,serif;color:rgba(255,255,255,.018);pointer-events:none}
+.rrPrepareCopy,.rrPrepareGuide{position:relative;z-index:1}
+.rrPrepareKicker{display:flex;align-items:center;gap:14px;color:var(--gold2);font-size:9px;font-weight:800;letter-spacing:.16em}.rrPrepareKicker i{width:46px;height:1px;background:rgba(224,197,142,.35)}
+.rrPrepareCopy h1{margin:24px 0 28px;max-width:720px;font:400 clamp(58px,6vw,92px)/.93 Georgia,serif;letter-spacing:-.045em;color:#fff!important}
+.rrPrepareCopy h1 em{display:block;color:var(--gold2)!important;font-weight:400}
+.rrPrepareCopy>p{max-width:650px;margin:0;color:var(--muted)!important;font-size:16px;line-height:1.8}
+.rrPrepareGuide{padding:38px;border:1px solid rgba(224,197,142,.24);background:rgba(255,255,255,.035)!important;box-shadow:0 28px 70px rgba(0,0,0,.22)}
+.rrPrepareGuideTop{display:flex;justify-content:space-between;align-items:center;color:var(--gold2);font-size:9px;font-weight:800;letter-spacing:.14em}.rrPrepareGuideTop b{font:22px Georgia,serif}
+.rrPrepareGuide>p{margin:40px 0;color:rgba(255,255,255,.68)!important;font:400 24px/1.45 Georgia,serif}.rrPrepareGuide>p strong{color:#fff!important}
+.rrPrepareGuideRoute{display:grid;grid-template-columns:auto 1fr auto 1fr auto;gap:12px;align-items:center;color:var(--gold2);font-size:8px;font-weight:800;letter-spacing:.1em}.rrPrepareGuideRoute i{height:1px;background:rgba(224,197,142,.3)}
+
+.rrPrepareSelection{width:min(1240px,calc(100% - 64px));margin:auto;padding:90px 0}
+.rrPrepareHeading{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end;padding-bottom:42px;border-bottom:1px solid var(--line)}
+.rrPrepareTag,.rrPreparePrinciple>div>span,.rrPrepareNext>span{color:var(--gold2);font-size:9px;font-weight:800;letter-spacing:.16em}
+.rrPrepareHeading h2{max-width:720px;margin:14px 0 0;font:400 clamp(40px,4.5vw,66px)/1 Georgia,serif;color:#fff!important}
+.rrPrepareHeading>p{margin:0;color:var(--muted)!important;font-size:14px;line-height:1.75}
+.rrPrepareAgeList{display:grid}
+.rrPrepareAgeCard{position:relative;display:grid;grid-template-columns:58px 145px minmax(0,1fr) 48px;gap:26px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line);background:transparent!important;transition:background .25s ease,padding .25s ease}
+.rrPrepareAgeFeatured{background:rgba(184,142,72,.045)!important}
+.rrPrepareAgeIndex{font:20px Georgia,serif;color:rgba(255,255,255,.28)}
+.rrPrepareAgeYears{display:flex;align-items:baseline;gap:8px}.rrPrepareAgeYears strong{font:400 39px Georgia,serif;color:var(--gold2)}.rrPrepareAgeYears small{color:rgba(255,255,255,.38);font-size:8px;font-weight:800;letter-spacing:.12em}
+.rrPrepareAgeTitle{display:flex;align-items:center;gap:14px}.rrPrepareAgeTitle>span{color:#fff;font-size:9px;font-weight:900;letter-spacing:.15em}.rrPrepareAgeTitle b{padding:5px 8px;border:1px solid rgba(224,197,142,.3);border-radius:999px;color:var(--gold2);font-size:7px;letter-spacing:.1em}
+.rrPrepareAgeInfo h3{margin:8px 0 7px;font:400 clamp(20px,2vw,28px)/1.1 Georgia,serif;color:#fff!important}.rrPrepareAgeInfo p{max-width:690px;margin:0;color:rgba(255,255,255,.52)!important;font-size:12px;line-height:1.6}
+.rrPrepareAgeArrow{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(224,197,142,.25);border-radius:50%;color:var(--gold2);transition:.25s}
+
+.rrPreparePrinciple{width:min(1240px,calc(100% - 64px));margin:0 auto 90px;padding:55px;display:grid;grid-template-columns:140px 1fr;gap:50px;border:1px solid rgba(224,197,142,.22);background:rgba(255,255,255,.025)!important}
+.rrPreparePrincipleMark{font:88px/1 Georgia,serif;color:rgba(224,197,142,.12)}
+.rrPreparePrinciple h2{max-width:950px;margin:16px 0 22px;font:400 clamp(30px,3.3vw,48px)/1.12 Georgia,serif;color:#fff!important}.rrPreparePrinciple h2 strong{color:var(--gold2)!important;font-weight:400}
+.rrPreparePrinciple p{max-width:800px;margin:0;color:var(--muted)!important;font-size:14px;line-height:1.8}
+
+.rrPrepareNext{padding:105px max(32px,calc((100vw - 1050px)/2));text-align:center;background:radial-gradient(circle at 50% 0%,rgba(184,142,72,.11),transparent 34%),#07131f!important;border-top:1px solid var(--line)}
+.rrPrepareNext p{margin:20px 0 8px;color:rgba(255,255,255,.56)!important;font-size:15px}.rrPrepareNext h2{max-width:900px;margin:0 auto;font:400 clamp(40px,5vw,70px)/1 Georgia,serif;color:#fff!important}
+
+@media(hover:hover){.rrPrepareAgeCard:hover{padding-left:18px;padding-right:18px;background:rgba(255,255,255,.04)!important}.rrPrepareAgeCard:hover .rrPrepareAgeArrow{background:var(--gold);color:#fff;transform:translateX(4px)}}
+@media(max-width:850px){.rrPrepareHero,.rrPrepareHeading{grid-template-columns:1fr;gap:45px}.rrPrepareAgeCard{grid-template-columns:46px 120px 1fr 44px}.rrPreparePrinciple{grid-template-columns:90px 1fr}}
+@media(max-width:650px){.rrPrepareHeader,.rrPrepareHero,.rrPrepareSelection,.rrPreparePrinciple{width:calc(100% - 36px)}.rrPrepareHeader{height:74px}.rrPrepareHero{padding:65px 0}.rrPrepareCopy h1{font-size:clamp(50px,14vw,68px)}.rrPrepareGuide{padding:25px}.rrPrepareGuide>p{font-size:21px}.rrPrepareSelection{padding:65px 0}.rrPrepareAgeCard{grid-template-columns:64px 1fr 42px;gap:12px 16px;padding:27px 0}.rrPrepareAgeIndex{display:none}.rrPrepareAgeYears{grid-column:1}.rrPrepareAgeInfo{grid-column:2}.rrPrepareAgeArrow{grid-column:3}.rrPrepareAgeInfo p{display:none}.rrPrepareAgeYears strong{font-size:30px}.rrPrepareAgeYears small{display:none}.rrPrepareAgeTitle{flex-wrap:wrap}.rrPreparePrinciple{margin-bottom:65px;padding:30px 24px;grid-template-columns:1fr}.rrPreparePrincipleMark{font-size:55px}.rrPrepareNext{padding:78px 20px}}
