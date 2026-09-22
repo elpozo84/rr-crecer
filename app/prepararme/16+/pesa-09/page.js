@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import TrainingProgressTracker from "../../../../components/TrainingProgressTracker";
 import { useState } from "react";
 
 const primerasReacciones = [
@@ -38,6 +39,13 @@ export default function Pesa09Responsabilizarse16Plus() {
 
   return (
     <main className="trainingPage">
+      <TrainingProgressTracker
+        stage="16+"
+        weightNumber={9}
+        startedKg={30}
+        completedKg={30}
+        completed={paso === 13}
+      />
       <header className="trainingHeader">
         <Link href="/prepararme/16+" className="backLink">
           ← SALIR DE LA PESA
