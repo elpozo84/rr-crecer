@@ -81,6 +81,17 @@ const pesas = [
     aprendizaje: "Reconoce el criterio y también cuándo pedir ayuda.",
     href: "/prepararme/7-9/pesa-08",
   },
+  {
+    id: "09",
+    kg: "10 → 20 KG",
+    titulo: "¿POR QUÉ HACE ESOS RUIDOS?",
+    capacidad: "Imitación, grupo y sexualidad",
+    descripcion:
+      "Entrena cómo responder cuando la sexualidad aparece a través de otros niños, la imitación y las risas del grupo.",
+    aprendizaje:
+      "No saber no me obliga a reírme, imitar ni inventar. Puedo preguntar.",
+    href: "/prepararme/7-9/pesa-09",
+  },
 ];
 
 export default function Comprender79() {
@@ -89,7 +100,6 @@ export default function Comprender79() {
       <header className="header">
         <Link className="brand" href="/">
           <span className="mark">RR</span>
-
           <span>
             <strong>CRECER</strong>
             <small>MÉTODO RUIZ RIVAS</small>
@@ -103,7 +113,6 @@ export default function Comprender79() {
 
       <section className="gymHero">
         <div className="gymAge">7–9 AÑOS</div>
-
         <div className="sectionTag">COMPRENDER</div>
 
         <h1>
@@ -113,13 +122,14 @@ export default function Comprender79() {
 
         <p>
           Entrena criterios para hablar sobre el cuerpo, los límites, la
-          intimidad, la reproducción, las pantallas y cómo pedir ayuda.
+          intimidad, la reproducción, las pantallas, el grupo y cómo pedir
+          ayuda.
         </p>
 
         <div className="progressBox">
           <div>
             <span>RECORRIDO · COMPRENDER</span>
-            <strong>8 PESAS</strong>
+            <strong>9 PESAS</strong>
           </div>
 
           <div className="progressTrack">
@@ -127,8 +137,9 @@ export default function Comprender79() {
           </div>
 
           <small>
-            Empieza con situaciones guiadas y termina tomando decisiones con
-            mucha menos ayuda.
+            Empieza con situaciones guiadas y avanza hacia conversaciones en
+            las que tendrás que reconocer y aplicar los criterios con cada vez
+            menos ayuda.
           </small>
         </div>
       </section>
@@ -144,14 +155,8 @@ export default function Comprender79() {
 
         <div className="weights">
           {pesas.map((pesa) => (
-            <Link
-              className="weightCard"
-              href={pesa.href}
-              key={pesa.id}
-            >
-              <div className="weightNumber">
-                {pesa.id}
-              </div>
+            <Link className="weightCard" href={pesa.href} key={pesa.id}>
+              <div className="weightNumber">{pesa.id}</div>
 
               <div className="weightBody">
                 <span>
@@ -187,10 +192,7 @@ export default function Comprender79() {
           <div className="sectionTag">PROGRESIÓN RR</div>
 
           <h2>No repetimos la misma dificultad.</h2>
-
-          <h2 className="accent">
-            Retiramos ayuda.
-          </h2>
+          <h2 className="accent">Retiramos ayuda.</h2>
 
           <p>
             Al principio RR señala qué mirar. Después tendrás que reconocer el
@@ -204,13 +206,10 @@ export default function Comprender79() {
           <div className="steps">
             <b>5 KG · DESCUBRIR</b>
             <i>↓</i>
-
             <b>10 KG · RECONOCER</b>
             <i>↓</i>
-
             <b>20 KG · COMBINAR</b>
             <i>↓</i>
-
             <b>40 KG · DECIDIR</b>
           </div>
 
@@ -230,9 +229,7 @@ export default function Comprender79() {
           <h2>Puedo poner límites.</h2>
         </div>
 
-        <div className="circle">
-          RR
-        </div>
+        <div className="circle">RR</div>
 
         <div>
           <span>TU CUERPO</span>
@@ -244,7 +241,7 @@ export default function Comprender79() {
         <span>PRINCIPIO RR · CRECER</span>
 
         <blockquote>
-          No queremos preparar a una familia para ocho conversaciones.
+          No queremos preparar a una familia para nueve conversaciones.
           <strong>
             {" "}
             Queremos que pueda responder mejor a conversaciones que todavía no
@@ -273,11 +270,8 @@ export default function Comprender79() {
       <section className="closing">
         <span>7–9 · COMPRENDER</span>
 
-        <h2>Ocho Pesas.</h2>
-
-        <h2 className="accent">
-          Criterios que crecen contigo.
-        </h2>
+        <h2>Nueve Pesas.</h2>
+        <h2 className="accent">Criterios que crecen contigo.</h2>
 
         <Link href="/prepararme/7-9/pesa-01" className="primary">
           EMPEZAR PESA 01 <span>→</span>
@@ -290,9 +284,7 @@ export default function Comprender79() {
           <span>Un proyecto del Método Ruiz Rivas</span>
         </div>
 
-        <span>
-          7–9 · COMPRENDER · 8 PESAS · 5–40 KG
-        </span>
+        <span>7–9 · COMPRENDER · 9 PESAS · 5–40 KG</span>
       </footer>
     </main>
   );
