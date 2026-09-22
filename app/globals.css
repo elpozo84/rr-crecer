@@ -780,3 +780,394 @@ footer strong {
     padding: 70px 25px;
   }
 }
+/* ========================================
+   RR CRECER · ENTRENAMIENTO
+======================================== */
+
+.trainingPage {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.trainingHeader {
+  min-height: 72px;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.trainingBrand {
+  text-align: center;
+}
+
+.trainingBrand span,
+.trainingBrand small {
+  display: block;
+}
+
+.trainingBrand span {
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.trainingBrand small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: .18em;
+}
+
+.kg {
+  justify-self: end;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.trainingProgress {
+  height: 3px;
+  background: rgba(24,43,42,.08);
+}
+
+.trainingProgressFill {
+  height: 100%;
+  background: var(--gold);
+  transition: width .4s ease;
+}
+
+.trainingScreen {
+  width: min(760px, calc(100% - 44px));
+  margin: auto;
+  padding: 80px 0 110px;
+}
+
+.trainingTag {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: .2em;
+  font-weight: 800;
+}
+
+.trainingScreen > h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(43px, 6vw, 68px);
+  line-height: 1.03;
+  letter-spacing: -.04em;
+  font-weight: 500;
+  margin: 20px 0 30px;
+}
+
+.trainingScreen > h2 {
+  margin: 45px 0 20px;
+  font-family: Georgia, serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.trainingLead {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.scene {
+  margin: 45px 0;
+  padding: 35px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.scene > p {
+  color: var(--muted);
+}
+
+.scene blockquote {
+  margin: 25px 0 0;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  color: var(--ink);
+  font-size: 28px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 22px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.6;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--gold);
+}
+
+.trainingButton {
+  display: block;
+  width: 100%;
+  margin-top: 28px;
+  padding: 18px 22px;
+  border: 0;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-align: center;
+}
+
+.trainingButton:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.dontKnow {
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.emotionGrid {
+  margin: 35px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.emotionGrid button {
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.3);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.emotionGrid button.selected {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}
+
+.factStory {
+  margin: 45px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.factStory > div {
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.35);
+}
+
+.factStory span,
+.conversation span,
+.yourFirstAnswer span,
+.criterionReminder span,
+.lesson > span,
+.comparison span,
+.nextSpot > span {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: .16em;
+  font-weight: 800;
+}
+
+.factStory p {
+  line-height: 1.7;
+}
+
+.bigQuestion {
+  margin: 60px 0 20px;
+  text-align: center;
+}
+
+.bigQuestion small {
+  color: var(--muted);
+  letter-spacing: .14em;
+}
+
+.bigQuestion h2 {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.conversation {
+  margin: 45px 0;
+}
+
+.conversation > div {
+  max-width: 82%;
+  margin: 14px 0;
+  padding: 22px 25px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.conversation p {
+  margin-bottom: 0;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.conversation .childAnswer {
+  margin-left: auto;
+  background: var(--green);
+  color: white;
+}
+
+.yourFirstAnswer,
+.reflectionBox,
+.criterionReminder {
+  margin: 35px 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.35);
+}
+
+.yourFirstAnswer p {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.reflectionBox h2 {
+  margin-top: 0;
+  font-family: Georgia, serif;
+  font-weight: 500;
+}
+
+.reflectionBox p,
+.criterionReminder p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.finishScreen {
+  text-align: center;
+}
+
+.finishMark {
+  width: 85px;
+  height: 85px;
+  margin: 35px auto;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.finishScreen > h2 {
+  margin-top: -15px;
+  color: var(--green2);
+  font-style: italic;
+}
+
+.lesson {
+  margin: 55px 0;
+  padding: 40px 25px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.lesson blockquote {
+  margin: 20px auto 0;
+  padding: 0;
+  border: 0;
+  color: var(--ink);
+  font-size: 27px;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: left;
+}
+
+.comparison > div {
+  padding: 25px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.comparison p {
+  line-height: 1.6;
+}
+
+.nextSpot {
+  margin: 55px 0 0;
+  padding: 35px;
+  background: var(--green);
+  color: white;
+}
+
+.nextSpot strong {
+  display: block;
+  margin: 10px 0;
+  color: #d0ad6c;
+  font-family: Georgia, serif;
+  font-size: 34px;
+}
+
+.nextSpot p {
+  color: #d7e0dc;
+  line-height: 1.7;
+}
+
+.linkButton {
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .trainingHeader {
+    grid-template-columns: 1fr auto;
+    padding: 0 20px;
+  }
+
+  .trainingBrand {
+    display: none;
+  }
+
+  .trainingScreen {
+    padding-top: 55px;
+  }
+
+  .trainingScreen > h1 {
+    font-size: 45px;
+  }
+
+  .emotionGrid,
+  .factStory,
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .scene {
+    padding: 25px;
+  }
+
+  .conversation > div {
+    max-width: 94%;
+  }
+}
