@@ -4,6 +4,7 @@ const pesas = [
   {
     id: "01",
     kg: "5 → 10 KG",
+    nivel: "DESCUBRIR",
     titulo: "PAPÁ, ¿QUÉ SIGNIFICA...?",
     capacidad: "Preguntas inesperadas",
     descripcion:
@@ -14,6 +15,7 @@ const pesas = [
   {
     id: "02",
     kg: "5 → 10 KG",
+    nivel: "DESCUBRIR",
     titulo: "DALE UN BESO",
     capacidad: "Cuerpo y límites",
     descripcion:
@@ -24,6 +26,7 @@ const pesas = [
   {
     id: "03",
     kg: "5 → 10 KG",
+    nivel: "DESCUBRIR",
     titulo: "ES NUESTRO SECRETO",
     capacidad: "Secretos y pedir ayuda",
     descripcion:
@@ -34,6 +37,7 @@ const pesas = [
   {
     id: "04",
     kg: "5 → 10 KG",
+    nivel: "RECONOCER",
     titulo: "¿POR QUÉ NO PUEDO ENTRAR?",
     capacidad: "Intimidad sin vergüenza",
     descripcion:
@@ -44,6 +48,7 @@ const pesas = [
   {
     id: "05",
     kg: "5 → 10 KG",
+    nivel: "RECONOCER",
     titulo: "¿DE DÓNDE VIENEN LOS BEBÉS?",
     capacidad: "Reproducción",
     descripcion:
@@ -54,6 +59,7 @@ const pesas = [
   {
     id: "06",
     kg: "5 → 10 KG",
+    nivel: "RECONOCER",
     titulo: "¿POR QUÉ SE LLAMA PENE / VULVA?",
     capacidad: "Nombrar el cuerpo",
     descripcion:
@@ -64,6 +70,7 @@ const pesas = [
   {
     id: "07",
     kg: "10 → 20 KG",
+    nivel: "COMBINAR",
     titulo: "ME HA SALIDO ESTO EN EL MÓVIL",
     capacidad: "Pantallas y contenido inesperado",
     descripcion:
@@ -74,6 +81,7 @@ const pesas = [
   {
     id: "08",
     kg: "20 → 40 KG",
+    nivel: "DECIDIR",
     titulo: "INTEGRACIÓN",
     capacidad: "Transferir lo aprendido",
     descripcion:
@@ -83,7 +91,8 @@ const pesas = [
   },
   {
     id: "09",
-    kg: "10 → 20 KG",
+    kg: "10 → 20 → 30 KG",
+    nivel: "TRANSFERIR",
     titulo: "¿POR QUÉ HACE ESOS RUIDOS?",
     capacidad: "Imitación, grupo y sexualidad",
     descripcion:
@@ -96,8 +105,8 @@ const pesas = [
 
 export default function Comprender79() {
   return (
-    <main className="gymPage">
-      <header className="header">
+    <main className="premiumGymPage">
+      <header className="header premiumHeader">
         <Link className="brand" href="/">
           <span className="mark">RR</span>
           <span>
@@ -111,174 +120,231 @@ export default function Comprender79() {
         </Link>
       </header>
 
-      <section className="gymHero">
-        <div className="gymAge">7–9 AÑOS</div>
-        <div className="sectionTag">COMPRENDER</div>
+      <section className="premiumGymHero">
+        <div className="premiumGymHeroInner">
+          <div className="premiumGymHeroCopy">
+            <div className="premiumKicker">
+              <span>7–9 AÑOS</span>
+              <i />
+              <span>COMPRENDER</span>
+            </div>
 
-        <h1>
-          No tienes que prepararte
-          <em> todas las respuestas.</em>
-        </h1>
+            <h1>
+              No tienes que preparar
+              <span> todas las respuestas.</span>
+            </h1>
 
-        <p>
-          Entrena criterios para hablar sobre el cuerpo, los límites, la
-          intimidad, la reproducción, las pantallas, el grupo y cómo pedir
-          ayuda.
-        </p>
+            <p>
+              Entrena criterios para hablar sobre el cuerpo, los límites, la
+              intimidad, la reproducción, las pantallas, el grupo y cómo pedir
+              ayuda.
+            </p>
 
-        <div className="progressBox">
-          <div>
-            <span>RECORRIDO · COMPRENDER</span>
-            <strong>9 PESAS</strong>
+            <Link href="/prepararme/7-9/pesa-01" className="premiumPrimary">
+              EMPEZAR PESA 01 <span>→</span>
+            </Link>
           </div>
 
-          <div className="progressTrack">
-            <div className="progressFill" />
-          </div>
+          <div className="premiumGymProgress">
+            <div className="premiumGymProgressTop">
+              <span>RECORRIDO · COMPRENDER</span>
+              <strong>9 PESAS</strong>
+            </div>
 
-          <small>
-            Empieza con situaciones guiadas y avanza hacia conversaciones en
-            las que tendrás que reconocer y aplicar los criterios con cada vez
-            menos ayuda.
-          </small>
+            <div className="premiumGymProgressNumber">
+              <span>01</span>
+              <small>/ 09</small>
+            </div>
+
+            <div className="premiumGymProgressTrack">
+              <i />
+            </div>
+
+            <p>
+              Empiezas con situaciones guiadas. RR irá retirando ayuda hasta
+              que puedas reconocer el criterio y construir tu propia respuesta.
+            </p>
+
+            <div className="premiumGymScale">
+              <span>5 KG</span>
+              <i />
+              <span>10 KG</span>
+              <i />
+              <span>20 KG</span>
+              <i />
+              <span>40 KG</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="gymContent">
-        <div className="gymHeading">
-          <span>GIMNASIO RR · CRECER</span>
+      <section className="premiumGymWeights">
+        <div className="premiumGymHeading">
+          <div>
+            <div className="sectionTag">GIMNASIO RR · CRECER</div>
+            <h2>
+              La ayuda disminuye.
+              <span> El criterio empieza a ser tuyo.</span>
+            </h2>
+          </div>
 
-          <h2>
-            La ayuda disminuye a medida que el criterio empieza a ser tuyo.
-          </h2>
+          <p>
+            Cada Pesa parte de una situación que podría ocurrir mañana. No
+            entrenas una frase: entrenas qué mirar, qué preguntar y cómo
+            decidir.
+          </p>
         </div>
 
-        <div className="weights">
+        <div className="premiumWeightList">
           {pesas.map((pesa) => (
-            <Link className="weightCard" href={pesa.href} key={pesa.id}>
-              <div className="weightNumber">{pesa.id}</div>
-
-              <div className="weightBody">
-                <span>
-                  {pesa.capacidad} · {pesa.kg}
-                </span>
-
-                <h3>{pesa.titulo}</h3>
-
-                <p>{pesa.descripcion}</p>
-
-                <small
-                  style={{
-                    display: "block",
-                    marginTop: "13px",
-                    color: "var(--green)",
-                    lineHeight: "1.5",
-                  }}
-                >
-                  {pesa.aprendizaje}
-                </small>
+            <Link
+              className={`premiumWeightCard ${
+                pesa.id === "09" ? "premiumWeightCardFeatured" : ""
+              }`}
+              href={pesa.href}
+              key={pesa.id}
+            >
+              <div className="premiumWeightId">
+                <small>PESA</small>
+                <strong>{pesa.id}</strong>
               </div>
 
-              <div className="weightStatus weightAvailable">
-                ENTRENAR <b>→</b>
+              <div className="premiumWeightMeta">
+                <span>{pesa.nivel}</span>
+                <b>{pesa.kg}</b>
+              </div>
+
+              <div className="premiumWeightContent">
+                <span>{pesa.capacidad}</span>
+                <h3>{pesa.titulo}</h3>
+                <p>{pesa.descripcion}</p>
+                <strong className="premiumWeightLearning">
+                  {pesa.aprendizaje}
+                </strong>
+              </div>
+
+              <div className="premiumWeightAction">
+                <span>ENTRENAR</span>
+                <b>→</b>
               </div>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="method">
-        <div>
+      <section className="premiumGymMethod">
+        <div className="premiumGymMethodCopy">
           <div className="sectionTag">PROGRESIÓN RR</div>
 
-          <h2>No repetimos la misma dificultad.</h2>
-          <h2 className="accent">Retiramos ayuda.</h2>
+          <h2>
+            No aumentamos teoría.
+            <span> Retiramos ayuda.</span>
+          </h2>
 
           <p>
             Al principio RR señala qué mirar. Después tendrás que reconocer el
             criterio, combinar aprendizajes y decidir qué hacer por ti mismo.
           </p>
+
+          <blockquote>
+            Llegar a más KG no significa saber más respuestas.
+            <strong> Significa necesitar menos ayuda para pensar.</strong>
+          </blockquote>
         </div>
 
-        <div className="spot">
-          <span>PROGRESIÓN DEL RECORRIDO</span>
-
-          <div className="steps">
-            <b>5 KG · DESCUBRIR</b>
-            <i>↓</i>
-            <b>10 KG · RECONOCER</b>
-            <i>↓</i>
-            <b>20 KG · COMBINAR</b>
-            <i>↓</i>
-            <b>40 KG · DECIDIR</b>
+        <div className="premiumGymLevels">
+          <div>
+            <span>01</span>
+            <strong>5 KG</strong>
+            <b>DESCUBRIR</b>
+            <p>RR te ayuda a ver lo que antes podía pasar desapercibido.</p>
           </div>
 
-          <p>
-            El objetivo no es llegar a 40 KG porque sepas más teoría.
-          </p>
+          <div>
+            <span>02</span>
+            <strong>10 KG</strong>
+            <b>RECONOCER</b>
+            <p>Empiezas a identificar el criterio dentro de la situación.</p>
+          </div>
 
-          <strong>
-            Llegas porque necesitas menos ayuda para pensar.
-          </strong>
+          <div>
+            <span>03</span>
+            <strong>20 KG</strong>
+            <b>COMBINAR</b>
+            <p>Una conversación puede necesitar varios criterios a la vez.</p>
+          </div>
+
+          <div>
+            <span>04</span>
+            <strong>40 KG</strong>
+            <b>DECIDIR</b>
+            <p>RR se aparta y construyes la respuesta con menos apoyo.</p>
+          </div>
         </div>
       </section>
 
-      <section className="twoSides">
+      <section className="premiumGymBodies">
         <div>
           <span>MI CUERPO</span>
           <h2>Puedo poner límites.</h2>
+          <p>Aprender a reconocerlos y expresarlos también es entrenamiento.</p>
         </div>
 
-        <div className="circle">RR</div>
+        <div className="premiumGymBodiesMark">RR</div>
 
         <div>
           <span>TU CUERPO</span>
           <h2>Tengo que respetar los tuyos.</h2>
+          <p>El criterio no termina en lo que yo quiero o no quiero.</p>
         </div>
       </section>
 
-      <section className="gymPrinciple">
-        <span>PRINCIPIO RR · CRECER</span>
+      <section className="premiumGymPrinciple">
+        <div className="premiumGymPrincipleMark">RR</div>
 
-        <blockquote>
-          No queremos preparar a una familia para nueve conversaciones.
-          <strong>
-            {" "}
+        <div>
+          <span>PRINCIPIO RR · CRECER</span>
+          <h2>
+            No queremos preparar a una familia para nueve conversaciones.
+          </h2>
+          <p>
             Queremos que pueda responder mejor a conversaciones que todavía no
             sabemos que existirán.
-          </strong>
-        </blockquote>
+          </p>
+        </div>
       </section>
 
-      <section className="safety">
-        <span>CUANDO ENTRENAR NO ES SUFICIENTE</span>
+      <section className="premiumGymSafety">
+        <div className="premiumGymSafetyIcon">!</div>
 
-        <h2>También entrenamos cuándo pedir ayuda.</h2>
+        <div>
+          <span>CUANDO ENTRENAR NO ES SUFICIENTE</span>
+          <h2>También entrenamos cuándo pedir ayuda.</h2>
 
-        <p>
-          Si una situación puede implicar abuso, coerción, violencia,
-          explotación, una amenaza o un riesgo para un menor, RR · Crecer deja
-          de tratarla como un simple entrenamiento educativo.
-        </p>
+          <p>
+            Si una situación puede implicar abuso, coerción, violencia,
+            explotación, una amenaza o un riesgo para un menor, RR · Crecer
+            deja de tratarla como un simple entrenamiento educativo.
+          </p>
 
-        <p className="safetySmall">
-          RR · Crecer es una herramienta educativa y no sustituye atención
-          médica, psicológica ni servicios de protección infantil.
-        </p>
+          <small>
+            RR · Crecer es una herramienta educativa y no sustituye atención
+            médica, psicológica ni servicios de protección infantil.
+          </small>
+        </div>
       </section>
 
-      <section className="closing">
+      <section className="premiumGymClosing">
         <span>7–9 · COMPRENDER</span>
+        <p>Nueve Pesas. Cada vez menos ayuda.</p>
+        <h2>Criterios que crecen contigo.</h2>
 
-        <h2>Nueve Pesas.</h2>
-        <h2 className="accent">Criterios que crecen contigo.</h2>
-
-        <Link href="/prepararme/7-9/pesa-01" className="primary">
+        <Link href="/prepararme/7-9/pesa-01" className="premiumPrimary">
           EMPEZAR PESA 01 <span>→</span>
         </Link>
       </section>
 
-      <footer>
+      <footer className="premiumFooter">
         <div>
           <strong>RR · CRECER</strong>
           <span>Un proyecto del Método Ruiz Rivas</span>
