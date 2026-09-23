@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const paths = [
   {
@@ -105,6 +106,15 @@ export default function Home() {
           </div>
 
           <div className="premiumHeroPanel">
+            <div className="premiumHeroPhoto">
+              <Image
+                src="/hero-crecer.png"
+                alt="Un padre escucha a su hijo mientras conversan en casa"
+                fill
+                priority
+                sizes="(max-width: 800px) 100vw, 44vw"
+              />
+            </div>
             <div className="premiumPanelTop">
               <span>UN SPOT REAL</span>
               <b>10 KG</b>

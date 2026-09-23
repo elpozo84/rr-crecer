@@ -1,0 +1,90 @@
+/* RR · CRECER: single dark palette shared by the public site and all 45 training screens.
+   Page structure and interaction styles remain in globals.css and prepararme/stages.css. */
+:root {
+  --rr-dark: #081522;
+  --rr-surface: #10263a;
+  --rr-surface-raised: #17324a;
+  --rr-copy: #f5f8fb;
+  --rr-copy-muted: #c8d3db;
+  --rr-dark-line: rgba(224,197,142,.25);
+  color-scheme: dark;
+}
+body { background: var(--rr-dark); color: var(--rr-copy); }
+
+/* Cover and navigation */
+.premiumHome { background: var(--rr-dark); color: var(--rr-copy); }
+.premiumHome .header { background: var(--rr-dark); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.premiumHome .brand small { color: var(--rr-copy-muted); }
+.premiumHome .navButton { border-color: var(--rr-dark-line); }
+.premiumHome :is(.premiumHero,.premiumChoose,.premiumStages,.premiumClosing) { background: var(--rr-dark); color: var(--rr-copy); }
+.premiumHome :is(.premiumIntro,.premiumSafety) { background: #0c2032; border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.premiumHome :is(.premiumCard,.premiumStage) { background: var(--rr-surface); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.premiumHome :is(.premiumHeroCopy h1,.premiumHeroCopy h1 span,.premiumHeroLead,.premiumHeroText strong,.premiumIntro h2,.premiumSectionHead h2,.premiumIntroText blockquote,.premiumCardTop b,.premiumCard h3,.premiumCard > strong,.premiumStage > div b,.premiumStageArrow,.premiumSafety h2,.premiumSafetyText a,.premiumClosing h2) { color: var(--rr-copy); }
+.premiumHome :is(.premiumHeroText,.premiumMicro,.premiumGrowth,.premiumIntroText > p,.premiumSectionHead > p,.premiumCard p,.premiumStage > div p,.premiumSafetyText p) { color: var(--rr-copy-muted); }
+.premiumHome :is(.premiumSecondary,.premiumCard > strong) { border-color: var(--rr-dark-line); }
+.premiumHome .premiumSecondary { color: var(--rr-copy); }
+.premiumHome .premiumPrimary { background: var(--rr-gold-light); border-color: var(--rr-gold-light); color: var(--rr-dark); }
+.premiumHome .premiumPrimary:hover { color: var(--rr-dark); }
+.premiumHome .premiumStageList, .premiumHome .premiumStage { border-color: var(--rr-dark-line); }
+.premiumHome .premiumStage:hover { background: var(--rr-surface-raised); }
+.premiumHome .premiumHeroPanel { min-height: 0; padding: 0; display: block; background: var(--rr-surface); }
+.premiumHome .premiumHeroPhoto { position: relative; height: clamp(220px, 24vw, 290px); overflow: hidden; background: var(--rr-dark); }
+.premiumHome .premiumHeroPhoto img { object-fit: cover; object-position: center 43%; }
+.premiumHome .premiumPanelTop { position: absolute; top: 18px; left: 20px; right: 20px; z-index: 3; padding: 10px 12px; border-radius: 10px; background: rgba(8,21,34,.76); backdrop-filter: blur(8px); }
+.premiumHome .premiumQuote { margin: 0; padding: 27px 30px 23px; }
+.premiumHome .premiumQuote p { font-size: clamp(24px, 2.25vw, 31px); }
+.premiumHome .premiumPanelLine { margin: 0 30px; }
+.premiumHome .premiumPanelBottom { padding: 21px 30px 28px; }
+@media (max-width: 800px) {
+  .premiumHome .premiumHeroPhoto { height: clamp(205px, 57vw, 310px); }
+  .premiumHome .premiumQuote { padding: 25px 22px 21px; }
+  .premiumHome .premiumPanelLine { margin: 0 22px; }
+  .premiumHome .premiumPanelBottom { padding: 21px 22px 26px; }
+}
+
+/* Stage indexes: guard against old general selectors and ensure their secondary panels are dark. */
+main.rrStage { background: var(--rr-dark); color: var(--rr-copy); }
+main.rrStage :is(.header,.premiumHeader,.premiumGymHeader,.gymHeader) { background: var(--rr-dark); color: var(--rr-copy); border-color: var(--rr-dark-line); }
+main.rrStage :is(.premiumAgeHero,.premiumGymHero,.gymHero,.premiumAgeSelection,.premiumGymWeights,.premiumWeights,.premiumWeightsSection,.gymWeights,.premiumGymIntro,.gymIntro,.premiumGymMethod,.gymProgression,.premiumGymJourney,.premiumGymBodies,.premiumAgePrinciple,.premiumGymPrinciple) { background-color: var(--rr-dark); color: var(--rr-copy); }
+main.rrStage :is(.premiumAgeGuide,.premiumGymProgress,.premiumGymHeroPanel,.gymHeroPrinciple,.premiumAgeCard,.premiumWeightCard,.gymWeightCard,.premiumGymSafety,.premiumSafetyBlock) { background: var(--rr-surface); color: var(--rr-copy); border-color: var(--rr-dark-line); }
+main.rrStage :is(.premiumAgeCopy h1,.premiumGymHeroCopy h1,.premiumGymHeroCopy h1 span,.gymHero h1,.premiumAgeHeading h2,.premiumGymHeading h2,.premiumSectionHeading h2,.premiumWeightContent h3,.premiumWeightCopy h3,.gymWeightBody h3,.premiumAgeInfo h3,.premiumGymSafety h2,.premiumAgePrinciple h2,.premiumGymPrinciple h2,.premiumGymClosing h2,.gymClosing h2) { color: var(--rr-copy); }
+main.rrStage :is(.premiumAgeInfo p,.premiumGymHeroCopy > p,.premiumGymLead,.premiumHeroLead,.premiumHeroText,.premiumWeightContent p,.premiumWeightCopy p,.gymWeightBody p) { color: var(--rr-copy-muted); }
+main.rrStage :is(.premiumPrimary,.premiumPrimaryButton,.gymStartButton,.gymSafetyButton,.premiumSafetyButton) { background: var(--rr-gold-light); color: var(--rr-dark); }
+
+/* Training pages: cards, answers, text inputs and the completion screen. */
+.trainingPage { background: var(--rr-dark); color: var(--rr-copy); }
+.trainingPage .trainingHeader { background: var(--rr-dark); color: var(--rr-copy); border-color: var(--rr-dark-line); }
+.trainingPage :is(.trainingScreen > h1,.trainingScreen > h2,.bigQuestion h2,.finishScreen > h2,.puenteRR h2,.puenteRRRoute strong) { color: var(--rr-copy); }
+.trainingPage :is(.backLink,.lesson blockquote) { color: var(--rr-copy); }
+.trainingPage .lesson { border-color: var(--rr-dark-line); }
+.trainingPage :is(.trainingLead,.trainingBrand small,.bigQuestion small,.reflectionBox p,.criterionReminder p,.dontKnow) { color: var(--rr-copy-muted); }
+.trainingPage :is(.factStory > div,.yourFirstAnswer,.reflectionBox,.criterionReminder,.comparison > div,.conversation > div,.puenteRR,.scene,.nextSpot) { background: var(--rr-surface); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.trainingPage :is(.conversation .childAnswer,.puenteRRSafety) { background: var(--rr-surface-raised); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.trainingPage :is(.scene > p,.nextSpot p) { color: var(--rr-copy-muted) !important; }
+.trainingPage :is(.emotionGrid button,.choiceList button) { background: var(--rr-surface); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.trainingPage :is(.emotionGrid button.selected,.choiceList button.selected,.choiceList button.selectedChoice) { background: var(--rr-surface-raised); border-color: var(--rr-gold-light); color: #fff; }
+.trainingPage :is(.emotionGrid button:hover,.choiceList button:hover) { background: var(--rr-surface-raised); color: var(--rr-copy); }
+.trainingPage :is(textarea,input:not([type="checkbox"]):not([type="radio"])) { background: #122b40; color: var(--rr-copy); border-color: var(--rr-dark-line); }
+.trainingPage :is(textarea,input)::placeholder { color: #aebfc9; }
+.trainingPage .trainingProgress { background: var(--rr-surface-raised); }
+.trainingPage .puenteRRSecondary { background: var(--rr-surface); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.trainingPage .puenteRRSecondary:hover { background: var(--rr-surface-raised); }
+.trainingPage .secondaryTrainingButton { border-color: var(--rr-dark-line); color: var(--rr-copy-muted); }
+.trainingPage :is(.trainingButton,.primary,.puenteRRPrimary) { background: var(--rr-surface-raised); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+
+/* Account page: its form remains distinct, but uses the same navy surfaces. */
+.accessPage { background: radial-gradient(circle at 80% 0%,#17324a 0%,#081522 58%); color: var(--rr-copy); }
+.accessPage .accessHeader { background: var(--rr-dark); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.accessPage :is(.accessIntro h1,.accessIntro h1 span,.accessBack,.accessPromise strong,.accessPoints strong,.accessCardCopy h2,.accessForm label > span,.accessWithoutAccount,.accessFooter strong) { color: var(--rr-copy); }
+.accessPage :is(.accessIntro > p,.accessPromise p,.accessPoints small,.accessCardCopy p,.accessPrivacy,.accessCardTop,.accessFooter) { color: var(--rr-copy-muted); }
+.accessPage :is(.accessPromise,.accessCard) { background: var(--rr-surface); border-color: var(--rr-dark-line); color: var(--rr-copy); }
+.accessPage .accessTabs { background: var(--rr-dark); }
+.accessPage .accessTabs button { color: var(--rr-copy-muted); }
+.accessPage .accessTabs button.active { background: var(--rr-surface-raised); color: var(--rr-copy); }
+.accessPage .accessForm input { background: #122b40; color: var(--rr-copy); border-color: var(--rr-dark-line); }
+.accessPage .accessForm input::placeholder { color: #aebfc9; }
+.accessPage .accessSubmit { background: var(--rr-gold-light); color: var(--rr-dark); }
+.accessPage .accessSubmit:not(:disabled):hover { background: #efdbb5; }
+.accessPage .accessMessage.accessError { background: #442a34; border-color: #d8a2a2; color: #ffe5e5; }
+.accessPage .accessMessage.accessSuccess { background: #173d39; border-color: #94cbb2; color: #e0fff0; }
+.accessPage :is(.accessDivider span,.accessFooter) { border-color: var(--rr-dark-line); }
