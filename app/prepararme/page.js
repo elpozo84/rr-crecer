@@ -40,12 +40,12 @@ const etapas = [
 ];
 
 function hrefEtapa(edad) {
-  return `/prepararme/${edad.replace("–", "-").replace("+", "plus")}`;
+  return `/prepararme/${edad.replace("–", "-")}`;
 }
 
 export default function Prepararme() {
   return (
-    <main className="premiumAgePage">
+    <main className="premiumAgePage rrStage">
       <header className="header premiumHeader">
         <Link className="brand" href="/">
           <span className="mark">RR</span>

@@ -1,0 +1,66 @@
+/* Shared presentation for the six stage indexes. Training pages keep their own styles. */
+.rrStage {
+  --rr-night: #081522;
+  --rr-panel: #10263a;
+  --rr-gold: #d7b575;
+  --rr-line: rgba(215,181,117,.27);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #081522;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rrStage *, .rrStage *::before, .rrStage *::after { box-sizing: border-box; }
+.rrStage a { color: inherit; text-decoration: none; }
+.rrStage :is(.header,.premiumHeader,.premiumGymHeader,.gymHeader) {
+  min-height: 82px; padding: 16px max(5%, calc((100% - 1240px)/2));
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  background: #081522; color: #fff; border-bottom: 1px solid var(--rr-line);
+}
+.rrStage :is(.brand,.premiumBrand,.premiumGymBrand,.gymBrand) { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .12em; }
+.rrStage :is(.mark,.premiumBrandMark,.premiumGymMark,.gymBrandMark) { display: inline-grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--rr-gold); border-radius: 50%; color: var(--rr-gold); font: 700 18px Georgia,serif; }
+.rrStage :is(.backLink,.premiumNav,.premiumGymNav,.gymNav) { display: flex; flex-wrap: wrap; gap: 16px; color: #e7d7bb; font-size: 12px; }
+.rrStage :is(.premiumAgeHero,.premiumGymHero,.gymHero) { padding: clamp(70px,8vw,110px) max(5%,calc((100% - 1240px)/2)); background: radial-gradient(circle at 84% 12%, #193952 0, #0b1d30 35%, #081522 75%); color: #fff; }
+.rrStage :is(.premiumAgeHeroInner,.premiumGymHeroInner) { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(260px,.8fr); gap: clamp(24px,5vw,80px); align-items: center; }
+.rrStage :is(h1,h2,h3,p) { color: inherit; }
+.rrStage h1, .rrStage h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; }
+.rrStage h1 { max-width: 900px; margin: 18px 0 24px; font-size: clamp(44px,6vw,82px); line-height: 1.05; letter-spacing: -.035em; }
+.rrStage h2 { font-size: clamp(28px,3.5vw,48px); line-height: 1.15; }
+.rrStage h3 { font-size: clamp(18px,2vw,25px); line-height: 1.25; }
+.rrStage p { line-height: 1.7; }
+.rrStage :is(.premiumKicker,.premiumEyebrow,.premiumPanelEyebrow,.sectionTag,.gymSectionTag,.gymHeroEyebrow) { color: var(--rr-gold); font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.rrStage :is(.premiumAgeGuide,.premiumGymProgress,.premiumGymHeroPanel,.gymHeroPrinciple,.premiumAgePrinciple,.premiumGymPrinciple,.gymSafety,.premiumGymSafety,.premiumSafetyBlock) { background: #10263a; color: #fff; border: 1px solid var(--rr-line); border-radius: 20px; padding: clamp(24px,3vw,42px); }
+.rrStage :is(.premiumAgeSelection,.premiumGymWeights,.premiumWeights,.premiumWeightsSection,.gymWeights,.premiumGymIntro,.gymIntro,.premiumGymMethod,.gymProgression,.premiumGymJourney,.premiumGymBodies,.premiumGymSafety,.premiumSafetyBlock,.premiumGymPrinciple,.premiumAgePrinciple,.premiumAgeNext,.premiumGymClosing,.gymClosing,.premiumGymLevels,.premiumGymProgression) { padding: clamp(55px,7vw,92px) max(5%,calc((100% - 1240px)/2)); background: #081522; color: #fff; }
+.rrStage :is(.premiumAgeList,.premiumWeightList,.premiumWeightsList,.gymWeightsGrid) { display: grid; gap: 14px; margin-top: 36px; }
+.rrStage :is(.premiumAgeCard,.premiumWeightCard,.gymWeightCard) { display: grid; grid-template-columns: 120px minmax(0,1fr) auto; gap: 22px; align-items: center; min-width: 0; padding: 22px; border: 1px solid var(--rr-line); border-radius: 18px; background: #10263a; color: #fff; transition: border-color .2s,transform .2s; }
+.rrStage :is(.premiumAgeCard,.premiumWeightCard,.gymWeightCard):hover { border-color: var(--rr-gold); transform: translateY(-2px); }
+.rrStage :is(.premiumAgeCard,.premiumWeightCard,.gymWeightCard) :is(h3,p) { margin: 6px 0; }
+.rrStage :is(.premiumAgeIndex,.premiumAgeYears,.premiumWeightId,.premiumWeightNumber,.premiumWeightArrow,.premiumAgeArrow,.gymWeightNumber) { color: var(--rr-gold); font-family: Georgia,serif; font-size: 24px; }
+.rrStage :is(.premiumWeightVisual,.gymWeightImage) { position: relative; width: 120px; height: 100px; overflow: hidden; border-radius: 12px; background: #193952; }
+.rrStage :is(.premiumWeightVisual,.gymWeightImage) img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.rrStage :is(.premiumWeightMeta,.premiumWeightCapacity,.gymWeightCapacity,.premiumAgeInfo p) { color: #c8d3db; }
+.rrStage :is(.premiumPrimary,.premiumPrimaryButton,.gymStartButton,.gymSafetyButton,.premiumSafetyButton) { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 24px; border-radius: 10px; background: var(--rr-gold); color: #081522; font-weight: 700; }
+.rrStage :is(.premiumSecondary,.premiumSecondaryButton) { display: inline-flex; padding: 16px 22px; border: 1px solid var(--rr-line); border-radius: 10px; color: #fff; }
+.rrStage :is(.premiumGymLevels,.premiumLevelGrid,.premiumJourneyGrid,.premiumMethodSteps,.gymMethodGrid,.gymProgressionLine) { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.rrStage :is(.premiumGymLevels,.premiumLevelGrid,.premiumJourneyGrid,.premiumMethodSteps,.gymMethodGrid,.gymProgressionLine) > * { min-width: 0; padding: 22px; border: 1px solid var(--rr-line); border-radius: 14px; }
+.rrStage :is(.premiumAgeNext,.premiumGymClosing,.gymClosing) { text-align: center; background: #10263a; }
+.rrStage :is(.premiumFooter,.premiumGymFooter) { padding: 28px max(5%,calc((100% - 1240px)/2)); border-top: 1px solid var(--rr-line); background: #081522; color: #d3dce4; }
+/* Distinct layouts of the five existing stage pages, with common colors and spacing. */
+.rrStage.premiumGymPage .premiumWeightCard { grid-template-columns: 120px 60px 105px minmax(0,1fr) auto; }
+.rrStage.premiumGym .premiumWeightCard { grid-template-columns: 120px 55px 100px minmax(0,1fr) auto; }
+.rrStage.premiumGymPage .premiumGymHero { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.6fr); gap: 40px; }
+.rrStage.premiumGymPage .premiumGymHero:has(.premiumGymHeroInner) { display: block; }
+.rrStage.gymPage .gymWeightsGrid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.rrStage.gymPage .gymWeightCard { display: block; }
+.rrStage.gymPage .gymWeightImage { width: 100%; height: 180px; }
+.rrStage.gymPage .gymWeightBody { padding-top: 16px; }
+@media (max-width: 800px) {
+  .rrStage :is(.premiumAgeHeroInner,.premiumGymHeroInner),.rrStage.premiumGymPage .premiumGymHero { display: block; }
+  .rrStage :is(.premiumAgeGuide,.premiumGymProgress,.premiumGymHeroPanel) { margin-top: 32px; }
+  .rrStage :is(.premiumAgeCard,.premiumWeightCard,.gymWeightCard),.rrStage.premiumGymPage .premiumWeightCard,.rrStage.premiumGym .premiumWeightCard { grid-template-columns: 88px minmax(0,1fr); gap: 12px; }
+  .rrStage :is(.premiumWeightVisual,.gymWeightImage) { width: 88px; height: 88px; }
+  .rrStage :is(.premiumAgeList,.premiumWeightList,.premiumWeightsList) > a > :not(:first-child) { min-width: 0; }
+  .rrStage :is(.premiumGymLevels,.premiumLevelGrid,.premiumJourneyGrid,.premiumMethodSteps,.gymMethodGrid,.gymProgressionLine),.rrStage.gymPage .gymWeightsGrid { grid-template-columns: 1fr; }
+  .rrStage :is(.premiumNav,.premiumGymNav,.gymNav) { gap: 9px; font-size: 10px; }
+}
+@media (max-width: 520px) { .rrStage :is(.header,.premiumHeader,.premiumGymHeader,.gymHeader) { flex-wrap: wrap; } .rrStage :is(.premiumAgeCard,.premiumWeightCard) { padding: 16px; } }

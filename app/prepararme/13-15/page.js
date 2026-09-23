@@ -107,7 +107,7 @@ const pesas = [
 
 export default function GimnasioDecidir1315() {
   return (
-    <main className="premiumGymPage">
+    <main className="premiumGymPage rrStage">
       <header className="premiumGymHeader">
         <Link href="/" className="premiumGymBrand" aria-label="RR Crecer, inicio">
           <span className="premiumGymMark">RR</span>

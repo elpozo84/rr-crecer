@@ -113,7 +113,7 @@ const pesas = [
 
 export default function Descubrir46() {
   return (
-    <main className="premiumGymPage">
+    <main className="premiumGymPage rrStage">
       <header className="header premiumHeader">
         <Link className="brand" href="/">
           <span className="mark">RR</span>

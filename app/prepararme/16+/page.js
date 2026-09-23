@@ -97,7 +97,7 @@ const pesas = [
 
 export default function Gimnasio16Plus() {
   return (
-    <main className="gymPage">
+    <main className="gymPage rrStage">
       <header className="gymHeader">
         <Link href="/" className="gymBrand">
           <span className="gymBrandMark">RR</span>

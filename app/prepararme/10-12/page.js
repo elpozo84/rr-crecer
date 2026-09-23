@@ -105,7 +105,7 @@ const pesas = [
 
 export default function Gimnasio1012() {
   return (
-    <main className="premiumGym">
+    <main className="premiumGym rrStage">
       <header className="premiumHeader">
         <Link href="/" className="premiumBrand">
           <span className="premiumBrandMark">RR</span>
