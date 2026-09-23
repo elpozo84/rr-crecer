@@ -27,6 +27,20 @@ body { background: var(--rr-dark); color: var(--rr-copy); }
 .premiumHome .premiumPrimary:hover { color: var(--rr-dark); }
 .premiumHome .premiumStageList, .premiumHome .premiumStage { border-color: var(--rr-dark-line); }
 .premiumHome .premiumStage:hover { background: var(--rr-surface-raised); }
+.premiumHome .premiumHeroPanel { min-height: 0; padding: 0; display: block; background: var(--rr-surface); }
+.premiumHome .premiumHeroPhoto { position: relative; height: clamp(220px, 24vw, 290px); overflow: hidden; background: var(--rr-dark); }
+.premiumHome .premiumHeroPhoto img { object-fit: cover; object-position: center 43%; }
+.premiumHome .premiumPanelTop { position: absolute; top: 18px; left: 20px; right: 20px; z-index: 3; padding: 10px 12px; border-radius: 10px; background: rgba(8,21,34,.76); backdrop-filter: blur(8px); }
+.premiumHome .premiumQuote { margin: 0; padding: 27px 30px 23px; }
+.premiumHome .premiumQuote p { font-size: clamp(24px, 2.25vw, 31px); }
+.premiumHome .premiumPanelLine { margin: 0 30px; }
+.premiumHome .premiumPanelBottom { padding: 21px 30px 28px; }
+@media (max-width: 800px) {
+  .premiumHome .premiumHeroPhoto { height: clamp(205px, 57vw, 310px); }
+  .premiumHome .premiumQuote { padding: 25px 22px 21px; }
+  .premiumHome .premiumPanelLine { margin: 0 22px; }
+  .premiumHome .premiumPanelBottom { padding: 21px 22px 26px; }
+}
 
 /* Stage indexes: guard against old general selectors and ensure their secondary panels are dark. */
 main.rrStage { background: var(--rr-dark); color: var(--rr-copy); }
