@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./dark-theme.css";
 
 export const metadata = {
   title: "RR · Crecer | Método Ruiz Rivas",
