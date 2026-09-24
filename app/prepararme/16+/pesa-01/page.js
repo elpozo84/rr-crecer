@@ -39,7 +39,7 @@ export default function Pesa01Responsabilizarse16Plus() {
         completed={paso === 12}
       />
       <header className="trainingHeader">
-        <Link href="/prepararme/16+" className="backLink">
+        <Link href="/prepararme/mas-16" className="backLink">
           ← SALIR DE LA PESA
         </Link>
 
@@ -64,7 +64,7 @@ export default function Pesa01Responsabilizarse16Plus() {
         <section className="trainingScreen">
           <div className="trainingVisual">
             <img
-              src="/16+/pesa01.png"
+              src="/mas-16/pesa01.png"
               alt="Pesa 01 · Ya no puedo decidir eso por ti"
             />
             <div className="trainingVisualCaption">
@@ -499,13 +499,13 @@ export default function Pesa01Responsabilizarse16Plus() {
           </div>
 
           <Link
-            href="/prepararme/16+/pesa-02"
+            href="/prepararme/mas-16/pesa-02"
             className="trainingButton linkButton"
           >
             IR A PESA 02 →
           </Link>
 
-          <Link href="/prepararme/16+" className="secondaryTrainingButton">
+          <Link href="/prepararme/mas-16" className="secondaryTrainingButton">
             VOLVER AL GIMNASIO 16+
           </Link>
         </section>
