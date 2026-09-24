@@ -10,8 +10,8 @@ const pesas = [
     titulo: "«YA NO PUEDO DECIDIR ESO POR TI»",
     descripcion:
       "Entrenar el paso de dirigir a acompañar cuando la decisión ya pertenece al joven.",
-    href: "/prepararme/16+/pesa-01",
-    imagen: "/16+/pesa01.png",
+    href: "/prepararme/mas-16/pesa-01",
+    imagen: "/mas-16/pesa01.png",
   },
   {
     n: "02",
@@ -20,8 +20,8 @@ const pesas = [
     titulo: "«NO ESTOY DE ACUERDO CON TU DECISIÓN»",
     descripcion:
       "Mantener criterio propio sin convertir el desacuerdo en control, amenaza o retirada afectiva.",
-    href: "/prepararme/16+/pesa-02",
-    imagen: "/16+/pesa02.png",
+    href: "/prepararme/mas-16/pesa-02",
+    imagen: "/mas-16/pesa02.png",
   },
   {
     n: "03",
@@ -30,8 +30,8 @@ const pesas = [
     titulo: "«ES MI VIDA»",
     descripcion:
       "Distinguir autonomía de ausencia de consecuencias y devolver responsabilidad sin apropiarse de la decisión.",
-    href: "/prepararme/16+/pesa-03",
-    imagen: "/16+/pesa03.png",
+    href: "/prepararme/mas-16/pesa-03",
+    imagen: "/mas-16/pesa03.png",
   },
   {
     n: "04",
@@ -40,8 +40,8 @@ const pesas = [
     titulo: "«QUIERO IRME A VIVIR CON MI PAREJA»",
     descripcion:
       "Pensar vínculos, convivencia, dependencia y proyecto sin convertir la conversación en permiso o prohibición.",
-    href: "/prepararme/16+/pesa-04",
-    imagen: "/16+/pesa04.png",
+    href: "/prepararme/mas-16/pesa-04",
+    imagen: "/mas-16/pesa04.png",
   },
   {
     n: "05",
@@ -50,8 +50,8 @@ const pesas = [
     titulo: "«NO SIEMPRE USAMOS PROTECCIÓN»",
     descripcion:
       "Sostener conversaciones adultas sobre salud sexual, riesgo y cuidado cuando ya existen decisiones reales.",
-    href: "/prepararme/16+/pesa-05",
-    imagen: "/16+/pesa05.png",
+    href: "/prepararme/mas-16/pesa-05",
+    imagen: "/mas-16/pesa05.png",
   },
   {
     n: "06",
@@ -60,8 +60,8 @@ const pesas = [
     titulo: "«SÉ QUE NO ME HACE BIEN, PERO NO PUEDO DEJARLO»",
     descripcion:
       "Acompañar relaciones difíciles sin sustituir la voluntad del joven y reconocer cuándo aumentar protección.",
-    href: "/prepararme/16+/pesa-06",
-    imagen: "/16+/pesa06.png",
+    href: "/prepararme/mas-16/pesa-06",
+    imagen: "/mas-16/pesa06.png",
   },
   {
     n: "07",
@@ -70,8 +70,8 @@ const pesas = [
     titulo: "«ME HE EQUIVOCADO»",
     descripcion:
       "Pasar del rescate a la responsabilidad: consecuencias, reparación, aprendizaje y siguiente decisión.",
-    href: "/prepararme/16+/pesa-07",
-    imagen: "/16+/pesa07.png",
+    href: "/prepararme/mas-16/pesa-07",
+    imagen: "/mas-16/pesa07.png",
   },
   {
     n: "08",
@@ -80,8 +80,8 @@ const pesas = [
     titulo: "«NO QUIERO QUE ME SOLUCIONES NADA»",
     descripcion:
       "Aprender a ser referencia sin convertir cada problema en una intervención.",
-    href: "/prepararme/16+/pesa-08",
-    imagen: "/16+/pesa08.png",
+    href: "/prepararme/mas-16/pesa-08",
+    imagen: "/mas-16/pesa08.png",
   },
   {
     n: "09",
@@ -90,8 +90,8 @@ const pesas = [
     titulo: "«NECESITO DECIDIR QUÉ HACER CON MI VIDA»",
     descripcion:
       "Integración final: acompañar una decisión compleja sin ocupar el volante ni abandonar el vínculo.",
-    href: "/prepararme/16+/pesa-09",
-    imagen: "/16+/pesa09.png",
+    href: "/prepararme/mas-16/pesa-09",
+    imagen: "/mas-16/pesa09.png",
   },
 ];
 
@@ -293,7 +293,7 @@ export default function Gimnasio16Plus() {
           saber que puede volver a ti cuando necesite perspectiva, apoyo o ayuda.
         </p>
 
-        <Link href="/prepararme/16+/pesa-01" className="gymStartButton">
+        <Link href="/prepararme/mas-16/pesa-01" className="gymStartButton">
           EMPEZAR PESA 01 →
         </Link>
       </section>
